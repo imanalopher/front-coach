@@ -1,0 +1,59 @@
+extends ../includes/layout
+
+block wrapper
+    main#auth-page
+        .container
+            .row
+                .col-md-6.col-sm-12
+                    .card.form-card
+                        .card-header Register New Account (free)
+                        .card-body
+                            form
+                                .row
+                                    .col-md-6
+                                        .form-group
+                                            label(for="firstName").bmd-label-floating First Name
+                                            input(type="text" name="firstName")#firstName.form-control
+                                    .col-md-6
+                                        .form-group
+                                            label(for="lastName").bmd-label-floating Last Name
+                                            input(type="text" name="lastName")#lastName.form-control
+
+                                    .col-md-12
+                                        .form-group
+                                            label(for="email").bmd-label-floating E-mail
+                                            input(type="text" name="email")#email.form-control
+
+                                    .col-md-6
+                                        .form-group
+                                            label(for="password").bmd-label-floating Password
+                                            input(type="password" name="password")#password.form-control
+
+                                    .col-md-6
+                                        .form-group
+                                            label(for="password-confirm").bmd-label-floating Password Confirm
+                                            input(type="password" name="password-confirm")#password-confirm.form-control
+                                .form-bottom
+                                    .checkbox
+                                        label
+                                            input(type="checkbox" name="acceptTerms")
+                                            a(href="terms").form-check-label Accept Terms
+
+                                    button(type="submit").btn.btn-primary.btn-raised Submit
+                .col-md-6.col-sm-12
+                    .card.form-card
+                        .card-header Login to an Existing Account
+                        .card-body
+                            form
+                                .row
+                                    .col-md-12
+                                        .form-group
+                                            label(for="loginEmail").bmd-label-floating E-mail
+                                            input(type="email" name="loginEmail")#loginEmail.form-control
+
+                                    .col-md-12
+                                        .form-group
+                                            label(for="loginPassword").bmd-label-floating Password
+                                            input(type="password" name="loginPassword")#loginPassword.form-control
+                                .form-bottom
+                                    button(type="submit").btn.btn-primary.btn-raised Submit

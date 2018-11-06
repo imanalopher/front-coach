@@ -1,7 +1,28 @@
 header
-    .container-fluid
+    .container
         .row.align-items-center
             .col-lg-5
+                nav
+                    ul.nav
+                        each val, index in {'favorites': 'My Favorites', 'register': 'Register', 'login': 'Login'}
+                            li.nav-item
+                                a(href="/" + index).nav-link= val
+                        li.nav-item.dropdown.language-tgl
+                            a(
+                            data-toggle="dropdown"
+                            href="#"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            ).nav-link.dropdown-toggle
+                                img(src=require("../../img/en.png"), alt="en")
+                            .dropdown-menu
+                                a(href="#").dropdown-item
+                                    img(src=require("../../img/en.png"), alt="en")
+                                    span English
+                                a(href="#").dropdown-item
+                                    img(src=require("../../img/es.png"), alt="es")
+                                    span Espanol
 
             .col-lg-2.col-md-4
                 #logo
