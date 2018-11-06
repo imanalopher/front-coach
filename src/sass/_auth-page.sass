@@ -1,0 +1,49 @@
+#auth-page
+  background-image: url('../img/featured.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+  .form-control, .custom-file-control, .is-focused .form-control, .is-focused .custom-file-control
+    background-image: linear-gradient(to top, $orange 2px, rgba(0, 150, 136, 0) 2px), linear-gradient(to top, rgba(0, 0, 0, 0.26) 1px, rgba(0, 0, 0, 0) 1px)
+
+  .checkbox label .checkbox-decorator .check, label.checkbox-inline .checkbox-decorator .check
+    border-color: $orange
+
+  .checkbox label input[type=checkbox]:checked + .checkbox-decorator .check::before, label.checkbox-inline input[type=checkbox]:checked + .checkbox-decorator .check::before
+    color: $orange
+
+  a
+    color: $orange
+
+
+.form-card
+  border-radius: .25rem
+  overflow: hidden
+
+  .card-header
+    background-color: $orange
+    text-transform: uppercase
+    text-align: center
+    color: #fff
+    font-weight: 700
+    font-size: 1.125rem
+    border: none
+
+  .card-body
+    min-height: 430px
+
+.form-bottom
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  button.btn.btn-raised
+    background-color: $orange
+    border-color: $orange
+    border-radius: .25rem
+    margin-top: 1rem
+
+    &:hover
+      background-color: $orange - #111
+      border-color: $orange - #111

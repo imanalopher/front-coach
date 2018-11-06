@@ -1,0 +1,57 @@
+body
+  font-family: Roboto, Arial, Helvetica, sans-serif
+
+header
+  padding: 10px 0
+  border-bottom: 1px solid #eee
+  background-color: #fff
+
+nav
+  a
+    color: $dark-orange
+    text-transform: uppercase
+    transition: all .3s ease
+
+    &:hover
+      color: $orange
+
+.language-tgl
+  display: flex
+  align-items: center
+
+  .dropdown-toggle
+    display: flex
+    align-items: center
+
+  .dropdown-item
+    display: flex
+    align-items: center
+    text-transform: none
+
+    img
+      margin-right: 5px
+
+#logo
+  text-align: center
+
+  img
+    max-width: 200px
+
+#btn-link
+  a
+    text-decoration: none
+    text-transform: uppercase
+    display: inline-block
+    background: linear-gradient(to right, rgba($dark-orange, .7), $orange, rgba($yellow, .7))
+    background-color: $orange
+    color: #fff
+    padding: 10px 15px
+    border-radius: 50px
+    transition: all .3s ease
+
+    &:hover
+      opacity: .85
+
+main
+  padding: 60px 0
+  min-height: 50vh
