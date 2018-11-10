@@ -1,55 +1,90 @@
 header
-  border-bottom: 1px solid #eee
-  //background-color: #ffffff
   position: fixed
   top: 0
   left: 0
   z-index: 10
   width: 100%
+  padding: 10px 0
 
   #logo
+    text-align: center
+
     img
-      max-width: 240px
+      max-width: 280px
 
   nav
     display: flex
-    justify-content: flex-end
     align-items: center
+
+    .nav-item
+      margin: 0 10px
 
     .nav-link
       display: block
-      padding: 1.125rem 0
-      margin: 0 .65rem
       color: #fff
       transition: all .3s ease
       font-size: .875rem
+      padding: 0
       position: relative
 
       &:before
         content: ''
         position: absolute
-        top: 0
-        left: 50%
-        transform: translateX(-50%)
-        -webkit-transition: width .3s
-        background-color: #00d2d4
-        height: 3px
+        top: calc(50% - 1px)
+        left: -5px
+        // transform: translate(-50%, -50%)
+        background-color: $blue
+        height: 1px
         width: 0
         transition: all .3s ease
 
       &:hover
         &:before
-          width: 100%
+          width: calc(100% + 10px)
+  // width: 100%
 
-    .btn-link
-      margin-left: .75rem
+  .language-tgl
+    margin-left: .75rem
 
-      &#apply
-        background-color: $blue
-        color: #fff
+    .dropdown-toggle
+      display: flex
+      align-items: center
 
-      &#phone
-        color: $blue
-        background-color: transparent
+    .dropdown-item
+      display: flex
+      align-items: center
+      text-transform: none
 
+      img
+        margin-right: 5px
 
+  .btn-link
+    margin-left: .75rem
+
+    &#apply
+      background-color: $blue
+      color: #fff
+
+    &#phone
+      color: $blue
+      background-color: transparent
+
+#header-right
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+  .social-links
+    display: flex
+
+  .social-link
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 24px
+    width: 24px
+    border-radius: 100%
+    background-color: #fff
+    color: $blue
+    margin-right: 10px
+    font-size: .75rem

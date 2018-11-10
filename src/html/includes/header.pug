@@ -3,14 +3,10 @@ include ../includes/mixins
 header
     .container-fluid
         .row.align-items-center
-            .col-xl-3.col-md-4
-                #logo
-                    a(href="/")
-                        +renderimg("logo.png").img-fluid
-            .col-xl-9.col-md-8
+            .col-xl-4
                 nav
                     ul.nav
-                        each val in ['Home', 'Opportunities', 'Why', 'Numbers', 'Training and Support', 'Process']
+                        each val in ['Login', 'Register', 'Learn', 'Help']
                             li.nav-item
                                 a(href='#').nav-link= val
                     .dropdown.language-tgl
@@ -29,8 +25,16 @@ header
                              a(href="#").dropdown-item
                                 img(src=require("../../img/es.png"))
                                 span ES
-
-                    a(href="auth.html")#apply.btn-link
-                        span Apply Now!
-                    a(href="#")#phone.btn-link
-                        span (303) 630-9454
+            .col-xl-4
+                #logo
+                    a(href="/")
+                        +renderimg("logo.png").img-fluid
+            .col-xl-4
+                #header-right
+                    .social-links
+                        a(href="#").social-link
+                            i.fab.fa-facebook-f
+                        a(href="#").social-link
+                            i.fab.fa-twitter
+                        a(href="#").social-link
+                            i.fab.fa-instagram
