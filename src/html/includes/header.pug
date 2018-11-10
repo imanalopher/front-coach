@@ -1,34 +1,36 @@
+include ../includes/mixins
+
 header
-    .container
+    .container-fluid
         .row.align-items-center
-            .col-lg-5
+            .col-xl-3.col-md-4
+                #logo
+                    a(href="/")
+                        +renderimg("logo.png").img-fluid
+            .col-xl-9.col-md-8
                 nav
                     ul.nav
-                        each val, index in {'favorites': 'My Favorites', 'register': 'Register', 'login': 'Login'}
+                        each val in ['Home', 'Opportunities', 'Why', 'Numbers', 'Training and Support', 'Process']
                             li.nav-item
-                                a(href="/" + index).nav-link= val
-                        li.nav-item.dropdown.language-tgl
-                            a(
-                            data-toggle="dropdown"
+                                a(href='#').nav-link= val
+                    .dropdown.language-tgl
+                        a(
+                            data-toggle = "dropdown"
                             href="#"
                             role="button"
                             aria-haspopup="true"
                             aria-expanded="false"
-                            ).nav-link.dropdown-toggle
-                                img(src=require("../../img/en.png"), alt="en")
-                            .dropdown-menu
-                                a(href="#").dropdown-item
-                                    img(src=require("../../img/en.png"), alt="en")
-                                    span English
-                                a(href="#").dropdown-item
-                                    img(src=require("../../img/es.png"), alt="es")
-                                    span Espanol
+                        ).dropdown-toggle
+                            img(src=require("../../img/en.png"))
+                        .dropdown-menu
+                             a(href="#").dropdown-item
+                                img(src=require("../../img/en.png"))
+                                span EN
+                             a(href="#").dropdown-item
+                                img(src=require("../../img/es.png"))
+                                span ES
 
-            .col-lg-2.col-md-4
-                #logo
-                    a(href="/")
-                        img(src=require("../../img/logo.svg")).img-fluid
-
-            .col-lg-5.col-md-8.text-right
-                #btn-link
-                    a(href="#") I'm a Physiotherapist
+                    a(href="auth.html")#apply.btn-link
+                        span Apply Now!
+                    a(href="#")#phone.btn-link
+                        span (303) 630-9454

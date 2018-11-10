@@ -1,0 +1,55 @@
+header
+  border-bottom: 1px solid #eee
+  //background-color: #ffffff
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+
+  #logo
+    img
+      max-width: 240px
+
+  nav
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    .nav-link
+      display: block
+      padding: 1.125rem 0
+      margin: 0 .65rem
+      color: #fff
+      transition: all .3s ease
+      font-size: .875rem
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        -webkit-transition: width .3s
+        background-color: #00d2d4
+        height: 3px
+        width: 0
+        transition: all .3s ease
+
+      &:hover
+        &:before
+          width: 100%
+
+    .btn-link
+      margin-left: .75rem
+
+      &#apply
+        background-color: $blue
+        color: #fff
+
+      &#phone
+        color: $blue
+        background-color: transparent
+
+
