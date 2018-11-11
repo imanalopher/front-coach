@@ -16,10 +16,9 @@
     color: #fff
     margin-top: 1.25rem
 
-// -- Banner Row
+// --- Banner Row ---
 
 #banner-row
-  background-size: cover
   background-image: url(../img/banner-row.jpg)
   @extend %bg-cover
   @extend %force-centered
@@ -32,29 +31,30 @@
     position: absolute
     top: -50%
     left: 0
+    z-index: 0
     width: 50%
     height: 200%
     background: linear-gradient(to left, rgba(#fff, .25), transparent, transparent)
     transform: rotate(25deg)
 
 #banner-form
-  width: 60%
+  width: 70%
 
   #banner-title
     color: #fff
     text-align: center
-    font-size: 2.75rem
+    font-size: 3.25rem
     font-weight: 700
 
-// -- Banner Row End
+// --- Banner Row End ---
 
 #our-story
-  padding-top: 100px
+  padding-top: 50px
   padding-bottom: 50px
 
-#partner-list
+#partners-list
   padding: 30px 0
-  box-shadow: 0 2px 15px 0 rgba(#888, 0.25)
+  box-shadow: 0px 2px 15px 0px rgba(#888, 0.25)
 
   .partners-title
     text-transform: uppercase
@@ -70,7 +70,6 @@
     img
       max-height: 26px
       width: auto
-
 
 .shortinfo-item
   &.colored
@@ -90,7 +89,6 @@
   font-weight: 700
 
 .shortinfo-txt
-  margin: 1rem 0
   text-align: justify
-
+  margin: 1rem 0
 

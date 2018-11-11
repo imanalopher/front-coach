@@ -1,4 +1,5 @@
 extends ../includes/layout
+include ../includes/mixins
 
 block wrapper
     main#index-page
@@ -7,68 +8,61 @@ block wrapper
                 h2#banner-title Book a free session with a coach of your choice
 
                 .booking-form
-                    form
-                        .form-elements
-                            .select-items
-                                .select-wrap
-                                    select(
-                                        multiple
-                                        placeholder="Coaching type..."
-                                        data-jcf={
-                                          multipleCompactStyle: true
-                                        }
-                                    ).jcf-hidden
-                                        option(val="v2") Option 0
-                                        optgroup(label="Option 1") test 1
-                                            option(val="v5") Option 5
-                                            option(val="v6") Option 6
-                                            option(val="v7") Option 7
-                                        option(val="v8") Option 8
-                                        option(val="v9") Option 9
-                                        option(val="v10") Option 10
-                                        option(val="v11") Option 11
-                                        option(val="v12") Option 12
-                                        option(val="v13") Option 13
-                                        option(val="v14") Option 14
-                                        option(val="v15") Option 15
-                                .select-wrap
-                                    select(
-                                        placeholder="Coaching type..."
-                                    ).jcf-hidden
-                                        option(val="v2") Option 0
-                                        optgroup(label="Option 1") test 1
-                                            option(val="v5") Option 5
-                                            option(val="v6") Option 6
-                                            option(val="v7") Option 7
-                                        option(val="v8") Option 8
-                                        option(val="v9") Option 9
-                                        option(val="v10") Option 10
-                                        option(val="v11") Option 11
-                                        option(val="v12") Option 12
-                                        option(val="v13") Option 13
-                                        option(val="v14") Option 14
-                                        option(val="v15") Option 15
+                      form
+                            .form-elements
+                                  .select-items
+                                        .select-wrap
+                                              select(
+                                                    multiple
+                                                    placeholder="Coaching type..."
+                                                    data-jcf={
+                                                      multipleCompactStyle: true
+                                                    }
+                                              ).jcf-hidden
+                                                    optgroup(label="Category 1")
+                                                        option(val="v1.1") Option 1
+                                                        option(val="v1.2") Option 2
+                                                        option(val="v1.3") Option 3
+                                                    optgroup(label="Category 1")
+                                                        option(val="v2.1") Option 1
+                                                        option(val="v3.2") Option 2
+                                                        option(val="v4.3") Option 3
+                                                    optgroup(label="Category 1")
+                                                        option(val="v3.1") Option 1
+                                                        option(val="v3.2") Option 2
+                                                        option(val="v3.3") Option 3
 
-                            button(type='submit')
-                                span Book my free session
+                                        .select-wrap
+                                              select(
+                                                    placeholder="Coaching type..."
+                                              ).jcf-hidden
+                                                    option(val="v2") Option 0
+                                                    option(val="v8") Option 8
+                                                    option(val="v9") Option 9
+                                                    option(val="v10") Option 10
+                                                    option(val="v11") Option 11
 
-            //a(href="#").btn-link
-            //    span Get Matched
+                                  button(type='submit')
+                                    span Book my free session
 
-        #partner-list
+                      //- a(href="#").btn-link
+                      //-   span Get Matched
+
+        #partners-list
             .container
                 .row
                     .col-xl-4
-                        .partners-title Our trustfully partners
+                        .partners-title Our Trustfully Partners
                     .col-xl-8
                         .partners-logo
                             each val in ['demochimp', 'merchant', 'innovaccer', 'tartu_science']
-                                a(href="#")
-                                    +renderimg(val + "-logo.png")
+                                a(href="#" target="_blank")
+                                    +renderimg(val+"-logo.png")
+
         #our-story.info-section
             .info-title Our Story
             p.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
 
             a(href="#").btn-link
                 span Read More
@@ -83,8 +77,7 @@ block wrapper
                         .shortinfo
                             .shortinfo-title Our Mission
                             .shortinfo-txt.
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
                             a(href="#").btn-link
                                 span Read More
-

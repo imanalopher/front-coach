@@ -1,5 +1,14 @@
-body
-  font-family: Roboto, Arial, Helvetica, sans-serif
+button.btn.btn-raised
+  background-color: $blue !important
+  border-color: $blue !important
+  border-radius: 3rem
+  margin-top: 1rem
+  padding-left: 30px
+  padding-right: 30px
+
+  &:hover
+    background-color: $dark-blue
+    border-color: $dark-blue
 
 .btn-link
   text-decoration: none
@@ -23,14 +32,14 @@ body
     left: 50%
     z-index: 0
     transform: translate(-50%, -50%)
-    transition: all .3s ease
+    transition: all .1s ease
     background-color: $dark-blue
     border-radius: 100%
-    width: 0
-    height: 0
+    width: 0%
+    height: 0%
 
   &:hover
-    color: #ffffff !important
+    color: #fff !important
     background-color: $dark-blue
     border-color: $dark-blue
 
@@ -38,8 +47,8 @@ body
       border-radius: 50px
       width: 100%
       height: 100%
-      left: 0
       top: 0
+      left: 0
       transform: translate(0, 0)
 
   span
@@ -80,40 +89,17 @@ body
   span
     position: relative
     z-index: 1
-    line-height: 0
-
+    line-height: 1
 
 %force-centered
   display: flex
   align-items: center
   justify-content: center
 
-  *
-    line-height: 1
-
 %bg-cover
   background-size: cover
   background-position: center
   background-repeat: no-repeat
-
-%hover-link
-  position: relative
-  text-decoration: none
-
-  &:before
-    content: ''
-    position: absolute
-    top: 50%
-    left: -5px
-    transform: translateY(-50%)
-    background-color: $blue
-    height: 1px
-    width: 0
-    transition: all .3s ease
-
-  &:hover
-    &:before
-      width: calc(100% + 10px)
 
 %link-hover
   position: relative
@@ -134,15 +120,83 @@ body
     &:before
       width: calc(100% + 10px)
 
+// --- JCF Plugin Syle ---
+.bmd-form-group
+  width: 100% !important
+
+  .jcf-select
+    margin: 0
+    width: 100%
+    border: none
+    background-color: transparent
+    height: 50px
+    display: flex
+    align-items: center
+    max-width: 100%
+
+    .jcf-select-text
+      margin: 0 20px 0 0
+      padding: 0 15px
+      font-size: .875rem
+      line-height: 1.2
+
+    .jcf-select-opener
+      background-color: transparent
+      @extend %force-centered
+      margin-right: 15px
+      width: 12px
+
+      &:before
+        content: '' !important
+        padding: 0 !important
+        width: 8px
+        height: 8px
+        border-right: 2px solid $blue
+        border-bottom: 2px solid $blue
+        transform: rotate(45deg)
+        cursor: pointer
+
+.jcf-select-drop
+  margin-top: 0 !important
+  z-index: 9 !important
+
+  &.jcf-compact-multiple
+    .jcf-option
+      display: flex
+      align-items: center
+
+      &.jcf-selected
+        &:before
+          height: 5px !important
+          width: 8px !important
+          margin: 0 5px 2px 0 !important
+          border: none !important
+          border-bottom: 2px solid $blue !important
+          border-left: 2px solid $blue !important
+          border-width: 2px !important
+
+  .jcf-hover
+    background-color: $ligt-grey !important
+
+  .jcf-select-drop-content
+    border-color: #ccc
+    border: none
+    overflow: hidden
+
+    .jcf-list
+      font-size: .875rem
+      line-height: 1.2
+// --- JCF Plugin Syle End ---
+
 .booking-form
   position: relative
-  z-index: 10
+  z-index: 9
   margin: 30px 0
 
   .form-elements
     display: flex
     align-items: center
-    background-color: #eaeaea
+    background-color: $ligt-grey
     border: 10px solid #fff
     border-radius: 100px
     overflow: hidden
@@ -160,7 +214,7 @@ body
         content: ''
         height: 30px
         width: 1px
-        background-color: #cccccc
+        background-color: $ligt-grey - #222
         position: absolute
         top: 10px
         right: 0
@@ -169,6 +223,8 @@ body
         &:after
           display: none
 
+
+
   button
     width: 220px
     background-color: $blue
@@ -176,25 +232,12 @@ body
     cursor: pointer
     border: none
     height: 50px
+    text-transform: uppercase
     @extend %hover-effect
     @extend %force-centered
 
-.language-tgl
-  display: flex
-  align-items: center
-
-  .dropdown-toggle
-    display: flex
-    align-items: center
-
-  .dropdown-item
-    display: flex
-    align-items: center
-    text-transform: none
-
-    img
-      margin-right: 5px
-
+body
+  font-family: Lato, Arial, Helvetica, sans-serif
 
 main
   min-height: 50vh
