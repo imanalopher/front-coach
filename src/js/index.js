@@ -24,7 +24,6 @@ $(() => {
     wrapNative: false,
     wrapNativeOnMobile: false,
     useCustomScroll: true,
-    multipleCompactStyle: true,
   });
 
   jcf.replaceAll();

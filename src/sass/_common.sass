@@ -49,6 +49,7 @@ body
 %hover-effect
   position: relative
   z-index: 3
+  transition: all .3s ease
 
   &:before
     content: ''
@@ -86,6 +87,9 @@ body
   display: flex
   align-items: center
   justify-content: center
+
+  *
+    line-height: 1
 
 %bg-cover
   background-size: cover
@@ -128,7 +132,52 @@ body
 
   &:hover
     &:before
-      width: calc(100% + 5px)
+      width: calc(100% + 10px)
+
+.booking-form
+  position: relative
+  z-index: 10
+  margin: 30px 0
+
+  .form-elements
+    display: flex
+    align-items: center
+    background-color: #eaeaea
+    border: 10px solid #fff
+    border-radius: 100px
+    overflow: hidden
+
+  .select-items
+    display: flex
+    align-items: center
+    flex: 1
+
+    .select-wrap
+      width: 50%
+      position: relative
+
+      &:after
+        content: ''
+        height: 30px
+        width: 1px
+        background-color: #cccccc
+        position: absolute
+        top: 10px
+        right: 0
+
+      &:last-child
+        &:after
+          display: none
+
+  button
+    width: 220px
+    background-color: $blue
+    color: #fff
+    cursor: pointer
+    border: none
+    height: 50px
+    @extend %hover-effect
+    @extend %force-centered
 
 .language-tgl
   display: flex
