@@ -9,32 +9,38 @@ header
                         each val in ['Login', 'Register', 'Learn', 'Help']
                             li.nav-item
                                 a(href='#').nav-link= val
-                    .dropdown.language-tgl
-                        a(
-                            data-toggle = "dropdown"
-                            href="#"
-                            role="button"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        ).dropdown-toggle
-                            img(src=require("../../img/en.png"))
-                        .dropdown-menu
-                             a(href="#").dropdown-item
-                                img(src=require("../../img/en.png"))
-                                span EN
-                             a(href="#").dropdown-item
-                                img(src=require("../../img/es.png"))
-                                span ES
+
             .col-xl-4
                 #logo
                     a(href="/")
                         +renderimg("logo.png").img-fluid
             .col-xl-4
                 #header-right
-                    .social-links
+                    #favorite-link.header-right-item
+                        a(href="#") My Favorites
+
+                    .dropdown.language-tgl.header-right-item
+                        a(
+                            data-toggle = "dropdown"
+                            href="#"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            style={"background-image": "url('../../img/en.png')"}
+                        ).toggle-link
+                        .dropdown-menu
+                            a(href="#").dropdown-item
+                                img(src=require("../../img/en.png"))
+                                span EN
+                            a(href="#").dropdown-item
+                                img(src=require("../../img/es.png"))
+                                span ES
                         a(href="#").social-link
-                            i.fab.fa-facebook-f
+                            span
+                                i.fab.fa-facebook-f
                         a(href="#").social-link
-                            i.fab.fa-twitter
+                            span
+                                i.fab.fa-twitter
                         a(href="#").social-link
-                            i.fab.fa-instagram
+                            span
+                                i.fab.fa-instagram

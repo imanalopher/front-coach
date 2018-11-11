@@ -19,36 +19,60 @@ header
     .nav-item
       margin: 0 10px
 
+      &:first-child
+        margin-left: 0
+
     .nav-link
       display: block
       color: #fff
       transition: all .3s ease
       font-size: .875rem
       padding: 0
-      position: relative
+      @extend %hover-link
 
-      &:before
-        content: ''
-        position: absolute
-        top: calc(50% - 1px)
-        left: -5px
-        // transform: translate(-50%, -50%)
-        background-color: $blue
-        height: 1px
-        width: 0
-        transition: all .3s ease
+  //.btn-link
+  //  margin-left: .75rem
+  //
+  //  &#apply
+  //    background-color: $blue
+  //    color: #fff
+  //
+  //  &#phone
+  //    color: $blue
+  //    background-color: transparent
 
-      &:hover
-        &:before
-          width: calc(100% + 10px)
-  // width: 100%
+#header-right
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+  .header-right-item
+    border-right: 1px solid rgba(#fff, .35)
+    padding: 0 15px
+    line-height: 1.25
+
+    &:last-child
+      border: none
+      padding-right: 0
+
+  #favorite-link
+    a
+      font-size: .875rem
+      text-transform: uppercase
+      color: #fff
+      margin: 0
+      padding: 0
+      @extend %link-hover
 
   .language-tgl
-    margin-left: .75rem
-
-    .dropdown-toggle
-      display: flex
-      align-items: center
+    .toggle-link
+      height: 20px
+      width: 20px
+      border: 2px solid #fff
+      border-radius: 100%
+      background-color: #fff
+      @extend %bg-cover
+      display: block
 
     .dropdown-item
       display: flex
@@ -57,22 +81,6 @@ header
 
       img
         margin-right: 5px
-
-  .btn-link
-    margin-left: .75rem
-
-    &#apply
-      background-color: $blue
-      color: #fff
-
-    &#phone
-      color: $blue
-      background-color: transparent
-
-#header-right
-  display: flex
-  align-items: center
-  justify-content: flex-end
 
   .social-links
     display: flex
@@ -86,5 +94,16 @@ header
     border-radius: 100%
     background-color: #fff
     color: $blue
-    margin-right: 10px
+    margin-left: 10px
     font-size: .75rem
+    transition: all .3s ease
+    @extend %hover-effect
+
+    &:first-child
+      margin-left: 0
+
+    &:hover
+      background-color: $blue
+      color: #fff
+
+

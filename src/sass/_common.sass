@@ -46,6 +46,42 @@ body
     position: relative
     z-index: 1
 
+%hover-effect
+  position: relative
+  z-index: 3
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 0
+    transform: translate(-50%, -50%)
+    transition: all .1s ease
+    background-color: $dark-blue
+    border-radius: 100%
+    width: 0%
+    height: 0%
+
+  &:hover
+    color: #fff !important
+    background-color: $dark-blue
+    border-color: $dark-blue
+
+    &:before
+      border-radius: 50px
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      transform: translate(0, 0)
+
+  span
+    position: relative
+    z-index: 1
+    line-height: 0
+
+
 %force-centered
   display: flex
   align-items: center
@@ -56,6 +92,43 @@ body
   background-position: center
   background-repeat: no-repeat
 
+%hover-link
+  position: relative
+  text-decoration: none
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: -5px
+    transform: translateY(-50%)
+    background-color: $blue
+    height: 1px
+    width: 0
+    transition: all .3s ease
+
+  &:hover
+    &:before
+      width: calc(100% + 10px)
+
+%link-hover
+  position: relative
+  text-decoration: none
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: -5px
+    transform: translateY(-50%)
+    background-color: $blue
+    height: 1px
+    width: 0
+    transition: all .3s ease
+
+  &:hover
+    &:before
+      width: calc(100% + 5px)
 
 .language-tgl
   display: flex
