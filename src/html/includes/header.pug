@@ -13,7 +13,9 @@ header
             .col-xl-4
                 #logo
                     a(href="/")
-                        +renderimg("logo.png").img-fluid
+                        +renderimg("logo.png").blue-logo.img-fluid
+                        +renderimg("logo-white.png").white-logo.img-fluid
+
             .col-xl-4
                 #header-right
                     #favorite-link.header-right-item
@@ -35,6 +37,8 @@ header
                             a(href="#").dropdown-item
                                 img(src=require("../../img/es.png"))
                                 span ES
+
+                    .social-links.header-right-item
                         a(href="#").social-link
                             span
                                 i.fab.fa-facebook-f
