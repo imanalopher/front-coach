@@ -4,7 +4,7 @@ block wrapper
     main#auth-page
         .container
             .row
-                .col-md-6.col-sm-12
+                .col-md-6
                     .card.form-card
                         .card-header Register New Account (free)
                         .card-body
@@ -12,27 +12,29 @@ block wrapper
                                 .row
                                     .col-md-6
                                         .form-group
-                                            label(for="firstName").bmd-label-floating First Name
-                                            input(type="text" name="firstName")#firstName.form-control
+                                            label(for="reg-first-name").bmd-label-floating First Name
+                                            input(type="text" name="firstName")#reg-first-name.form-control
+
                                     .col-md-6
                                         .form-group
-                                            label(for="lastName").bmd-label-floating Last Name
-                                            input(type="text" name="lastName")#lastName.form-control
+                                            label(for="reg-last-name").bmd-label-floating Last Name
+                                            input(type="text" name="lastName")#reg-last-name.form-control
 
                                     .col-md-12
                                         .form-group
-                                            label(for="email").bmd-label-floating E-mail
-                                            input(type="text" name="email")#email.form-control
+                                            label(for="reg-email").bmd-label-floating Email
+                                            input(type="email" name="email")#reg-email.form-control
 
                                     .col-md-6
                                         .form-group
-                                            label(for="password").bmd-label-floating Password
-                                            input(type="password" name="password")#password.form-control
+                                            label(for="reg-password").bmd-label-floating Password
+                                            input(type="password" name="password")#reg-password.form-control
 
                                     .col-md-6
                                         .form-group
-                                            label(for="password-confirm").bmd-label-floating Password Confirm
-                                            input(type="password" name="password-confirm")#password-confirm.form-control
+                                            label(for="reg-confirm-password").bmd-label-floating Confirm Password
+                                            input(type="password" name="confirmPassword")#reg-confirm-password.form-control
+
                                 .form-bottom
                                     .checkbox
                                         label
@@ -40,7 +42,8 @@ block wrapper
                                             a(href="terms").form-check-label Accept Terms
 
                                     button(type="submit").btn.btn-primary.btn-raised Submit
-                .col-md-6.col-sm-12
+
+                .col-md-6
                     .card.form-card
                         .card-header Login to an Existing Account
                         .card-body
@@ -48,12 +51,15 @@ block wrapper
                                 .row
                                     .col-md-12
                                         .form-group
-                                            label(for="loginEmail").bmd-label-floating E-mail
-                                            input(type="email" name="loginEmail")#loginEmail.form-control
+                                            label(for="login-email").bmd-label-floating Email
+                                            input(type="email" name="email")#login-email.form-control
 
                                     .col-md-12
                                         .form-group
-                                            label(for="loginPassword").bmd-label-floating Password
-                                            input(type="password" name="loginPassword")#loginPassword.form-control
+                                            label(for="login-password").bmd-label-floating Password
+                                            input(type="password" name="password")#login-password.form-control
+
                                 .form-bottom
-                                    button(type="submit").btn.btn-primary.btn-raised Submit
+                                    a(href="terms") Forgot Password
+
+                                    button(type="submit").btn.btn-primary.btn-raised Log In
