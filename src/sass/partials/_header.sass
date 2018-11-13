@@ -4,25 +4,30 @@ header
   left: 0
   z-index: 10
   width: 100%
-  padding: 10px 0
-  transition: all .3s ease
+  padding: 20px 0
+  transition: all .5s ease
 
   &.fixed
     background-color: rgba($blue, .9)
 
-    #logo img
-      &.blue-logo
-        display: none
-      &.white-logo
-        display: block
+    #logo
+      img
+        max-width: 220px
+
+        &.blue-logo
+          display: none
+        &.white-logo
+          display: block
 
 
   #logo
     text-align: center
     @extend %force-centered
+    transition: all .5s ease
 
     img
       max-width: 280px
+      transition: all .5s ease
 
       &.white-logo
         display: none
@@ -36,7 +41,7 @@ header
 
       &:first-child
         margin-left: 0
-    
+
     .nav-link
       display: block
       color: #fff

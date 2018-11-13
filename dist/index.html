@@ -10,40 +10,110 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5">
-          <nav>
-            <ul class="nav">
-              <li class="nav-item"><a class="nav-link" href="/favorites">My Favorites</a></li>
-              <li class="nav-item"><a class="nav-link" href="auth.html">Register</a></li>
-              <li class="nav-item"><a class="nav-link" href="auth.html">Login</a></li>
-              <li class="nav-item dropdown language-tgl">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/en.png" alt="en">
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">
-                  <img src="img/en.png" alt="en"><span>English</span></a>
-                  <a class="dropdown-item" href="#">
-                    <img src="img/es.png" alt="es"><span>Espanol</span></a>
-                </div>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="col-lg-2 col-md-4">
-          <div id="logo"><a href="index.html"><img class="img-fluid" src="img/logo.svg"></a></div>
-        </div>
-        <div class="col-lg-5 col-md-8 text-right">
-          <div id="btn-link"><a href="#">I'm a Physiotherapist</a></div>
+  <div id="wrapper">
+    <header>
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-xl-4">
+            <nav>
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xl-4">
+            <div id="logo"><a href="/"><img class="blue-logo img-fluid" src="../img/logo.png" alt="logo.png"><img class="white-logo img-fluid" src="../img/logo-white.png" alt="logo-white.png"></a></div>
+          </div>
+          <div class="col-xl-4">
+            <div id="header-right">
+              <div class="header-right-item" id="favorite-link"><a href="#">My Favorites</a></div>
+              <div class="dropdown language-tgl header-right-item"><a class="toggle-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background-image:url('../../img/en.png');"></a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#"><img src="../img/en.png" alt="en"><span>En</span></a><a class="dropdown-item" href="#"><img src="../img/es.png" alt="es"><span>Espanol</span></a></div>
+              </div>
+              <div class="social-links header-right-item"><a class="social-link" href="#"><span><i class="fab fa-facebook-f"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-twitter"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-instagram"></i></span></a></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <footer></footer>
-  <script src="js/bundle.js"></script>
+    </header>
+    <main id="index-page">
+      <div id="banner-row">
+        <div id="banner-form">
+          <h2 id="banner-title">Book a free session with a coach of your choice</h2>
+          <div class="booking-form">
+            <form>
+              <div class="form-elements">
+                <div class="select-items">
+                  <div class="select-wrap"><select class="jcf-hidden" multiple placeholder="Coaching type..." data-jcf="{&quot;multipleCompactStyle&quot;:true}">
+                      <optgroup label="Category 1">
+                        <option val="v1.1">Option 1</option>
+                        <option val="v1.2">Option 2</option>
+                        <option val="v1.3">Option 3</option>
+                      </optgroup>
+                      <optgroup label="Category 1">
+                        <option val="v2.1">Option 1</option>
+                        <option val="v3.2">Option 2</option>
+                        <option val="v4.3">Option 3</option>
+                      </optgroup>
+                      <optgroup label="Category 1">
+                        <option val="v3.1">Option 1</option>
+                        <option val="v3.2">Option 2</option>
+                        <option val="v3.3">Option 3</option>
+                      </optgroup>
+                    </select></div>
+                  <div class="select-wrap"><select class="jcf-hidden" placeholder="Coaching type...">
+                      <option val="v2">Option 0</option>
+                      <option val="v8">Option 8</option>
+                      <option val="v9">Option 9</option>
+                      <option val="v10">Option 10</option>
+                      <option val="v11">Option 11</option>
+                    </select></div>
+                </div><button type="submit"><span>Book my free session</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="partners-list">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4">
+              <div class="partners-title">Our Trustfully Partners</div>
+            </div>
+            <div class="col-xl-8">
+              <div class="partners-logo"><a href="#" target="_blank"><img src="../img/demochimp-logo.png" alt="demochimp-logo.png"></a><a href="#" target="_blank"><img src="../img/merchant-logo.png" alt="merchant-logo.png"></a><a href="#" target="_blank"><img src="../img/innovaccer-logo.png" alt="innovaccer-logo.png"></a><a href="#" target="_blank"><img src="../img/tartu_science-logo.png" alt="tartu_science-logo.png"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section" id="our-story">
+        <div class="info-title">Our Story</div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+        </p><a class="btn-link" href="#"><span>Read More</span></a>
+      </div>
+      <div class="shortinfo-section">
+        <div class="shortinfo-item colored">
+          <div class="row no-gutters">
+            <div class="col-xl-6">
+              <div class="shortinfo-img"><img class="img-fluid" src="../img/1837.jpg" alt="1837.jpg"></div>
+            </div>
+            <div class="col-xl-6">
+              <div class="shortinfo">
+                <div class="shortinfo-title">Our Mission</div>
+                <div class="shortinfo-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </div><a class="btn-link" href="#"><span>Read More</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="js/bundle.js"></script>
+  </div>
 </body>
 
 </html>
