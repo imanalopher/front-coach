@@ -31,10 +31,10 @@ header
                         ).toggle-link
                         .dropdown-menu
                             a(href="#").dropdown-item
-                                img(src=require("../../img/en.png"), alt="en")
+                                +renderimg("en.png")
                                 span En
                             a(href="#").dropdown-item
-                                img(src=require("../../img/es.png"), alt="es")
+                                +renderimg("es.png")
                                 span Es
 
                     .social-links.header-right-item

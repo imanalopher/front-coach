@@ -1,13 +1,10 @@
 import $ from "jquery";
-import popper from "popper.js/dist/umd/popper";
-import bootstrapMd from "bootstrap-material-design/dist/js/bootstrap-material-design";
 
 import fontawsome from "@fortawesome/fontawesome-free/js/all";
 import jcf from "jcf/js/jcf";
 import jcfSelect from "jcf/js/jcf.select";
 
 $(() => {
-  $("body").bootstrapMaterialDesign();
 
   jcf.setOptions("Select", {
     wrapNative: false,
