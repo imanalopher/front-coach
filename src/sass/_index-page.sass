@@ -78,6 +78,22 @@
 #coach-types
   @extend %sections
 
+  .slick-arrow
+    position: absolute
+    height: 100%
+    width: 100px
+    top: 0
+    z-index: 1
+    border: none
+
+    &.slick-prev
+      left: 0
+      background: linear-gradient(to right, rgba(#fff, .75), transparent)
+
+    &.slick-next
+      right: 0
+      background: linear-gradient(to left, rgba(#fff, .75), transparent)
+
   .type-item
     @extend %bg-cover
     @extend %force-centered
