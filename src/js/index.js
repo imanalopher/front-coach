@@ -56,4 +56,16 @@ $(() => {
   });
   // --- Featured Coaches Slick Slider End ---
 
+  // --- Testimonials Sliders ---
+
+  $(".testimonials-slider").slick({
+    arrows: false,
+    autoplay: true,
+  });
+
+  $(".slider-btn.to-right").click(() => $(".testimonials-slider").slick('slickNext'));
+  $(".slider-btn.to-left").click(() => $(".testimonials-slider").slick('slickPrev'));
+
+  // --- Testimonials Sliders End ---
+
 });
