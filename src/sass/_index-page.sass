@@ -1,23 +1,4 @@
-.info-section
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  text-align: center
-  padding: 0 15%
-
-  .info-title
-    font-size: 2rem
-    font-weight: 700
-    margin-bottom: 1rem
-
-  .btn-link
-    background-color: $blue
-    color: #fff
-    margin-top: 1.25rem
-
 // --- Banner Row ---
-
 #banner-row
   background-image: url(../img/banner-row.jpg)
   @extend %bg-cover
@@ -45,12 +26,12 @@
     text-align: center
     font-size: 3.25rem
     font-weight: 700
-
 // --- Banner Row End ---
 
+// --- Advantages Row ---
 #advantages
-  padding: 50px 0
-  background-color: $light-grey
+  @extend %section-distance
+  background-color: $light-grey + #080808
 
   .advantage
     text-align: center
@@ -61,7 +42,7 @@
       margin: auto
       border-radius: 100%
       @extend %force-centered
-      background: linear-gradient(25deg, $dark-blue, $dark-blue, $dark-blue)
+      background: linear-gradient(25deg, $dark-blue, $dark-blue, $blue)
       position: relative
 
       &:after
@@ -86,6 +67,84 @@
       text-transform: uppercase
       margin: 12px auto 4px
       height: 40px
+
+    .txt
+      color: $grey
+      font-size: .875rem
+      margin: 0
+// --- Advantages Row End ---
+
+// --- Coach Type Row ---
+#coach-types
+  @extend %sections
+
+  .type-item
+    @extend %bg-cover
+    @extend %force-centered
+    flex-direction: column
+    width: 280px
+    height: 400px
+    padding: 15px
+    border-radius: 15px
+    overflow: hidden
+    text-align: center
+    position: relative
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+      height: 100%
+      width: 100%
+      transition: all .3s ease
+
+    &:before
+      background-color: $black
+      opacity: .5
+
+    &:after
+      background: linear-gradient(25deg, $dark-blue, $blue)
+      opacity: 0
+      visibility: hidden
+
+
+    .title
+      text-transform: uppercase
+      font-size: 1.5rem
+      font-weight: 700
+      z-index: 1
+      color: #fff
+
+    .description
+      color: #fff
+      z-index: 1
+
+    .link
+      position: absolute
+      bottom: 2px
+      z-index: 1
+      border: 2px solid #fff
+      border-radius: 30px
+      padding: 3px 30px 5px
+      text-decoration: none
+      opacity: 0
+      //visibility: hidden
+      transition: all .3s ease
+      color: #fff
+      @extend %hover-effect
+
+    &:hover
+      &:after
+        opacity: .5
+        visibility: visible
+
+      .link
+        bottom: 40px
+        opacity: 1
+        visibility: visible
+// --- Coach Type Row End ---
 
 #our-story
   padding-top: 50px
@@ -146,12 +205,10 @@
   .circles
     display: flex
     justify-content: center
-    flex-direction: row
-    align-items: center
 
     .circle-item
-      width: 22vw
-      height: 22vw
+      height: 250px
+      width: 250px
       display: flex
       flex-direction: column
       align-items: center
@@ -164,3 +221,20 @@
         font-size: 3rem
         font-weight: 700
         margin-bottom: 0
+
+
+#blog-section
+  margin-bottom: 5rem
+
+  .title-txt
+    text-transform: uppercase
+    font-weight: 700
+    font-size: .875rem
+    text-align: center
+
+  .description-txt
+    font-size: 1.5rem
+    font-weight: 700
+    text-align: center
+    margin-bottom: 3rem
+

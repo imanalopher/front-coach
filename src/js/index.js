@@ -1,10 +1,13 @@
 import $ from "jquery";
-
+import popper from "popper.js/dist/umd/popper";
+import bootstrapMd from "bootstrap-material-design/dist/js/bootstrap-material-design";
+import slick from "slick-carousel/slick/slick";
 import fontawsome from "@fortawesome/fontawesome-free/js/all";
 import jcf from "jcf/js/jcf";
 import jcfSelect from "jcf/js/jcf.select";
 
 $(() => {
+  $("body").bootstrapMaterialDesign();
 
   jcf.setOptions("Select", {
     wrapNative: false,
@@ -25,4 +28,15 @@ $(() => {
   $(window).scroll(() => {
     headerFix();
   });
+  // ----------------------------------------
+
+  $(".slick-coach-types").slick({
+    // arrows: false,
+    autoplay: false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    centerMode: true
+  });
+
+  // ----------------------------------------
 });
