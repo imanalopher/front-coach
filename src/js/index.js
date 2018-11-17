@@ -6,6 +6,10 @@ import fontawsome from "@fortawesome/fontawesome-free/js/all";
 import jcf from "jcf/js/jcf";
 import jcfSelect from "jcf/js/jcf.select";
 
+window.FontAwesomeConfig = {
+  searchPseudoElements: true
+};
+
 $(() => {
   $("body").bootstrapMaterialDesign();
 
@@ -30,13 +34,14 @@ $(() => {
   });
   // ----------------------------------------
 
+  // --- Coach Type Slick Slider ---
   $(".slick-coach-types").slick({
-    // arrows: false,
+    dots: true,
     autoplay: false,
     slidesToShow: 4,
     slidesToScroll: 4,
     centerMode: true
   });
 
-  // ----------------------------------------
+  // --- Coach Type Slick Slider End ---
 });

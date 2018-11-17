@@ -25,7 +25,7 @@
     color: #fff
     text-align: center
     font-size: 3.25rem
-    font-weight: 700
+    font-weight: 900
 // --- Banner Row End ---
 
 // --- Advantages Row ---
@@ -63,7 +63,7 @@
 
     .title
       font-size: 1rem
-      font-weight: 700
+      font-weight: 900
       text-transform: uppercase
       margin: 12px auto 4px
       height: 40px
@@ -85,14 +85,52 @@
     top: 0
     z-index: 1
     border: none
+    transform: translate(0, 0)
+    @extend %force-centered
+
+    &:before
+      color: #fff
+      font-size: 4rem
+      opacity: 1
+      text-shadow: 3px 3px 9px rgba($grey, .75)
 
     &.slick-prev
       left: 0
-      background: linear-gradient(to right, rgba(#fff, .75), transparent)
+      background: linear-gradient(to right, rgba(#fff, .6), transparent)
+
+      &:before
+        content: '\2329'
 
     &.slick-next
       right: 0
-      background: linear-gradient(to left, rgba(#fff, .75), transparent)
+      background: linear-gradient(to left, rgba(#fff, .6), transparent)
+
+      &:before
+        content: '\232A'
+
+  .slick-dots
+    bottom: -40px
+
+    li
+      width: auto
+      height: auto
+      margin: 0 3px
+
+      button
+        padding: 0
+        background-color: $light-grey - #222
+        height: 8px
+        width: 8px
+        border-radius: 10px
+        transition: all .3s ease
+
+        &:before
+          display: none
+
+      &.slick-active
+        button
+          background-color: $blue
+          width: 20px
 
   .type-item
     @extend %bg-cover
@@ -100,7 +138,7 @@
     flex-direction: column
     width: 280px
     height: 400px
-    padding: 15px
+    padding: 10px
     border-radius: 15px
     overflow: hidden
     text-align: center
@@ -129,7 +167,7 @@
     .title
       text-transform: uppercase
       font-size: 1.5rem
-      font-weight: 700
+      font-weight: 900
       z-index: 1
       color: #fff
 
@@ -174,7 +212,7 @@
   .partners-title
     text-transform: uppercase
     font-size: 1.25rem
-    font-weight: 700
+    font-weight: 900
 
 .partners-logo
   display: flex
@@ -201,7 +239,7 @@
 
 .shortinfo-title
   font-size: 1.5rem
-  font-weight: 700
+  font-weight: 900
 
 .shortinfo-txt
   text-align: justify
@@ -215,7 +253,7 @@
   .numbers-text
     text-align: center
     font-size: 1.5rem
-    font-weight: 700
+    font-weight: 900
     margin: 3rem auto 1rem
 
   .circles
@@ -235,7 +273,7 @@
 
       p
         font-size: 3rem
-        font-weight: 700
+        font-weight: 900
         margin-bottom: 0
 
 
@@ -244,13 +282,13 @@
 
   .title-txt
     text-transform: uppercase
-    font-weight: 700
+    font-weight: 900
     font-size: .875rem
     text-align: center
 
   .description-txt
     font-size: 1.5rem
-    font-weight: 700
+    font-weight: 900
     text-align: center
     margin-bottom: 3rem
 
