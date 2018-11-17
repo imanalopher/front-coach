@@ -89,7 +89,7 @@
     @extend %force-centered
 
     &:before
-      color: #fff
+      color: $blue
       font-size: 4rem
       opacity: 1
       text-shadow: 3px 3px 9px rgba($grey, .75)
@@ -97,6 +97,7 @@
     &.slick-prev
       left: 0
       background: linear-gradient(to right, rgba(#fff, .6), transparent)
+      justify-content: flex-start
 
       &:before
         content: '\2329'
@@ -104,6 +105,7 @@
     &.slick-next
       right: 0
       background: linear-gradient(to left, rgba(#fff, .6), transparent)
+      justify-content: flex-end
 
       &:before
         content: '\232A'
@@ -199,6 +201,219 @@
         opacity: 1
         visibility: visible
 // --- Coach Type Row End ---
+
+// -- Featured Coaches Row ---
+#featured-coaches
+  @extend %sections
+  background-color: rgba($blue, .5)
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    width: 100%
+    height: 100%
+    background-image: url(../img/226.jpg)
+    background-attachment: fixed
+    @extend %bg-cover
+
+  .section-title
+    color: #fff
+
+  .slick-arrow
+    position: absolute
+    top: 50%
+    z-index: 1
+    border: none
+    transform: translateY(-50)
+    @extend %force-centered
+
+    &:before
+      color: #fff
+      font-size: 1.5rem
+      opacity: 1
+      text-shadow: 3px 3px 9px rgba($grey, .75)
+
+    &.slick-prev
+      left: -40px
+
+      &:before
+        content: '\2329'
+
+    &.slick-next
+      right: -40px
+
+      &:before
+        content: '\232A'
+
+  .slick-dots
+    bottom: -40px
+
+    li
+      width: auto
+      height: auto
+      margin: 0 3px
+
+      button
+        padding: 0
+        background-color: $light-grey - #111
+        height: 8px
+        width: 8px
+        border-radius: 10px
+        transition: all .3s ease
+
+        &:before
+          display: none
+
+      &.slick-active
+        button
+          background-color: #fff
+          width: 20px
+
+  .slick-featured-coaches
+    .item
+      width: calc(100% / 3 - 30px)
+      padding: 0 10px
+
+  .coach-card
+    width: 100%
+    border-radius: 15px
+    overflow: hidden
+    position: relative
+    box-shadow: 0px 3px 10px  0 rgba($black, 0.25)
+
+    .card-top-info
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      width: 100%
+      padding: 15px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background: linear-gradient(rgba($black, .85), transparent)
+      line-height: 1
+
+    .add-to-wishlist
+      color: #fff
+      cursor: pointer
+
+      div
+        font-size: 2rem
+        overflow: hidden
+
+        &.filled
+          width: 0
+          height: 0
+          font-size: 0
+      &:hover, &.in-list
+        .filled
+          font-size: 2rem
+          width: auto
+          height: auto
+
+        .stroke
+          width: 0
+          height: 0
+          font-size: 0
+
+    .top-right-side
+      text-align: right
+
+    .rating
+      display: flex
+      color: $yellow
+      margin-bottom: 5px
+
+      .rating-star
+        margin-right: 5px
+
+        &:last-child
+          margin-right: 0
+
+    .comment-link
+      color: #fff
+
+    .link-body
+      display: flex
+      flex-direction: column
+      height: 400px
+      text-decoration: none
+
+      .link-header
+        height: 50%
+        @extend %bg-cover
+        position: relative
+
+      .info-belt
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        @extend %force-centered
+        height: 50px
+
+        .txt-item
+          @extend %force-centered
+          flex-direction: column
+          color: #fff
+          width: 100px
+          line-height: 1.2
+
+          .txt-label
+            text-transform: uppercase
+            font-size: .875rem
+
+          .price
+            font-weight: 900
+
+        .coach-avatar
+          width: 96px
+          height: 96px
+          border-radius: 100%
+          overflow: hidden
+          @extend %bg-cover
+          border: 4px solid #fff
+          box-shadow: 0 1px 2px 0 rgba($black, 0.15)
+
+      .link-footer
+        height: 50%
+        background-color: #fff
+        padding: 30px 15px 15px
+
+        .coach-full-name
+          text-align: center
+          font-weight: 900
+          color: $blue
+          margin-bottom: 10px
+
+        .location
+          text-align: center
+          font-size: .875rem
+          color: $light-grey - #333
+
+        .proff-list
+          text-align: center
+
+          span
+            color: $black
+            display: inline-block
+            border: 1px solid $light-grey
+            border-radius: 15px
+            padding: 5px 15px
+            margin: 5px
+            font-size: .875rem
+
+            &:last-child
+              font-weight: 900
+              background-color: $blue
+              border-color: $blue
+              color: #fff
+// -- Featured Coaches Row End ---
 
 #our-story
   padding-top: 50px

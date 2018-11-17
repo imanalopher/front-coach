@@ -44,4 +44,16 @@ $(() => {
   });
 
   // --- Coach Type Slick Slider End ---
+
+
+  // --- Featured Coaches Slick Slider ---
+  $(".slick-featured-coaches").slick({
+    dots: true,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true
+  });
+  // --- Featured Coaches Slick Slider End ---
+
 });
