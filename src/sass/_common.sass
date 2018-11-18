@@ -1,3 +1,6 @@
+@import "partials/coach-card"
+@import "partials/booking-form"
+
 // --- Extentable Styles ---
 %section-distance
   padding: 80px 0
@@ -231,51 +234,6 @@ button.btn.btn-raised
       line-height: 1.2
 // --- JCF Plugin Syle End ---
 
-.booking-form
-  position: relative
-  z-index: 1
-  margin: 30px 0
-
-  .form-elements
-    display: flex
-    align-items: center
-    background-color: $light-grey
-    border: 10px solid #fff
-    border-radius: 100px
-    overflow: hidden
-
-  .select-items
-    display: flex
-    align-items: center
-    flex: 1
-
-    .select-wrap
-      width: 50%
-      position: relative
-
-      &:after
-        content: ''
-        height: 30px
-        width: 1px
-        background-color: $light-grey - #222
-        position: absolute
-        top: 10px
-        right: 0
-
-      &:last-child
-        &:after
-          display: none
-
-  button
-    width: 220px
-    background-color: $blue
-    color: #fff
-    cursor: pointer
-    border: none
-    height: 50px
-    text-transform: uppercase
-    @extend %hover-effect
-    @extend %force-centered
 
 body
   font-family: Lato, Arial, Helvetica, sans-serif
@@ -283,3 +241,6 @@ body
 
 main
   min-height: 50vh
+
+.page-content
+  background-color: $light-grey + #080808

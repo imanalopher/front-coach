@@ -1,0 +1,17 @@
+extends ../includes/layout
+include ../includes/mixins
+
+block wrapper
+	#coach-list.page-content
+		.booking-form-wrap
+			.container
+				include ../includes/booking-form
+
+		.container
+			.row
+				.col-lg-4
+				.col-lg-8
+					.row
+						- for (var x = 0; x <= 5; x++)
+							.col-lg-6
+								include ../includes/coach-card

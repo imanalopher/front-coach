@@ -22,7 +22,7 @@ $(() => {
 
   // --- Add Or Remove Header Fixed Class ---
   function headerFix() {
-    if ($(window).scrollTop() > 0) {
+    if (window.location.pathname !== '/' || $(window).scrollTop() > 0) {
       $("header").addClass("fixed");
     } else {
       $("header").removeClass("fixed");
