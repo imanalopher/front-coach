@@ -1,0 +1,9 @@
+#breadcrumb
+	ul
+		- var pages = ['Home', 'Coach list']
+		each val, index in pages
+			li
+				if index < pages.length - 1
+					a(href="#")= val
+				else
+					span= val

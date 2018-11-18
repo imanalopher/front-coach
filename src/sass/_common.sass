@@ -1,19 +1,17 @@
 @import "partials/coach-card"
 @import "partials/booking-form"
+@import "partials/breadcrumb"
 
-// --- Extentable Styles ---
+// --- Extendable Styles ---
+
 %section-distance
   padding: 80px 0
 
 %sections
   @extend %section-distance
 
-  .section-title
-    font-size: 2rem
-    font-weight: 900
+  .c-title
     margin-bottom: 40px
-    text-transform: uppercase
-    text-align: center
 
   .btn-link
     background-color: $blue
@@ -94,7 +92,7 @@
   &:hover
     &:before
       width: calc(100% + 10px)
-// --- Extentable Styles End ---
+// --- Extendable Styles End ---
 
 // --- Form Controls ---
 
@@ -242,5 +240,12 @@ body
 main
   min-height: 50vh
 
+.c-title
+  font-size: 2rem
+  font-weight: 900
+  text-transform: uppercase
+  text-align: center
+
 .page-content
+  padding-top: 70px
   background-color: $light-grey + #080808
