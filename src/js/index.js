@@ -1,39 +1,6 @@
-import $ from "jquery";
-import popper from "popper.js/dist/umd/popper";
-import bootstrapMd from "bootstrap-material-design/dist/js/bootstrap-material-design";
-import slick from "slick-carousel/slick/slick";
-import fontawsome from "@fortawesome/fontawesome-free/js/all";
-import jcf from "jcf/js/jcf";
-import jcfSelect from "jcf/js/jcf.select";
-
-window.FontAwesomeConfig = {
-  searchPseudoElements: true
-};
+import slick from 'slick-carousel/slick/slick'
 
 $(() => {
-  $("body").bootstrapMaterialDesign();
-
-  jcf.setOptions("Select", {
-    wrapNative: false,
-    wrapNativeOnMobile: false,
-    useCustomScroll: true
-  });
-  jcf.replaceAll();
-
-  // --- Add Or Remove Header Fixed Class ---
-  function headerFix() {
-    if (window.location.pathname !== '/' || $(window).scrollTop() > 0) {
-      $("header").addClass("fixed");
-    } else {
-      $("header").removeClass("fixed");
-    }
-  }
-  headerFix();
-  $(window).scroll(() => {
-    headerFix();
-  });
-  // ----------------------------------------
-
   // --- Coach Type Slick Slider ---
   $(".slick-coach-types").slick({
     dots: true,
@@ -44,7 +11,6 @@ $(() => {
   });
 
   // --- Coach Type Slick Slider End ---
-
 
   // --- Featured Coaches Slick Slider ---
   $(".slick-featured-coaches").slick({
@@ -57,7 +23,6 @@ $(() => {
   // --- Featured Coaches Slick Slider End ---
 
   // --- Testimonials Sliders ---
-
   $(".testimonials-slider").slick({
     arrows: false,
     autoplay: true,
@@ -65,7 +30,6 @@ $(() => {
 
   $(".slider-btn.to-right").click(() => $(".testimonials-slider").slick('slickNext'));
   $(".slider-btn.to-left").click(() => $(".testimonials-slider").slick('slickPrev'));
-
   // --- Testimonials Sliders End ---
 
 });

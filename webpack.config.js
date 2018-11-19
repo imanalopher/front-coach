@@ -21,10 +21,25 @@ function generateHtmlPlugins(templateDir) {
 
 const htmlPlugins = generateHtmlPlugins("./src/html/views");
 
+let jsFiles = {};
+function generateJSEntries(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  templateFiles.map(item => {
+    const parts = item.split(".");
+    const name = parts[0];
+    jsFiles[name] = templateDir + "/" + item;
+  });
+  jsFiles.style = "./src/sass/style.sass";
+
+  return jsFiles;
+}
+const jsEntries = generateJSEntries("./src/js");
+
 module.exports = {
-  entry: ["./src/js/index.js", "./src/sass/style.sass"],
+  entry: jsEntries,
   output: {
-    filename: "./js/bundle.js"
+    path: path.join(__dirname, "./dist"),
+    filename: "./js/[name].js"
   },
   devtool: "source-map",
   module: {

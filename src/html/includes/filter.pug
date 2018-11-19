@@ -1,2 +1,19 @@
-#filter
+#filter.text-left
 	h5#filter-title Filters
+
+	form
+		.filter-section
+			label.section-label Languages talked (type to search):
+
+			.search-form-item
+				.select-wrap
+					select(
+						placeholder="Language..."
+					).jcf-hidden
+
+						option(val="v1") Option 1
+						option(val="v2") Option 2
+						option(val="v3") Option 3
+						option(val="v4") Option 4
+						option(val="v5") Option 5
+

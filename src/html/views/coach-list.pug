@@ -1,18 +1,25 @@
 extends ../includes/layout
 include ../includes/mixins
 
+block page-scripts
+	script(src="js/coach-list.js")
+
 block wrapper
-	#coach-list.page-content
+	main#coach-list
 		.container
 			include ../includes/booking-form
-			h1.c-title Select a coach & book your FREE SESSION directory from the coach profile
 
-			include ../includes/breadcrumb
-			.row
+			//include ../includes/breadcrumb
+			.row.no-gutters
 				.col-lg-4
-					include ../includes/filter
+					#coach-list-map-wrap
+						#coach-list-map
+
+
 				.col-lg-8
-					.row
-						- for (var x = 0; x <= 5; x++)
-							.col-lg-6
-								include ../includes/coach-card
+					#coach-list-catalog
+						h3.coach-list-title Select a coach & book your FREE SESSION directory from the coach profile
+						.row
+							- for (var x = 0; x <= 5; x++)
+								.col-lg-6
+									include ../includes/coach-card
