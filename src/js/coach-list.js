@@ -108,8 +108,8 @@ let dataList = [
     nameplate: "Отсуствует",
     shared: 123,
     liked: 500,
-    lt: 51.160534,
-    ln: 71.470356,
+    lt: 42.8867097,
+    ln: 74.4589972,
   },
   {
     id: 2,
@@ -120,8 +120,8 @@ let dataList = [
     nameplate: "Отсуствует",
     shared: 123,
     liked: 500,
-    lt: 51.161423,
-    ln: 71.443256,
+    lt: 42.8787997,
+    ln: 74.4559072,
   },
   {
     id: 3,
@@ -132,8 +132,8 @@ let dataList = [
     nameplate: "Отсуствует",
     shared: 123,
     liked: 500,
-    lt: 51.14871,
-    ln: 71.460127,
+    lt: 42.8797087,
+    ln: 74.4539072,
   },
 ];
 
@@ -141,10 +141,101 @@ let map;
 let mapObj = [];
 
 function init() {
-  let map = new google.maps.Map(document.getElementById("coach-list-map"), {
-    zoom: 13,
-    center: new google.maps.LatLng(51.157845, 71.454424),
+  map = new google.maps.Map(document.getElementById("coach-list-map"), {
+    zoom: 15,
+    center: new google.maps.LatLng(42.8767997, 74.4517972),
+  });
+
+  dataList.forEach((e, i) => {
+    mapObj.push({
+      marker: new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(e.lt, e.ln),
+      }),
+      infoBubble: new InfoBubble({
+        content: createBubbleInfo(e),
+        minWidth: 300,
+        maxWidth: 300,
+        maxHeight: 300,
+        padding: 0,
+        backgroundClassName: 'map-coach-card',
+        backgroundColor: "#fff",
+        shadowStyle: 0,
+        arrowStyle: 2,
+        borderRadius: 15,
+      })
+    });
+
+    google.maps.event.addListener(mapObj[i].marker, "click", () => {
+      closeMaps(mapObj[i].infoBubble);
+      if (!mapObj[i].infoBubble.isOpen()) {
+        mapObj[i].infoBubble.open(map, mapObj[i].marker);
+        $(".map-coach-card").parent().css("border-radius", "15px");
+      } else {
+        mapObj[i].infoBubble.close();
+      }
+    });
   });
 }
 
-google.maps.event.addDomListener(window, "load", init);
+function createBubbleInfo(e) {
+  return `
+    <div class="coach-card">
+        <div class="card-top-info">
+          <div class="add-to-wishlist"></div>
+          <div class="top-right-side">
+            <div class="rating">
+              <div class="rating-star">
+                <i class="far fa-star"></i>
+              </div>
+              <div class="rating-star">
+                <i class="far fa-star"></i>
+              </div>
+              <div class="rating-star">
+                <i class="far fa-star"></i>
+              </div>
+              <div class="rating-star">
+                <i class="far fa-star"></i>
+              </div>
+              <div class="rating-star">
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="link-body" href="#">
+          <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
+            <div class="info-belt">
+              <div class="in-call txt-item">
+                <span class="txt-label">In-Call</span>
+                <span class="price">Unavailable</span>
+              </div>
+              <div class="coach-avatar" style="background-image:url('./img/life-coaching.jpg');"></div>
+              <div class="in-call txt-item">
+                <span class="txt-label">House-Call</span>
+                <span class="price">€39</span>
+              </div>
+            </div>
+          </div>
+          <div class="link-footer">
+            <h5 class="coach-full-name">Cristina Nunez Pabon</h5>
+            <p class="location">Madrid, Spain</p>
+          </div>
+        </a>
+    </div>
+    `;
+}
+
+function closeMaps(objInfoBubble) {
+  mapObj.forEach(e => {
+    if (objInfoBubble !== e.infoBubble) {
+      if (e.infoBubble.isOpen()) {
+        e.infoBubble.close();
+      }
+    }
+  });
+}
+
+$(document).ready(function () {
+  init();
+});
