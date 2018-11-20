@@ -11,7 +11,8 @@
     "jquery": "^3.3.1",
     "js-info-bubble": "^0.8.0",
     "popper.js": "^1.14.4",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sticky-sidebar": "^3.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
