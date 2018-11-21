@@ -1,37 +1,41 @@
 #coach-list
-  padding-top: 70px
-
-  .coach-list-title
-    margin-bottom: 22px
-
-  .c-title
-    margin: 30px 0 10px
-
   #breadcrumb
     margin-bottom: 30px
 
   #coach-list-catalog
-    padding-left: 30px
-    padding-bottom: 30px
+    .coach-card
+      margin-bottom: 30px
+      transition: all .3s ease
 
-  .coach-card
-    margin-bottom: 30px
-    transition: all .3s ease
-
-    &:hover
-      transform: translateY(-5px)
+      &:hover
+        transform: translateY(-5px)
 
   #coach-list-map-wrap
     height: calc(100vh - 60px)
+    position: static
 
     &.fixed
       position: fixed
       top: 60px
+      left: 15px
       max-width: 100%
-      height: 100%
-      overflow-y: scroll
+      width: calc((100% - 30px) / 3)
 
     #coach-list-map
       height: 100%
       width: 100%
-      position: fixed
+      overflow: hidden
+      border-radius: 15px
+      box-shadow: 0px 3px 10px 0px rgba($grey, 0.05)
+
+    .map-coach-card
+      .coach-card
+
+        .link-body
+          height: auto
+
+          .link-header
+            height: 200px
+
+          .link-footer
+            height: auto

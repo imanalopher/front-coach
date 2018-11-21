@@ -319,7 +319,7 @@ block wrapper
 
 			include ../includes/breadcrumb
 
-		.container
+		.container-fluid
 			.row
 				.col-lg-4
 					#coach-list-map-wrap
@@ -332,18 +332,18 @@ block wrapper
 							- for (var x = 0; x <= 5; x++)
 								.col-lg-6
 									include ../includes/coach-card
-							.col-lg-12
-								.text-center.align-items-center
+						.col-lg-12
+							.text-center.align-items-center
 
-									nav
-										ul.pagination.justify-content-center
-											li.page-item
-												a(href="#").page-link Previous
-											li.page-item.active
-												a(href="#").page-link 1
-											li.page-item
-												a(href="#").page-link 2
-											li.page-item
-												a(href="#").page-link 3
-											li.page-item
-												a(href="#").page-link Next
+								nav
+									ul.pagination.justify-content-center
+										li.page-item
+											a(href="#").page-link Previous
+										li.page-item.active
+											a(href="#").page-link 1
+										li.page-item
+											a(href="#").page-link 2
+										li.page-item
+											a(href="#").page-link 3
+										li.page-item
+											a(href="#").page-link Next
