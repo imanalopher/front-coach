@@ -2,57 +2,12 @@ extends ../includes/layout
 include ../includes/mixins
 
 block page-scripts
+	script(src="js/coach-profile.js")
 
 block wrapper
 	main#coach-profile
-		div#coach-profile-header
-			.container
-				.row
-					.col-lg-8
-						#coach-types
-							h5.c-title What type of coaching are you looking for?
-
-							.slick-coach-types
-								.item
-									.type-item(style={"background-image": "url('./img/life-coaching.jpg')"})
-										h5.title Life Coaching
-										p.description.
-											Life coaching value lies in connecting the different aspects of your life in a single powerful strategy and action plan. The right life coach will help you reach the clarity.
-										a(href="#").link.light
-											span Search Now
-								.item
-									.type-item(style={"background-image": "url('./img/leadership-coaching.jpg')"})
-										h5.title Leadership Coaching
-										p.description.
-											Leaders need to constantly develop if they are to maintain a positive and lasting impact on their teams and organizations. An experienced leadership coach is your ally in your pursuit of excellence.
-										a(href="#").link.light
-											span Search Now
-								.item
-									.type-item(style={"background-image": "url('./img/career-coaching.jpg')"})
-										h5.title Career Coaching
-										p.description.
-											A gratifying and meaningful career is critical to leading a fulfilling life. Whether you are searching for the right career, or find yourself at a crossroads wondering which route to take.
-										a(href="#").link.light
-											span Search Now
-								.item
-									.type-item(style={"background-image": "url('./img/mentoring.jpg')"})
-										h5.title Mentoring
-										p.description.
-											A mentor is a guide – someone who had walked the path that you wish to follow and faced the challenges you are encountering. Mentors are seasoned experts with a wealth of experience to share in a specific proficiency.
-										a(href="#").link.light
-											span Search Now
-								.item
-									.type-item(style={"background-image": "url('./img/health-coaching.jpg')"})
-										h5.title Health Coaching
-										p.description.
-											The pressures of a modern lifestyle and escalating work demands make it difficult to maintain optimal health, but when your health has slipped too far it is often necessary to acquire the assistance of a professional coach.
-										a(href="#").link.light
-											span Search Now
-
-					.col-lg-4
-
 		.container
-			.row
-				.col-lg-8
+			include ../includes/booking-form
+			h1.c-title Silvia Di Bonaventura
 
-				.col-lg-4
+			include ../includes/breadcrumb
