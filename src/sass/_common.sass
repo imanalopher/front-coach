@@ -233,6 +233,53 @@ button.btn.btn-raised
       line-height: 1.2
 // --- JCF Plugin Syle End ---
 
+.social-links
+  display: flex
+
+  .social-link
+    @extend %force-centered
+    height: 24px
+    width: 24px
+    border-radius: 100%
+    color: $blue
+    margin-left: 10px
+    font-size: .75rem
+    transition: all .3s ease
+    @extend %hover-effect
+
+    &:first-child
+      margin-left: 0
+
+    &:hover
+      background-color: $blue
+      color: #fff
+
+    span
+      line-height: 0
+
+.add-to-wishlist
+  color: #fff
+  cursor: pointer
+
+  div
+    font-size: 2rem
+    overflow: hidden
+
+    &.filled
+      width: 0
+      height: 0
+      font-size: 0
+
+  &:hover
+    .filled
+      font-size: 2rem
+      width: auto
+      height: auto
+
+    .stroke
+      width: 0
+      height: 0
+      font-size: 0
 
 .proff-list
   span
