@@ -12,7 +12,11 @@ window.FontAwesomeConfig = {
 
 // --- Add Or Remove Header Fixed Class ---
 function headerFix() {
-  if (window.location.pathname !== '/' && window.location.pathname === '/coach-profile.html') {
+  if (
+    window.location.pathname !== '/'
+    || window.location.pathname === '/coach-profile.html'
+    || window.location.pathname === '/coach-dashboard.html'
+  ) {
     $("header").addClass("fixed");
   } else if($(window).scrollTop() > 0) {
     $("header").addClass("fixed");
