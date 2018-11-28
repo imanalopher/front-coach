@@ -63,3 +63,29 @@ block wrapper
 												).jcf-hidden
 													each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
 														option(val= index)= val
+
+										.card-element
+											p.element-label Tell Us About Yourself
+											.text-handler
+												textarea(placeholder="Introduction" data-lang="en")
+												textarea(placeholder="Introduction" data-lang="gr" hidden)
+
+										.row
+											.col-lg-6
+												.card-element
+													p.element-label Translate From:
+													.select-wrap
+														select(
+															placeholder="Choose Language..."
+														).jcf-hidden
+															each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+																option(val= index)= val
+											.col-lg-6
+												.card-element
+													p.element-label Translate To:
+													.select-wrap
+														select(
+															placeholder="Choose Language..."
+														).jcf-hidden
+															each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+																option(val= index)= val
