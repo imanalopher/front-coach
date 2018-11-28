@@ -76,26 +76,56 @@
 
       #dashboard-profile-tabs
         border-top: 1px solid $light-grey
+        display: flex
 
         .tabs-sidebar
           width: 240px
+          height: 100%
           border-right: 1px solid $light-grey
 
-        ul
-          list-style: none
-          margin: 0
-          padding: 0
+          ul
+            list-style: none
+            margin: 0
+            padding: 0
 
-          li
-            a
-              display: block
-              padding: 10px 20px
-              text-decoration: none
-              color: $black
+            li
+              a
+                display: block
+                padding: 10px 20px
+                text-decoration: none
+                color: $black
+                font-weight: 700
+                transition: all .3s ease
+                border-left: 3px solid transparent
+
+                &.active, &:hover
+                  background-color: $light-grey
+                  border-color: $blue
+
+        .tab-content
+          width: 100%
+          height: 100%
+          flex: 1
+          padding-left: 30px
+
+          .tab-title
+            font-weight: 700
+
+          .profile-card-item
+            border: 1px solid $light-grey
+            padding: 15px
+
+            .card-title
               font-weight: 700
-              transition: all .3s ease
-              border-left: 3px solid transparent
 
-              &.active, &:hover
-                background-color: $light-grey
-                border-color: $blue
+            .element-label
+              font-size: .875rem
+              margin-bottom: 10px
+              color: $blue
+
+            .select-wrap
+              border: 1px solid #eaeaea
+              border-radius: 30px
+
+              .jfc-select
+                height: 40px

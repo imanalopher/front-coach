@@ -37,3 +37,29 @@ block wrapper
 							each val in ['Payment Information', 'Contact Information']
 								li
 									a(href="#")= val
+
+					.tab-content
+						h5.tab-title About
+
+						.container-fluid
+							.row
+								.col-lg-6
+									p My Language
+									p My Language
+									p My Language
+								.col-lg-6
+									.profile-card-item
+										p.card-title My Language
+
+										.card-element
+											p.element-label Language spoken (at least 1 required)
+											.select-wrap
+												select(
+													multiple
+													placeholder="Coaching type..."
+													data-jcf={
+														multipleCompactStyle: true
+													}
+												).jcf-hidden
+													each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+														option(val= index)= val
