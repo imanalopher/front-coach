@@ -9,3 +9,10 @@ block wrapper
 			h1.c-title Silvia Di Bonaventura
 
 			include ../includes/breadcrumb
+
+		#dashboard-content.content
+			nav#dash-board-nav
+				ul
+					each val in ['Mi Message', 'Mi Bookings', 'My Parents']
+						li
+							a(href="#")= val
