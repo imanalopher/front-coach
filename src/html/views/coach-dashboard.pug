@@ -20,9 +20,20 @@ block wrapper
 					li
 						a(href="#").active My Profile
 
-			.dashboard-section
+			#dashboard-profile.dashboard-section
 				#coach-fullname
 					h4 Silvia Di Bonaventura
 					a(href="#")
-						i.far.fa-address-card
-						| See My profile
+						span
+							i.far.fa-address-card
+							| See My profile
+
+				#dashboard-profile-tabs
+					.tabs-sidebar
+						ul
+							li
+								a(href="#").active About Me
+
+							each val in ['Payment Information', 'Contact Information']
+								li
+									a(href="#")= val

@@ -6,6 +6,8 @@
     background-color: #fff
     border-radius: 15px
     box-shadow: 0 3px 10px 0 rgba($gray, 0.05)
+    overflow: hidden
+    min-height: 50vh
 
     nav#dash-board-nav
       border-bottom: 1px solid $light-grey
@@ -36,7 +38,7 @@
           a
             text-decoration: none
             display: inline-block
-            padding: 15px
+            padding: 15px 20px
             color: $grey
             border-bottom: 2px solid transparent
 
@@ -48,22 +50,52 @@
               color: $blue
 
 
-    .dashboard-section
-      padding: 15px
-
+    #dashboard-profile
       #coach-fullname
         display: flex
         justify-content: space-between
         align-items: center
+        padding: 30px
 
         h4
           font-weight: 900
+          font-size: 2rem
+          margin: 0
 
         a
+          @extend %hover-effect
           text-decoration: none
-          border: 1px solid $grey
-          border-radius: 15px
-          padding: 0 10px
+          border: 1px solid $blue
+          border-radius: 30px
+          padding: 3px 12px
+          color: $black
+          font-size: .875rem
 
-          svg
+          i, svg
             margin-right: 10px
+
+      #dashboard-profile-tabs
+        border-top: 1px solid $light-grey
+
+        .tabs-sidebar
+          width: 240px
+          border-right: 1px solid $light-grey
+
+        ul
+          list-style: none
+          margin: 0
+          padding: 0
+
+          li
+            a
+              display: block
+              padding: 10px 20px
+              text-decoration: none
+              color: $black
+              font-weight: 700
+              transition: all .3s ease
+              border-left: 3px solid transparent
+
+              &.active, &:hover
+                background-color: $light-grey
+                border-color: $blue
