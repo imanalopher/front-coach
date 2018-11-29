@@ -285,3 +285,16 @@ block wrapper
 						h5.info-item-title Map
 
 						#coach-profile-map
+
+					#coach-photos-section.coach-info-item
+						h5.info-item-title Photos
+
+						.coach-photos-slide
+							each val in [1,2,3,4]
+								.item
+									+renderimg("medi" + val + ".jpg").img-fluid
+
+						.coach-photos-nav
+							each val in [1,2,3,4]
+								.item
+									+renderimg("medi" + val + ".jpg").img-fluid

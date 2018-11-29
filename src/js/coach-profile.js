@@ -2,6 +2,7 @@ import airDatepicker from "air-datepicker/dist/js/datepicker";
 import airDatepickerEn from "air-datepicker/dist/js/i18n/datepicker.en";
 import stickySideBar from "sticky-sidebar";
 import fullCalendar from "fullcalendar/dist/fullcalendar.min";
+import slick from 'slick-carousel/slick/slick'
 
 $(() => {
   $("#booking-date").datepicker({
@@ -71,5 +72,23 @@ $(() => {
     innerWrapperSelector: "#book-form-handler",
     topSpacing: 70,
     bottomSpacing: 20
+  });
+
+  $(".coach-photos-slide").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.coach-photos-nav'
+  });
+
+  $(".coach-photos-nav").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.coach-photos-slide',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+    arrows: false,
   });
 });
