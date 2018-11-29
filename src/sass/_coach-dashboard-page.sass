@@ -122,8 +122,12 @@
 
               #profile-image-handler
                 margin-right: 15px
+                border-radius: 15px
+                overflow: hidden
 
               #avatar-loader-wrapper
+                display: flex
+                flex-direction: column
                 flex: 1
 
                 #avatar-uploader-label
@@ -136,6 +140,14 @@
                   font-size: 1rem
                   text-transform: uppercase
                   width: 100%
+
+                #image-drag-upload
+                  border: 2px dashed $light-grey
+                  border-radius: 15px
+                  @extend %force-centered
+                  height: 90px
+                  flex: 1
+                  color: $black
 
             .card-element
               margin-bottom: 30px
