@@ -21,9 +21,9 @@ $(() => {
   //   },
   // });
 
-  jQuery('#coach-profile-full-calendar').each(function() {
-    var e = jQuery(this)
-      , events = [
+  $('#coach-profile-full-calendar').fullCalendar({
+    defaultView: 'agendaWeek',
+    events: [
       {
         "title":"John Bobby",
         "start":"2018-11-29T06:30:00",
@@ -39,42 +39,31 @@ $(() => {
         "start":"2018-11-29T15:30:00",
         "end":"2018-11-29T19:30:00"
       },
-    ]
-      , s = e.data('lang');
-    e.fullCalendar({
-      defaultView: 'agendaWeek',
-      events: events,
-      editable: true,
-      header: {
-        left: 'prev',
-        center: 'title',
-        right: 'next, agendaWeek, agendaDay'
-      },
-      lang: s,
-      firstDay: 0,
-      views: {
-        month: {
-          titleFormat: 'MMMM - YYYY'
-        }
-      },
-      loading: function(e) {
-        var o = jQuery(this)
-          , n = o.find('.fc-center h2');
-        if (!e) {
-          var t = n.html()
-            , s = '';
-          t = t.split(' ');
-          for (var i = 0; i < t.length; i++) {
-            if (i !== 2) {
-              s = s + t[i] + ' '
-            } else {
-              s = s + ' <span>' + t[i] + '</span> '
-            }
-          }
-          ;n.html(s)
-        }
+    ],
+    selectable: true,
+    selectHelper: true,
+    select: function(start, end) {
+      const title = prompt("Event title:");
+      if (title) {
+        let eventData = { title, start, end };
+        $('#coach-profile-full-calendar').fullCalendar('renderEvent', eventData, true);
       }
-    })
+      $('#coach-profile-full-calendar').fullCalendar('unselect');
+    },
+    editable: true,
+    eventLimit: true, // allow "more" link when too many events
+    navLinks: true,
+    header: {
+      left: 'prev',
+      center: 'title',
+      right: 'next, agendaWeek, agendaDay'
+    },
+    firstDay: 0,
+    views: {
+      month: {
+        titleFormat: 'MMMM - YYYY'
+      }
+    },
   });
 
   let coachBookForm = new StickySidebar("#book-form-handler", {
