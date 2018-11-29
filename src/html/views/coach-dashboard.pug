@@ -39,21 +39,27 @@ block wrapper
 									a(href="#")= val
 
 					.tab-content
-						h5.tab-title About
+						.container-fluid
+							.row
+								.col-lg-12
+									h5.tab-title About
 
 						.container-fluid
 							.row
 								.col-lg-6
 									.profile-card-item
-										p My Language
-										p My Language
-										p My Language
+										.profile-img
+											+renderimg('default-user.png').text-center
+
+										.profile-img
+											span Upload Image Span
+											input(type="file", value="Upload Image").text-center
 								.col-lg-6
 									.profile-card-item
 										p.card-title My Language
 
 										.card-element
-											p.element-label Language spoken (at least 1 required)
+											p.element-label Language spoken (at least 1 required):
 											.select-wrap
 												select(
 													multiple
