@@ -45,12 +45,14 @@ block wrapper
 							.row
 								.col-lg-6
 									.profile-card-item
-										.profile-img
-											+renderimg('default-user.png').text-center
+										#profile-avatar-loader
+											#profile-image-handler
+												+renderimg('default-user.png')
 
-										.profile-img
-											span Upload Image Span
-											input(type="file", value="Upload Image").text-center
+											#avatar-loader-wrapper
+												label(for="avatar-uploader")#avatar-uploader-label Upload File
+													input(type="file" id="avatar-uploader" hidden)
+
 								.col-lg-6
 									.profile-card-item
 										p.card-title My Language
