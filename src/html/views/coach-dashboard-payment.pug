@@ -1,0 +1,98 @@
+extends ../includes/layout
+
+block page-scripts
+	script(src="js/coach-dashboard-payment.js")
+
+block wrapper
+	main#coach-dashboard
+		.container
+			//h1.c-title Silvia Di Bonaventura
+
+			include ../includes/breadcrumb
+
+		#dashboard-content.content.card
+			nav#dash-board-nav
+				ul
+					each val in ['Mi Message', 'Mi Bookings', 'My Payments', 'My Comments']
+						li
+							a(href="#")= val
+
+					li
+						a(href="#").active My Profile
+
+			#dashboard-profile.dashboard-section
+				#coach-fullname
+					h4 Silvia Di Bonaventura
+					a(href="#")
+						span
+							i.far.fa-address-card
+							| See My profile
+
+				#dashboard-profile-tabs
+					.tabs-sidebar
+						ul
+							each val, index in {'About Me': 0, 'Payment Information': 1, 'Contact Information': 0}
+								li
+									if val === 1
+										a(href="#").active= index
+									else
+										a(href="#")= index
+
+					.tab-content
+						.container-fluid
+							h5.text-center.tab-title Provide your information so we can pay you.
+
+							.row
+								.col-lg-6
+									.card
+										.card-body
+											form(style="color: #757575;")
+												.form-group.md-form
+													label(for="Lastname" class="bmd-label-floating") Lastname
+													input(id="Lastname" type="text" class="form-control")
+
+												.form-group.md-form
+													label(for="Firstname" class="bmd-label-floating") Firstname
+													input(id="Firstname" type="text" class="form-control")
+
+												.form-group.md-form
+													label(for="Lastname" class="bmd-label-floating") Birthday
+													input(id="coach-birthday" class="form-control")
+
+												.form-group.md-form
+													label(class="") Nationality
+													include ../includes/country-list
+
+												.form-group.md-form
+													label(class="") Country of Residence
+													include ../includes/country-list
+
+												.form-group.md-form
+													label(for="Profession" class="bmd-label-floating") Profession
+													input(id="Profession" class="form-control")
+								.col-lg-6
+									.card
+										.card-body
+											form(style="color: #757575;")
+												.form-group.md-form
+													label(for="Annual" class="bmd-label-floating") Annual income
+													input(id="Annual" type="text" class="form-control")
+
+												.form-group.md-form
+													label(for="BankOwner" class="bmd-label-floating") Bank owner name
+													input(id="BankOwner" type="text" class="form-control")
+
+												.form-group.md-form
+													label(for="city" class="bmd-label-floating") City
+													textarea(id="city" class="form-control md-textarea" rows=4)
+
+												.form-group.md-form
+													label(for="iban" class="bmd-label-floating") IBAN
+													input(id="iban" class="form-control")
+
+												.form-group.md-form
+													label(for="bic" class="bmd-label-floating") BIC
+													input(id="bic" class="form-control")
+
+								.col-md-12.text-center
+									button(type="submit").btn.btn-primary.btn-raised Submit
