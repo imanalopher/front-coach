@@ -13,7 +13,7 @@ block wrapper
 		#dashboard-content.content
 			nav#dash-board-nav
 				ul
-					each val in ['Mi Message', 'Mi Bookings', 'My Parents']
+					each val in ['Mi Message', 'Mi Bookings', 'My Payments', 'My Comments']
 						li
 							a(href="#")= val
 
@@ -54,6 +54,8 @@ block wrapper
 													input(type="file" id="avatar-uploader" hidden)
 												#image-drag-upload
 													span Or Drag And Drop File Here
+										form(action="#" method="post" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone")
+											input(type="file" name="file")
 
 								.col-lg-6
 									.profile-card-item
