@@ -1,0 +1,94 @@
+extends ../includes/layout
+
+block wrapper
+	main#coach-dashboard
+		.container
+			include ../includes/breadcrumb
+
+		#dashboard-content.content.card
+			nav#dash-board-nav
+				ul
+					each val in ['Mi Message', 'Mi Bookings', 'My Payments', 'My Comments']
+						li
+							a(href="#")= val
+
+					li
+						a(href="#").active My Profile
+
+			#dashboard-profile.dashboard-section
+				#coach-fullname
+					h4 Silvia Di Bonaventura
+					a(href="#")
+						span
+							i.far.fa-address-card
+							| See My profile
+
+				#dashboard-profile-tabs
+					.tabs-sidebar
+						ul
+							each val, index in {'About Me': 0, 'Payment Information': 0, 'Contact Information': 1}
+								li
+									if val === 1
+										a(href="#").active= index
+									else
+										a(href="#")= index
+
+					.tab-content
+						.container-fluid
+							h5.text-center.tab-title Contact information
+
+							.row
+								.col-lg-6
+									.card
+										.card-body
+											form(style="color: #757575;")
+												.form-group.md-form
+													label(for="Email" class="bmd-label-floating") Email
+													input(id="Email" type="text" class="form-control" value="e-mail@gmail.com")
+
+												.form-group.md-form
+													label(for="PhonePrefix" class="bmd-label-floating") Phone prefix
+													input(id="PhonePrefix" type="text" class="form-control" value="+35")
+
+												.form-group.md-form
+													label(for="Phone" class="bmd-label-floating") Phone
+													input(id="Phone" class="form-control" value="87698709879")
+
+												.form-group.md-form
+													label(class="") Timezone
+													include ../includes/country-list
+
+												.form-group.md-form
+													label(for="Password" class="bmd-label-floating") Password
+													input(id="Password" type="password" class="form-control")
+
+												.form-group.md-form
+													label(for="Verification" class="bmd-label-floating") Verification
+													input(id="Verification" type="password" class="form-control")
+								.col-lg-6
+									.card
+										.card-body
+											h5 Billing Address
+											form(style="color: #757575;")
+												.form-group.md-form
+													label(for="Address" class="bmd-label-floating") Address
+													textarea(id="Address" class="form-control" rows=4)
+
+												.form-group.md-form
+													label(for="city" class="bmd-label-floating") City
+													textarea(id="city" class="form-control md-textarea" rows=4)
+
+												.form-group.md-form
+													label(for="Postal" class="bmd-label-floating") Postal code
+													input(id="Postal" type="text" class="form-control")
+
+												.form-group.md-form.country
+													label(class="bmd-label-floating") Country
+													include ../includes/country-list
+
+												.form-group.md-form
+													label(for="bic" class="bmd-label-floating") BIC
+													input(id="bic" class="form-control")
+
+								.col-md-12.text-center
+									button(type="submit").btn.btn-primary.btn-raised Submit
