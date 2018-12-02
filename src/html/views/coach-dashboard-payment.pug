@@ -10,15 +10,16 @@ block wrapper
 
 			include ../includes/breadcrumb
 
-		#dashboard-content.content.card
+		#dashboard-content.content
 			nav#dash-board-nav
 				ul
-					each val in ['Mi Message', 'Mi Bookings', 'My Payments', 'My Comments']
-						li
-							a(href="#")= val
-
-					li
-						a(href="#").active My Profile
+					each val, index in {'Mi Message': 0, 'Mi Bookings': 0, 'My Payments': 0, 'My Comments': 0, 'My Profile': 1}
+						if val === 1
+							li
+								a(href="#").active= index
+						else
+							li
+								a(href="#")= index
 
 			#dashboard-profile.dashboard-section
 				#coach-fullname
@@ -44,55 +45,118 @@ block wrapper
 
 							.row
 								.col-lg-6
-									.card
+									.card.profile-card-item
 										.card-body
-											form(style="color: #757575;")
-												.form-group.md-form
-													label(for="Lastname" class="bmd-label-floating") Lastname
-													input(id="Lastname" type="text" class="form-control")
+											.card-element
+												p.element-label Last Name
+													.input-wrap
+														input(type="text" value="Di Bonaventura")
 
-												.form-group.md-form
-													label(for="Firstname" class="bmd-label-floating") Firstname
-													input(id="Firstname" type="text" class="form-control")
+											.card-element
+												p.element-label First Name
+													.input-wrap
+														input(type="text" value="Silvia")
 
-												.form-group.md-form
-													label(for="Lastname" class="bmd-label-floating") Birthday
-													input(id="coach-birthday" class="form-control")
+											.card-element
+												p.element-label Birthday
 
-												.form-group.md-form
-													label(class="") Nationality
-													include ../includes/country-list
+												.row
+													.col-md-4
+														.select-wrap
+															select(
+																multiple
+																placeholder="Day"
+																data-jcf={
+																	multipleCompactStyle: true
+																}
+															).jcf-hidden
+																each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+																	option(val= index)= val
 
-												.form-group.md-form
-													label(class="") Country of Residence
-													include ../includes/country-list
+													.col-md-4
+														.select-wrap
+															select(
+																multiple
+																placeholder="Month"
+																data-jcf={
+																	multipleCompactStyle: true
+																}
+															).jcf-hidden
+																each val, index in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+																	option(val= index)= val
 
-												.form-group.md-form
-													label(for="Profession" class="bmd-label-floating") Profession
-													input(id="Profession" class="form-control")
+													.col-md-4
+														.select-wrap
+															select(
+																multiple
+																placeholder="Year"
+																data-jcf={
+																	multipleCompactStyle: true
+																}
+															).jcf-hidden
+																- for (var i = 1920; i < 2018; i++)
+																	option(= i)= i
+
+
+
+											.card-element
+												p.element-label Nationality
+												.select-wrap
+													select(
+														multiple
+														placeholder="Nationality"
+														data-jcf={
+															multipleCompactStyle: true
+														}
+													).jcf-hidden
+														each val, index in ['Chinese', 'English', 'Deutch', 'Greek']
+															option(val= index)= val
+
+											.card-element
+												p.element-label Country of Residence
+												.select-wrap
+													select(
+														multiple
+														placeholder="Country of Residence"
+														data-jcf={
+															multipleCompactStyle: true
+														}
+													).jcf-hidden
+														each val, index in ['Chinese', 'English', 'Deutch', 'Greek']
+															option(val= index)= val
+
+											.card-element
+												p.element-label Profession
+												.input-wrap
+													input(type="text" value="", placeholder="Profession")
+
 								.col-lg-6
-									.card
+									.card.profile-card-item
 										.card-body
-											form(style="color: #757575;")
-												.form-group.md-form
-													label(for="Annual" class="bmd-label-floating") Annual income
-													input(id="Annual" type="text" class="form-control")
+											.card-element
+												p.element-label Annual income
+												.input-wrap
+													input(type="text" value="")
 
-												.form-group.md-form
-													label(for="BankOwner" class="bmd-label-floating") Bank owner name
-													input(id="BankOwner" type="text" class="form-control")
+											.card-element
+												p.element-label Bank owner name
+												.input-wrap
+													input(type="text" value="")
 
-												.form-group.md-form
-													label(for="city" class="bmd-label-floating") City
-													textarea(id="city" class="form-control md-textarea" rows=4)
+											.card-element
+												p.element-label City
+												.input-wrap
+													input(type="text" value="")
 
-												.form-group.md-form
-													label(for="iban" class="bmd-label-floating") IBAN
-													input(id="iban" class="form-control")
+											.card-element
+												p.element-label IBAN
+												.input-wrap
+													input(type="text" value="")
 
-												.form-group.md-form
-													label(for="bic" class="bmd-label-floating") BIC
-													input(id="bic" class="form-control")
+											.card-element
+												p.element-label BIC
+												.input-wrap
+													input(type="text" value="")
 
 								.col-md-12.text-center
 									button(type="submit").btn.btn-primary.btn-raised Submit
