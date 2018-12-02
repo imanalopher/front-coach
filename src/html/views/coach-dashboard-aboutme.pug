@@ -46,16 +46,11 @@ block wrapper
 								.col-lg-6
 									.profile-card-item
 										#profile-avatar-loader
-											#profile-image-handler
+											#dashboard-profile-image
 												+renderimg('default-user.png')
-
-											#avatar-loader-wrapper
-												label(for="avatar-uploader")#avatar-uploader-label Upload File
-													input(type="file" id="avatar-uploader" hidden)
-												#image-drag-upload
-													span Or Drag And Drop File Here
-										form(action="#" method="post" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone")
-											input(type="file" name="file")
+											#avatar-load-zone
+												form(action="#" method="post" enctype="multipart/form-data").dropzone
+													input(type="file" name="file" hidden)
 
 								.col-lg-6
 									.profile-card-item
