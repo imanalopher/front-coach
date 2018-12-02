@@ -54,47 +54,51 @@ block wrapper
 
 								.col-lg-6
 									.profile-card-item
-										p.card-title My Language
+										form(action="#")
+											p.card-title My Language
 
-										.card-element
-											p.element-label Language spoken (at least 1 required):
-											.select-wrap
-												select(
-													multiple
-													placeholder="Coaching type..."
-													data-jcf={
-														multipleCompactStyle: true
-													}
-												).jcf-hidden
-													each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
-														option(val= index)= val
+											.card-element
+												p.element-label Language spoken (at least 1 required):
+												.select-wrap
+													select(
+														multiple
+														placeholder="Coaching type..."
+														data-jcf={
+															multipleCompactStyle: true
+														}
+													).jcf-hidden
+														each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+															option(val= index)= val
 
-										.card-element
-											p.element-label Tell Us About Yourself
-											.text-handler
-												textarea(placeholder="Introduction" data-lang="en")
-												textarea(placeholder="Introduction" data-lang="gr" hidden)
+											.card-element
+												p.element-label Tell Us About Yourself
+												.text-handler
+													textarea(placeholder="Introduction" data-lang="en")
+													textarea(placeholder="Introduction" data-lang="gr" hidden)
 
-										.container-fluid
-											.row
-												.col-lg-6
-													.card-element
-														p.element-label Translate From:
-														.select-wrap
-															select(
-																placeholder="Choose Language..."
-															).jcf-hidden
-																each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
-																	option(val= index)= val
-												.col-lg-6
-													.card-element
-														p.element-label Translate To:
-														.select-wrap
-															select(
-																placeholder="Choose Language..."
-															).jcf-hidden
-																each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
-																	option(val= index)= val
+											.container-fluid
+												.row
+													.col-lg-6
+														.card-element
+															p.element-label Translate From:
+															.select-wrap
+																select(
+																	placeholder="Choose Language..."
+																).jcf-hidden
+																	each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+																		option(val= index)= val
+													.col-lg-6
+														.card-element
+															p.element-label Translate To:
+															.select-wrap
+																select(
+																	placeholder="Choose Language..."
+																).jcf-hidden
+																	each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+																		option(val= index)= val
+
+													button(type="submit")#dashboard-update.btn-raised
+														span Update
 
 								.col-lg-12.text-center
 									button(type="submit").btn.btn-primary.btn-raised Update
