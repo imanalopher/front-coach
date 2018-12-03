@@ -39,56 +39,72 @@ block wrapper
 
 							.row
 								.col-lg-6
-									.card
+									.card.profile-card-item
 										.card-body
-											form(style="color: #757575;")
-												.form-group.md-form
-													label(for="Email" class="bmd-label-floating") Email
-													input(id="Email" type="text" class="form-control" value="e-mail@gmail.com")
+											.card-element
+												p.element-label Email
+												.input-wrap
+													input(type="text" value="e-mail@gmail.com")
 
-												.form-group.md-form
-													label(for="PhonePrefix" class="bmd-label-floating") Phone prefix
-													input(id="PhonePrefix" type="text" class="form-control" value="+35")
+											.card-element
+												p.element-label Phone prefix
+												.input-wrap
+													input(type="text" value="+35")
 
-												.form-group.md-form
-													label(for="Phone" class="bmd-label-floating") Phone
-													input(id="Phone" class="form-control" value="87698709879")
+											.card-element
+												p.element-label Phone
+												.input-wrap
+													input(type="text" value="87698709879")
 
-												.form-group.md-form
-													label(class="") Timezone
-													include ../includes/country-list
+											.card-element
+												p.element-label Timezone
+												.select-wrap
+													select(
+														placeholder="Timezone"
+														data-jcf={
+															multipleCompactStyle: true
+														}
+													).jcf-hidden
+														each val, index in ['Etc/GMT+12', "Etc/GMT+11", "Pacific/Midway", "Pacific/Niue", "Pacific/Pago_Pago", "Etc/GMT+10", "Pacific/Honolulu", "Pacific/Johnston", "Pacific/Rarotonga", "Pacific/Tahiti"]
+															option(val= index)= val
+											.card-element
+												p.element-label Password
+												.input-wrap
+													input(type="password" placeholder="password")
 
-												.form-group.md-form
-													label(for="Password" class="bmd-label-floating") Password
-													input(id="Password" type="password" class="form-control")
-
-												.form-group.md-form
-													label(for="Verification" class="bmd-label-floating") Verification
-													input(id="Verification" type="password" class="form-control")
+											.card-element
+												p.element-label Verification
+												.input-wrap
+													input(type="password" placeholder="verification")
 								.col-lg-6
-									.card
+									.card.profile-card-item
 										.card-body
 											h5 Billing Address
-											form(style="color: #757575;")
-												.form-group.md-form
-													label(for="Address" class="bmd-label-floating") Address
-													textarea(id="Address" class="form-control" rows=4)
+											.card-element
+												p.element-label Address
+												.input-wrap
+													textarea(rows=4)
 
-												.form-group.md-form
-													label(for="city" class="bmd-label-floating") City
-													textarea(id="city" class="form-control md-textarea" rows=4)
+											.card-element
+												p.element-label City
+												.input-wrap
+													input(type="text" placeholder="city...")
 
-												.form-group.md-form
-													label(for="Postal" class="bmd-label-floating") Postal code
-													input(id="Postal" type="text" class="form-control")
+											.card-element
+												p.element-label Postal code
+												.input-wrap
+													input(type="text" placeholder="postal code...")
 
-												.form-group.md-form.country
-													label(class="bmd-label-floating") Country
+											.card-element
+												p.element-label Country
+												.input-wrap
 													include ../includes/country-list
 
-												.form-group.md-form
-													label(for="bic" class="bmd-label-floating") BIC
-													input(id="bic" class="form-control")
+											.card-element
+												p.element-label BIC
+												.input-wrap
+													input(type="text" placeholder="BIC")
 
-								.col-md-12.text-center
-									button(type="submit").btn.btn-primary.btn-raised Submit
+							.button-row
+								button(type="submit").btn.btn-primary.btn-raised
+									span Update
