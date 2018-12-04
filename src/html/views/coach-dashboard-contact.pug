@@ -5,15 +5,16 @@ block wrapper
 		.container
 			include ../includes/breadcrumb
 
-		#dashboard-content.content.card
+		#dashboard-content.content
 			nav#dash-board-nav
 				ul
-					each val in ['Mi Message', 'Mi Bookings', 'My Payments', 'My Comments']
-						li
-							a(href="#")= val
-
-					li
-						a(href="#").active My Profile
+					each val, index in {'Mi Message': 0, 'Mi Bookings': 0, 'My Payments': 0, 'My Comments': 0, 'My Profile': 1}
+						if val === 0
+							li
+								a(href="#")= index
+						else
+							li
+								a(href="#").active= index
 
 			#dashboard-profile.dashboard-section
 				#coach-fullname
