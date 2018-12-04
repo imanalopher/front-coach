@@ -43,17 +43,18 @@ block wrapper
 							h5.tab-title About
 							.row
 								.col-lg-6
-									.profile-card-item
-										#profile-avatar-loader
-											#dashboard-profile-image
-												+renderimg('default-user.png')
-											#avatar-load-zone
-												form(action="#" method="post" enctype="multipart/form-data").dropzone
-													input(type="file" name="file" hidden)
+									.card.profile-card-item
+										.card-body
+											#profile-avatar-loader
+												#dashboard-profile-image
+													+renderimg('default-user.png')
+												#avatar-load-zone
+													form(action="#" method="post" enctype="multipart/form-data").dropzone
+														input(type="file" name="file" hidden)
 
 								.col-lg-6
-									.profile-card-item
-										form(action="#")
+									.card.profile-card-item
+										.card-body
 											p.card-title My Language
 
 											.card-element
