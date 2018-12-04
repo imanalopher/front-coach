@@ -1,67 +1,46 @@
-#coach-dashboard
+.message-card
+  border: 1px solid $light-grey
+  border-radius: 15px
+  padding: 15px
+  margin: 15px 0
+  display: flex
 
-  #dashboard-content
-    padding: 20px
+  .message-preview-img
+    a
+      border-radius: 15px
+      overflow: hidden
+      display: block
 
-    #dash-board-nav
-      margin-bottom: 15px
+      img
+        max-width: 100%
+        min-height: 100%
+        width: auto
+        height: auto
 
-    .row
+  .message-content
+    flex: 1
+    width: 100%
+    padding: 0 15px
 
-      .col-lg-12
-        padding-top: 10px
-        padding-bottom: 10px
+    .content-header
+      display: flex
+      justify-content: space-between
+      align-items: center
 
-        &:last-child
-          padding-top: 30px
+    .message-title
+      font-weight: 700
 
-        .card
-          border-radius: 15px
+    .message-middle
+      display: flex
 
-          .card-body
-
-            .img-holder
-              position: relative
-              float: left
-              margin: 0 19px 0 0
-              min-width: 20%
-
-              img
-                width: 100%
-
-            .holder
-              padding: 0
-              overflow: hidden
-
-              h5
-                float: left
-              span
-                float: right
-
-              .message-header
-                position: relative
-                overflow: hidden
-
-                h5
-                  font-weight: 700
-
-                span
-                  font-weight: 700
-
-              .message-text
-                position: relative
-
-            .share-links
-              float: right
-
-              a
-                margin-top: 1rem
-                font-weight: 700
-                margin-right: 5px
-                background-color: $blue !important
-                border-color: $blue !important
-                border-radius: 3rem
-
-              svg, i
-                margin-right: 5px
-
+  .message-btns
+    a
+      border-radius: 30px
+      @extend %force-centered
+      background-color: $blue
+      @extend %hover-effect
+      color: #fff
+      margin-bottom: 10px
+      text-transform: uppercase
+      width: 150px
+      padding: 10px 30px

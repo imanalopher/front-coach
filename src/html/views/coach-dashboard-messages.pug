@@ -1,0 +1,80 @@
+extends ../includes/layout
+
+block page-scripts
+	script(src="js/coach-dashboard-messages.js")
+
+block wrapper
+	main#coach-dashboard
+		.container
+			include ../includes/breadcrumb
+
+		#dashboard-content.content
+			nav#dash-board-nav
+				ul
+					each val, index in {'Mi Message': 1, 'Mi Bookings': 0, 'My Payments': 0, 'My Comments': 0, 'My Profile': 0}
+						if val === 1
+							li
+								a(href="#").active= index
+						else
+							li
+								a(href="#")= index
+
+			#dashboard-messages.dashboard-section
+				.container-fluid
+					.row
+
+						.col-12
+							.message-card
+								.message-preview-img
+									a(href="#")
+										+renderimg('default-user.png')
+
+								.message-content
+									.content-header
+										h5.message-title Titre du message
+
+									.message-middle
+										p.message-author You are tanking to: Antony N
+										include ../includes/rating-stars
+
+									.message-footer
+										p Antony N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..
+											a(href="#") [Read More]
+
+								.message-btns
+									a(href="#")
+										span Open
+
+									a(href="#")
+										span Reply
+
+									a(href="#")
+										span Delete
+
+						.col-12
+							.message-card
+								.message-preview-img
+									a(href="#")
+										+renderimg('default-user.png')
+
+								.message-content
+									.content-header
+										h5.message-title Titre du message
+
+									.message-middle
+										p.message-author You are tanking to: Antony N
+										include ../includes/rating-stars
+
+									.message-footer
+										p Antony N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..
+											a(href="#") [Read More]
+
+								.message-btns
+									a(href="#")
+										span Open
+
+									a(href="#")
+										span Reply
+
+									a(href="#")
+										span Delete
