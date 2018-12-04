@@ -1,0 +1,29 @@
+#pagination
+  margin: 15px
+
+  ul
+    @extend %force-centered
+    list-style: none
+    margin: 0
+    padding: 0
+
+    li
+      margin: 0 5px
+
+      &.active
+        span
+          display: block
+          background-color: $blue
+          border-radius: 30px
+          padding: 5px 15px
+          color: #fff
+
+      a
+        display: block
+        background: $light-grey
+        border-radius: 30px
+        padding: 5px 15px
+        text-decoration: none
+        color: $blue
+        @extend %hover-effect
+
