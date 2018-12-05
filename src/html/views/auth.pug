@@ -1,65 +1,65 @@
 extends ../includes/layout
 
 block wrapper
-    main#auth-page.page-content
-        .container
-            .row
-                .col-md-6
-                    .card.form-card
-                        .card-header Register New Account (free)
-                        .card-body
-                            form
-                                .row
-                                    .col-md-6
-                                        .form-group
-                                            label(for="reg-first-name").bmd-label-floating First Name
-                                            input(type="text" name="firstName")#reg-first-name.form-control
+	main#auth-page.page-content
+		.container
+			.row
+				.col-md-6
+					.card.form-card
+						.card-header Register New Account (free)
+						.card-body
+							form
+								.row
+									.col-md-6
+										.form-group
+											label(for="reg-first-name").bmd-label-floating First Name
+											input(type="text" name="firstName")#reg-first-name.form-control
 
-                                    .col-md-6
-                                        .form-group
-                                            label(for="reg-last-name").bmd-label-floating Last Name
-                                            input(type="text" name="lastName")#reg-last-name.form-control
+									.col-md-6
+										.form-group
+											label(for="reg-last-name").bmd-label-floating Last Name
+											input(type="text" name="lastName")#reg-last-name.form-control
 
-                                    .col-md-12
-                                        .form-group
-                                            label(for="reg-email").bmd-label-floating Email
-                                            input(type="email" name="email")#reg-email.form-control
+									.col-md-12
+										.form-group
+											label(for="reg-email").bmd-label-floating Email
+											input(type="email" name="email")#reg-email.form-control
 
-                                    .col-md-6
-                                        .form-group
-                                            label(for="reg-password").bmd-label-floating Password
-                                            input(type="password" name="password")#reg-password.form-control
+									.col-md-6
+										.form-group
+											label(for="reg-password").bmd-label-floating Password
+											input(type="password" name="password")#reg-password.form-control
 
-                                    .col-md-6
-                                        .form-group
-                                            label(for="reg-confirm-password").bmd-label-floating Confirm Password
-                                            input(type="password" name="confirmPassword")#reg-confirm-password.form-control
+									.col-md-6
+										.form-group
+											label(for="reg-confirm-password").bmd-label-floating Confirm Password
+											input(type="password" name="confirmPassword")#reg-confirm-password.form-control
 
-                                .form-bottom
-                                    .checkbox
-                                        label
-                                            input(type="checkbox" name="acceptTerms")
-                                            a(href="terms").form-check-label Accept Terms
+								.form-bottom
+									.checkbox
+										label
+											input(type="checkbox" name="acceptTerms")
+											a(href="terms").form-check-label Accept Terms
 
-                                    button(type="submit").btn.btn-primary.btn-raised Submit
+									button(type="submit").btn.btn-primary.btn-raised Submit
 
-                .col-md-6
-                    .card.form-card
-                        .card-header Login to an Existing Account
-                        .card-body
-                            form
-                                .row
-                                    .col-md-12
-                                        .form-group
-                                            label(for="login-email").bmd-label-floating Email
-                                            input(type="email" name="email")#login-email.form-control
+				.col-md-6
+					.card.form-card
+						.card-header Login to an Existing Account
+						.card-body
+							form
+								.row
+									.col-md-12
+										.form-group
+											label(for="login-email").bmd-label-floating Email
+											input(type="email" name="email")#login-email.form-control
 
-                                    .col-md-12
-                                        .form-group
-                                            label(for="login-password").bmd-label-floating Password
-                                            input(type="password" name="password")#login-password.form-control
+									.col-md-12
+										.form-group
+											label(for="login-password").bmd-label-floating Password
+											input(type="password" name="password")#login-password.form-control
 
-                                .form-bottom
-                                    a(href="terms") Forgot Password
+								.form-bottom
+									a(href="terms") Forgot Password
 
-                                    button(type="submit").btn.btn-primary.btn-raised Log In
+									button(type="submit").btn.btn-primary.btn-raised Log In

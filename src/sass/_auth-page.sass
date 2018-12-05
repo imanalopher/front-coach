@@ -1,15 +1,13 @@
 #auth-page
   padding-bottom: 30px
-  background-image: url('../img/featured.jpg')
-  @extend %bg-cover
+  background-color: $light-grey
 
   a
     color: $blue
 
   .form-card
-    border-radius: .25rem
-    overflow: hidden
-    box-shadow: 0px 3px 10px 0px rgba($grey, 0.05)
+    background-color: transparent
+    box-shadow: none
 
     .card-header
       background-color: $blue
@@ -19,9 +17,15 @@
       font-weight: 700
       font-size: 1.125rem
       border: none
+      border-radius: 15px
+      margin-bottom: 10px
+      box-shadow: 0 3px 10px 0 rgba($grey, 0.05)
 
     .card-body
       min-height: 430px
+      background-color: #fff
+      border-radius: 15px
+      box-shadow: 0 3px 10px 0 rgba($grey, 0.05)
 
   .form-bottom
     display: flex
