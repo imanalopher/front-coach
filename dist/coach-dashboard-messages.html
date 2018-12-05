@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Coach » auth</title>
+  <title>Coach » coach-dashboard-messages</title>
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96">
@@ -30,7 +30,27 @@
           <div class="col-xl-4">
             <div id="logo"><a href="/"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1685.67 262.79">
                   <defs>
-                    <style>.cls-1{fill:#00d1d2;}.cls-2{fill:#01cdc8;}.cls-3{fill:#01cdc9;}.cls-4{fill:#00cdc8;}.cls-5{fill:#02cec9;}</style>
+                    <style>
+                      .cls-1 {
+                        fill: #00d1d2;
+                      }
+
+                      .cls-2 {
+                        fill: #01cdc8;
+                      }
+
+                      .cls-3 {
+                        fill: #01cdc9;
+                      }
+
+                      .cls-4 {
+                        fill: #00cdc8;
+                      }
+
+                      .cls-5 {
+                        fill: #02cec9;
+                      }
+                    </style>
                   </defs>
                   <title>logo</title>
                   <path class="cls-1" d="M791.93,118.66c0-16-.13-32,.1-48,.05-3.81-1-4.93-4.76-4.66a101.21,101.21,0,0,1-13.49,0c-3.22-.2-3.88,1-3.84,4,.15,11.49.06,23,.06,34.49v9.35c-17.06-17.83-49-15.11-64.44,1.37C688,133.93,688.32,166,706,183.89c16.19,16.4,47.79,18.76,64.46.73,1.24,4-1.4,9,1.4,10.76s7.4.54,11.22.61a37.37,37.37,0,0,1,4.49,0c3.53.51,4.45-.89,4.42-4.39C791.86,167.32,791.93,143,791.93,118.66Zm-49.49,59.69c-16.5-.06-27.74-12-27.58-29.42.15-17,11.62-28.94,27.75-28.88,16.32.06,27.74,12.3,27.58,29.55C770,166.7,758.73,178.41,742.44,178.35Z" transform="translate(0)" />
@@ -81,96 +101,113 @@
         </div>
       </div>
     </header>
-    <main class="page-content" id="auth-page">
+    <main id="coach-dashboard">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card form-card">
-              <div class="card-header">Register New Account (free)</div>
-              <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">First Name</p>
-                        <div class="input-wrap">
-                          <input type="text" placeholder="Enter Your First Name">
-                        </div>
+        <div id="breadcrumb">
+          <ul>
+            <li><a href="#">Home</a>
+            </li>
+            <li><a href="#">Coach list</a>
+            </li>
+            <li><span>Silvia Di Bonaventura</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content" id="dashboard-content">
+        <nav id="dash-board-nav">
+          <ul>
+            <li><a class="active" href="#">Mi Message</a></li>
+            <li><a href="#">Mi Bookings</a></li>
+            <li><a href="#">My Payments</a></li>
+            <li><a href="#">My Comments</a></li>
+            <li><a href="#">My Profile</a></li>
+          </ul>
+        </nav>
+        <div class="dashboard-section" id="dashboard-messages">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="message-card">
+                  <div class="message-preview-img"><a href="#"><img src="../img/default-user.png" alt="default-user.png"></a></div>
+                  <div class="message-content">
+                    <div class="content-header">
+                      <h5 class="message-title"><a href="#">Titre du message</a></h5><span class="message-date">Date: 25/02/2018</span>
+                    </div>
+                    <div class="message-middle">
+                      <p class="message-author">You are tanking to:<span>Antony N</span></p>
+                      <div class="rating">
+                        <div class="rating-star"><i class="far fa-star"></i></div>
+                        <div class="rating-star"><i class="far fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">Last Name</p>
-                        <div class="input-wrap">
-                          <input type="text" placeholder="Enter Your Last Name">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="card-element">
-                        <p class="element-label">Email</p>
-                        <div class="input-wrap">
-                          <input type="email" placeholder="Enter Your Email">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">Password</p>
-                        <div class="input-wrap">
-                          <input type="password" placeholder="Enter Password">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">Confirm Password</p>
-                        <div class="input-wrap">
-                          <input type="password" placeholder="Confirm Password">
-                        </div>
-                      </div>
+                    <div class="message-footer">
+                      <p>Antony N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..<a href="#">[Read More]</a></p>
                     </div>
                   </div>
-                  <div class="form-bottom">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="acceptTerms"><a class="form-check-label" href="terms">Accept Terms</a>
-                      </label>
+                  <div class="message-btns"><a href="#"><span>Open</span></a><a href="#"><span>Reply</span></a><a href="#"><span>Delete</span></a></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="message-card">
+                  <div class="message-preview-img"><a href="#"><img src="../img/default-user.png" alt="default-user.png"></a></div>
+                  <div class="message-content">
+                    <div class="content-header">
+                      <h5 class="message-title"><a href="#">Titre du message</a></h5><span class="message-date">Date: 25/02/2018</span>
                     </div>
-                    <button class="btn btn-primary btn-raised" type="submit">Submit</button>
+                    <div class="message-middle">
+                      <p class="message-author">You are tanking to:<span>Antony N</span></p>
+                      <div class="rating">
+                        <div class="rating-star"><i class="far fa-star"></i></div>
+                        <div class="rating-star"><i class="far fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                      </div>
+                    </div>
+                    <div class="message-footer">
+                      <p>Antony N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..<a href="#">[Read More]</a></p>
+                    </div>
                   </div>
-                </form>
+                  <div class="message-btns"><a href="#"><span>Open</span></a><a href="#"><span>Reply</span></a><a href="#"><span>Delete</span></a></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="message-card">
+                  <div class="message-preview-img"><a href="#"><img src="../img/default-user.png" alt="default-user.png"></a></div>
+                  <div class="message-content">
+                    <div class="content-header">
+                      <h5 class="message-title"><a href="#">Titre du message</a></h5><span class="message-date">Date: 25/02/2018</span>
+                    </div>
+                    <div class="message-middle">
+                      <p class="message-author">You are tanking to:<span>Antony N</span></p>
+                      <div class="rating">
+                        <div class="rating-star"><i class="far fa-star"></i></div>
+                        <div class="rating-star"><i class="far fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                        <div class="rating-star"><i class="fas fa-star"></i></div>
+                      </div>
+                    </div>
+                    <div class="message-footer">
+                      <p>Antony N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..<a href="#">[Read More]</a></p>
+                    </div>
+                  </div>
+                  <div class="message-btns"><a href="#"><span>Open</span></a><a href="#"><span>Reply</span></a><a href="#"><span>Delete</span></a></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card form-card">
-              <div class="card-header">Login to an Existing Account</div>
-              <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="card-element">
-                        <p class="element-label">Email</p>
-                        <div class="input-wrap">
-                          <input type="email" placeholder="Enter Your Email">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="card-element">
-                        <p class="element-label">Password</p>
-                        <div class="input-wrap">
-                          <input type="password" placeholder="Password">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-bottom"><a href="terms">Forgot Password</a>
-                    <button class="btn btn-primary btn-raised" type="submit">Log In</button>
-                  </div>
-                </form>
-              </div>
+            <div id="pagination">
+              <ul>
+                <li><a href="#"><span><i class="fas fa-angle-left"></i></span></a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#"><span>2</span></a></li>
+                <li><a href="#"><span>3</span></a></li>
+                <li><a href="#"><span><i class="fas fa-angle-right"></i></span></a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -214,6 +251,7 @@
       </div>
     </footer>
     <script src="js/common.js"></script>
+    <script src="js/coach-dashboard-messages.js"></script>
   </div>
 </body>
 

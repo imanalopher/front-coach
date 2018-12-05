@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Coach » auth</title>
+  <title>Coach » coach-dashboard-aboutme</title>
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96">
@@ -81,95 +81,120 @@
         </div>
       </div>
     </header>
-    <main class="page-content" id="auth-page">
+    <main id="coach-dashboard">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card form-card">
-              <div class="card-header">Register New Account (free)</div>
-              <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">First Name</p>
-                        <div class="input-wrap">
-                          <input type="text" placeholder="Enter Your First Name">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">Last Name</p>
-                        <div class="input-wrap">
-                          <input type="text" placeholder="Enter Your Last Name">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="card-element">
-                        <p class="element-label">Email</p>
-                        <div class="input-wrap">
-                          <input type="email" placeholder="Enter Your Email">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">Password</p>
-                        <div class="input-wrap">
-                          <input type="password" placeholder="Enter Password">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-element">
-                        <p class="element-label">Confirm Password</p>
-                        <div class="input-wrap">
-                          <input type="password" placeholder="Confirm Password">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-bottom">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="acceptTerms"><a class="form-check-label" href="terms">Accept Terms</a>
-                      </label>
-                    </div>
-                    <button class="btn btn-primary btn-raised" type="submit">Submit</button>
-                  </div>
-                </form>
-              </div>
-            </div>
+        <div id="breadcrumb">
+          <ul>
+            <li><a href="#">Home</a>
+            </li>
+            <li><a href="#">Coach list</a>
+            </li>
+            <li><span>Silvia Di Bonaventura</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content" id="dashboard-content">
+        <nav id="dash-board-nav">
+          <ul>
+            <li><a href="#">Mi Message</a></li>
+            <li><a href="#">Mi Bookings</a></li>
+            <li><a href="#">My Payments</a></li>
+            <li><a href="#">My Comments</a></li>
+            <li><a class="active" href="#">My Profile</a></li>
+          </ul>
+        </nav>
+        <div class="dashboard-section" id="dashboard-profile">
+          <div id="coach-fullname">
+            <h4>Silvia Di Bonaventura</h4><a href="#"><span><i class="far fa-address-card"></i>See My profile</span></a>
           </div>
-          <div class="col-md-6">
-            <div class="card form-card">
-              <div class="card-header">Login to an Existing Account</div>
-              <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="card-element">
-                        <p class="element-label">Email</p>
-                        <div class="input-wrap">
-                          <input type="email" placeholder="Enter Your Email">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="card-element">
-                        <p class="element-label">Password</p>
-                        <div class="input-wrap">
-                          <input type="password" placeholder="Password">
+          <div id="dashboard-profile-tabs">
+            <div class="tabs-sidebar">
+              <ul>
+                <li><a class="active" href="#">About Me</a></li>
+                <li><a href="#">Payment Information</a></li>
+                <li><a href="#">Contact Information</a></li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="container-fluid">
+                <h5 class="tab-title">About</h5>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="card profile-card-item">
+                      <div class="card-body">
+                        <div id="profile-avatar-loader">
+                          <div id="dashboard-profile-image"><img src="../img/default-user.png" alt="default-user.png">
+                          </div>
+                          <div id="avatar-load-zone">
+                            <form class="dropzone" action="#" method="post" enctype="multipart/form-data">
+                              <input type="file" name="file" hidden>
+                            </form>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="form-bottom"><a href="terms">Forgot Password</a>
-                    <button class="btn btn-primary btn-raised" type="submit">Log In</button>
+                  <div class="col-lg-6">
+                    <div class="card profile-card-item">
+                      <div class="card-body">
+                        <p class="card-title">My Language</p>
+                        <div class="card-element">
+                          <p class="element-label">Language spoken (at least 1 required):</p>
+                          <div class="select-wrap">
+                            <select class="jcf-hidden" multiple placeholder="Coaching type..." data-jcf="{&quot;multipleCompactStyle&quot;:true}">
+                              <option val="0">Chinese</option>
+                              <option val="1">English</option>
+                              <option val="2">Dutch</option>
+                              <option val="3">Greek</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="card-element">
+                          <p class="element-label">Tell Us About Yourself</p>
+                          <div class="text-handler">
+                            <textarea placeholder="Introduction" data-lang="en"></textarea>
+                            <textarea placeholder="Introduction" data-lang="gr" hidden></textarea>
+                          </div>
+                        </div>
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div class="card-element">
+                                <p class="element-label">Translate From:</p>
+                                <div class="select-wrap">
+                                  <select class="jcf-hidden" placeholder="Choose Language...">
+                                    <option val="0">Chinese</option>
+                                    <option val="1">English</option>
+                                    <option val="2">Dutch</option>
+                                    <option val="3">Greek</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="card-element">
+                                <p class="element-label">Translate To:</p>
+                                <div class="select-wrap">
+                                  <select class="jcf-hidden" placeholder="Choose Language...">
+                                    <option val="0">Chinese</option>
+                                    <option val="1">English</option>
+                                    <option val="2">Dutch</option>
+                                    <option val="3">Greek</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="btn-raised" type="submit" id="dashboard-update"><span>Update</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </form>
+                  <div class="col-lg-12 text-center">
+                    <button class="btn btn-primary btn-raised" type="submit">Update</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -214,6 +239,7 @@
       </div>
     </footer>
     <script src="js/common.js"></script>
+    <script src="js/coach-dashboard-aboutme.js"></script>
   </div>
 </body>
 
