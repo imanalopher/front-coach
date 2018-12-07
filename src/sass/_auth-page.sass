@@ -20,7 +20,6 @@
       padding: 0
 
     .card-body
-      min-height: 430px
       background-color: #fff
       border-radius: 15px
       box-shadow: 0 3px 10px 0 rgba($grey, 0.05)
@@ -28,6 +27,11 @@
       height: 100%
 
   .form-bottom
-    display: flex
+    @extend %force-centered
     flex-direction: column
-    align-items: center
+
+    .bmd-form-group
+      padding: 0
+
+    .c-button
+      margin-top: 15px

@@ -40,13 +40,14 @@ block wrapper
 											.input-wrap
 												input(type="password" placeholder="Confirm Password")
 
-								.form-bottom
+								.form-bottom.text-center
 									.checkbox
 										label
 											input(type="checkbox" name="acceptTerms")
 											a(href="terms").form-check-label Accept Terms
 
-									button(type="submit").btn.btn-primary.btn-raised Submit
+									button(type="submit").c-button.colored-btn
+										span Register
 
 				.col-md-6
 					.card.form-card
@@ -70,4 +71,5 @@ block wrapper
 								.form-bottom
 									a(href="terms") Forgot Password
 
-									button(type="submit").btn.btn-primary.btn-raised Log In
+									button(type="submit").c-button.colored-btn
+										span Log In
