@@ -30,12 +30,12 @@ block wrapper
 				#dashboard-profile-tabs
 					.tabs-sidebar
 						ul
-							each val, index in {'About Me': 0, 'Payment Information': 1, 'Contact Information': 0}
-								li
-									if val === 1
-										a(href="#").active= index
-									else
-										a(href="#")= index
+							li
+								a(href="coach-dashboard-aboutme.html") About Me
+							li
+								a(href="coach-dashboard-paymentinformation.html").active Payment Information
+							li
+								a(href="coach-dashboard-contact.html") Contact Information
 
 					.tab-content
 						.container-fluid
