@@ -4,27 +4,19 @@
   .rate-level
     margin: 0 2px
 
-    &:hover
-      .rate-level-label
-        .filled-star
-          display: block
-
-        .stroke-star
-          display: none
-
-    input:checked + label
-      .filled-star
-        display: block
-
-      .stroke-star
-        display: none
-
     .rate-level-label
       color: $yellow
       margin: 0
 
       .filled-star
-        //display: none
+        display: none
+
+    .show-star
+      .filled-star
+        display: block
+
+      .stroke-star
+        display: none
 
 #review-form
   border: 1px solid $light-grey

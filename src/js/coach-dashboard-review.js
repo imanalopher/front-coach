@@ -1,15 +1,21 @@
 
 $(() => {
-  console.log("$");
-  $(".rate-level-input").change(e => {
-    let rateLevel = e.target;
-    $(".rate-level-input").not($(rateLevel)).prop("checked", false);
+  $(".rate-level-label").hover(function () {
 
-    let length = $(rateLevel).val();
+    let attrFor = $(this).attr("for");
+    let number = attrFor[attrFor.length - 1];
 
-    for (let i = 1; i < length; i++) {
-      $("#rate-level-" + i).prop("checked", true);
-    }
+    $('.rate-level-label').each(function (r) {
+
+      let innerFor = $(this).attr("for");
+      let innerNumber = innerFor[innerFor.length - 1];
+
+      if (number >= innerNumber) {
+        $(this).addClass("show-star");
+      } else {
+        $(this).removeClass("show-star");
+      }
+
+    });
   });
 });
-console.log("before");
