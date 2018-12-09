@@ -45,3 +45,18 @@ block wrapper
 										.average-grade
 											p Average grade:
 											include ../includes/rating-stars
+
+								form
+									.rate-user
+										span Rate this user:
+
+										.rate-form
+											each val in [1, 2, 3, 4, 5]
+												.rate-level
+													input(type="checkbox" id="rate-level-" + val class="rate-level-input" value= val hidden)
+													label(for="rate-level-" + val).rate-level-label
+														.filled-star
+															i.fas.fa-star
+
+														.stroke-star
+															i.far-fa-star

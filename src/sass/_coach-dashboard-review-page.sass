@@ -1,3 +1,31 @@
+.rate-form
+  display: flex
+
+  .rate-level
+    margin: 0 2px
+
+    &:hover
+      .rate-level-label
+        .filled-star
+          display: block
+
+        .stroke-star
+          display: none
+
+    input:checked + label
+      .filled-star
+        display: block
+
+      .stroke-star
+        display: none
+
+    .rate-level-label
+      color: $yellow
+      margin: 0
+
+      .filled-star
+        display: none
+
 #review-form
   border: 1px solid $light-grey
   border-radius: 15px
@@ -48,3 +76,19 @@
     .average-grade
       margin-top: 15px
       display: flex
+
+  .rate-user
+    @extend %force-centered
+    margin: 15px 0
+    padding: 30px
+    background-color: $light-grey
+    border: 1px solid $blue
+
+    span
+      font-weight: 700
+
+    .rate-form
+      margin-left: 10px
+
+      label
+        font-size: 1.5rem
