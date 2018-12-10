@@ -13,11 +13,11 @@ block wrapper
 					li
 						a(href="#") Mi Bookings
 					li
-						a(href="#").active My Payments
+						a(href="/coach-dashboard-payments.html").active My Payments
 					li
 						a(href="#") My Comments
 					li
-						a(href="#") My Profile
+						a(href="/coach-dashboard-aboutme.html") My Profile
 
 			#dashboard-mypayments.dashboard-section
 				.container-fluid
@@ -26,33 +26,74 @@ block wrapper
 							table.table.table-striped
 								thead
 									tr
-										th Booking number
-										th Date of payment
-										th Amount
-										th Status
-										th Bill
+										th(scope="col") Booking number
+										th(scope="col") Date of payment
+										th(scope="col") Amount
+										th(scope="col") Status
+										th(scope="col") Bill
 								tbody
 									tr
-										td(scope="row") 5406388
+										td(scope="row")
+											a(href="#") #5406388
 										td -
 										td €53.10
 										td In progress
 										td -
 									tr
-										td(scope="row") 9506234
+										td(scope="row")
+											a(href="#") #9506234
 										td -
 										td €130.10
 										td In progress
 										td -
 									tr
-										td(scope="row") 2606388
+										td(scope="row")
+											a(href="#") #2606388
 										td -
 										td €33.10
 										td In progress
 										td -
 									tr
-										td(scope="row") 1206098
+										td(scope="row")
+											a(href="#") #1206098
 										td -
 										td €90.10
 										td In progress
 										td -
+									tr
+										td(scope="row")
+											a(href="#") #5406388
+										td -
+										td €53.10
+										td In progress
+										td -
+									tr
+										td(scope="row")
+											a(href="#") #9506234
+										td -
+										td €130.10
+										td In progress
+										td -
+									tr
+										td(scope="row")
+											a(href="#") #2606388
+										td -
+										td €33.10
+										td In progress
+										td -
+									tr
+										td(scope="row")
+											a(href="#") #1206098
+										td -
+										td €90.10
+										td In progress
+										td -
+									tr
+										td(scope="row")
+											a(href="#") #5406388
+										td -
+										td €53.10
+										td In progress
+										td -
+
+					include ../includes/pagination
