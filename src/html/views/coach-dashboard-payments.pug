@@ -1,0 +1,58 @@
+extends ../includes/layout
+
+block wrapper
+	main#coach-dashboard
+		.container
+			include ../includes/breadcrumb
+
+		#dashboard-content.content
+			nav#dash-board-nav
+				ul
+					li
+						a(href="/coach-dashboard-messages.html") Mi Message
+					li
+						a(href="#") Mi Bookings
+					li
+						a(href="#").active My Payments
+					li
+						a(href="#") My Comments
+					li
+						a(href="#") My Profile
+
+			#dashboard-mypayments.dashboard-section
+				.container-fluid
+					.row
+						.col-lg-8.offset-lg-2
+							table.table.table-striped
+								thead
+									tr
+										th Booking number
+										th Date of payment
+										th Amount
+										th Status
+										th Bill
+								tbody
+									tr
+										td(scope="row") 5406388
+										td -
+										td €53.10
+										td In progress
+										td -
+									tr
+										td(scope="row") 9506234
+										td -
+										td €130.10
+										td In progress
+										td -
+									tr
+										td(scope="row") 2606388
+										td -
+										td €33.10
+										td In progress
+										td -
+									tr
+										td(scope="row") 1206098
+										td -
+										td €90.10
+										td In progress
+										td -
