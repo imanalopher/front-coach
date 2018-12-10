@@ -11,13 +11,16 @@ block wrapper
 		#dashboard-content.content
 			nav#dash-board-nav
 				ul
-					each val, index in {'Mi Message': 0, 'Mi Bookings': 0, 'My Payments': 0, 'My Comments': 0, 'My Profile': 1}
-						if val === 1
-							li
-								a(href="#").active= index
-						else
-							li
-								a(href="#")= index
+					li
+						a(href="/coach-dashboard-messages.html") Mi Message
+					li
+						a(href="#") Mi Bookings
+					li
+						a(href="#") My Payments
+					li
+						a(href="#") My Comments
+					li
+						a(href="/coach-dashboard-aboutme.html").active My Profile
 
 			#dashboard-profile.dashboard-section
 				#coach-fullname
