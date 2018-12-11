@@ -1,0 +1,104 @@
+extends ../includes/layout
+
+block wrapper
+	main#coach-dashboard
+		.container
+			include ../includes/breadcrumb
+
+		#dashboard-content.content
+			nav#dash-board-nav
+				ul
+					li
+						a(href="/coach-dashboard-messages.html") Mi Message
+					li
+						a(href="/coach-dashboard-bookings.html").active Mi Bookings
+					li
+						a(href="/coach-dashboard-payments.html") My Payments
+					li
+						a(href="#") My Comments
+					li
+						a(href="/coach-dashboard-aboutme.html") My Profile
+
+			#dashboard-bookings.dashboard-section
+				.container-fluid
+					.row
+
+						.col-lg-12
+							span.result-counter 3 Results
+						.col-lg-12
+							.message-card
+								.message-preview-img
+									a(href="#")
+										+renderimg('default-user.png')
+
+								.message-content
+									.content-header
+										h5.message-title
+											a(href="#") Listing One
+
+									.message-middle
+										.date-start
+											.date
+												b Start date:
+												span 25/02/2018
+											.date
+												b Start time:
+												span 13:00
+
+										.date-end
+											.date
+												b End date:
+												span 25/02/2018
+											.date
+												b End date:
+												span 15:00
+
+										.booking-number
+											b Booking number:
+											span 9876987
+
+								.message-btns
+									a(href="#").refused
+										span Status: Refused
+
+									a(href="#")
+										span Show
+						.col-lg-12
+							.message-card
+								.message-preview-img
+									a(href="#")
+										+renderimg('default-user.png')
+
+								.message-content
+									.content-header
+										h5.message-title
+											a(href="#") Listing One
+
+									.message-middle
+										.date-start
+											.date
+												b Start date:
+												span 25/02/2018
+											.date
+												b Start time:
+												span 13:00
+
+										.date-end
+											.date
+												b End date:
+												span 25/02/2018
+											.date
+												b End date:
+												span 15:00
+
+										.booking-number
+											b Booking number:
+											span 9876987
+
+								.message-btns
+									a(href="#").refused
+										span Status: Refused
+
+									a(href="#")
+										span Show
+						.col-lg-12
