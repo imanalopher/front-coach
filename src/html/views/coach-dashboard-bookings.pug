@@ -1,5 +1,8 @@
 extends ../includes/layout
 
+block page-scripts
+	script(src="js/coach-dashboard-mibookings.js")
+
 block wrapper
 	main#coach-dashboard
 		.container
@@ -19,86 +22,334 @@ block wrapper
 					li
 						a(href="/coach-dashboard-aboutme.html") My Profile
 
-			#dashboard-bookings.dashboard-section
+			#dashboard-mibookings.dashboard-section
 				.container-fluid
-					.row
 
-						.col-lg-12
-							span.result-counter 3 Results
-						.col-lg-12
-							.message-card
-								.message-preview-img
-									a(href="#")
-										+renderimg('default-user.png')
+					.booking-card
+						.booking-preview-img
+							a(href="#")
+								+renderimg('preview-default.png')
 
-								.message-content
-									.content-header
-										h5.message-title
-											a(href="#") Listing One
+						.booking-content
+							.content-header
+								h5.booking-title
+									a(href="#") Listing One
+								span.booking-number Booking number:
+									span 215423541 B
 
-									.message-middle
-										.date-start
-											.date
-												b Start date:
-												span 25/02/2018
-											.date
-												b Start time:
-												span 13:00
+							.booking-middle
+								p.booking-author You are talking to:
+									span Anthony N
+								include ../includes/rating-stars
 
-										.date-end
-											.date
-												b End date:
-												span 25/02/2018
-											.date
-												b End date:
-												span 15:00
+								.booking-times
+									.start-date
+										span Start Date:
+										| 12/05/2015
 
-										.booking-number
-											b Booking number:
-											span 9876987
+									.end-date
+										span End Date:
+										| 12/05/2015
 
-								.message-btns
-									a(href="#").refused
-										span Status: Refused
+									.duration
+										span Duration of the reservation:
+										| 4
 
-									a(href="#")
-										span Show
-						.col-lg-12
-							.message-card
-								.message-preview-img
-									a(href="#")
-										+renderimg('default-user.png')
+							.booking-footer
+								p
+									span Anthoni N. dit:
+									| ed tempus ante non metus ultricies vestibulum. Vestibulum eget ultrices nunc, nee feugiat purus.
+									a(href="#") [Read More]
 
-								.message-content
-									.content-header
-										h5.message-title
-											a(href="#") Listing One
+						.booking-card-right
+							.price 230,00 €
 
-									.message-middle
-										.date-start
-											.date
-												b Start date:
-												span 25/02/2018
-											.date
-												b Start time:
-												span 13:00
+							.status.accepted Waiting for the supplier
 
-										.date-end
-											.date
-												b End date:
-												span 25/02/2018
-											.date
-												b End date:
-												span 15:00
+							.expire-time Expires in 34 hours
 
-										.booking-number
-											b Booking number:
-											span 9876987
+							a(href="#")
+								span Open
 
-								.message-btns
-									a(href="#").refused
-										span Status: Refused
 
-									a(href="#")
-										span Show
-						.col-lg-12
+					.booking-card
+						.booking-preview-img
+							a(href="#")
+								+renderimg('preview-default.png')
+
+						.booking-content
+							.content-header
+								h5.booking-title
+									a(href="#") Listing Two
+								span.booking-number Booking number:
+									span 215423541 B
+
+							.booking-middle
+								p.booking-author You are talking to:
+									span Anthony N
+								include ../includes/rating-stars
+
+								.booking-times
+									.start-date
+										span Start Date:
+										| 12/05/2015
+
+									.end-date
+										span End Date:
+										| 12/05/2015
+
+									.duration
+										span Duration of the reservation:
+										| 8
+
+							.booking-footer
+								p
+									span Anthoni N. dit:
+									| ed tempus ante non metus ultricies vestibulum. Vestibulum eget ultrices nunc, nee feugiat purus.
+									a(href="#") [Read More]
+
+						.booking-card-right
+							.price 422,00 €
+
+							.status.expire Status: Expire
+
+							.expire-time Expires in 01:45 hours
+
+							a(href="#")
+								span Open
+
+
+					.booking-card
+						.booking-preview-img
+							a(href="#")
+								+renderimg('preview-default.png')
+
+						.booking-content
+							.content-header
+								h5.booking-title
+									a(href="#") Listing Three
+								span.booking-number Booking number:
+									span 215423541 B
+
+							.booking-middle
+								p.booking-author You are talking to:
+									span Anthony N
+								include ../includes/rating-stars
+
+								.booking-times
+									.start-date
+										span Start Date:
+										| 12/05/2015
+
+									.end-date
+										span End Date:
+										| 12/05/2015
+
+									.duration
+										span Duration of the reservation:
+										| 7
+
+							.booking-footer
+								p
+									span Anthoni N. dit:
+									| ed tempus ante non metus ultricies vestibulum. Vestibulum eget ultrices nunc, nee feugiat purus.
+									a(href="#") [Read More]
+
+						.booking-card-right
+							.price 32,00 €
+
+							.status.waiting Status: Waiting
+
+							.expire-time Expires in 02:04 hours
+
+							a(href="#")
+								span Open
+
+
+					.booking-card
+						.booking-preview-img
+							a(href="#")
+								+renderimg('preview-default.png')
+
+						.booking-content
+							.content-header
+								h5.booking-title
+									a(href="#") Listing Four
+								span.booking-number Booking number:
+									span 215423541 B
+
+							.booking-middle
+								p.booking-author You are talking to:
+									span Anthony N
+								include ../includes/rating-stars
+
+								.booking-times
+									.start-date
+										span Start Date:
+										| 12/05/2015
+
+									.end-date
+										span End Date:
+										| 12/05/2015
+
+									.duration
+										span Duration of the reservation:
+										| 6
+
+							.booking-footer
+								p
+									span Anthoni N. dit:
+									| ed tempus ante non metus ultricies vestibulum. Vestibulum eget ultrices nunc, nee feugiat purus.
+									a(href="#") [Read More]
+
+						.booking-card-right
+							.price 540,00 €
+
+							.status.canceled Status: Canceled
+
+							.expire-time Expires in 03:30 hours
+
+							a(href="#")
+								span Open
+
+
+					.booking-card
+						.booking-preview-img
+							a(href="#")
+								+renderimg('preview-default.png')
+
+						.booking-content
+							.content-header
+								h5.booking-title
+									a(href="#") Listing Five
+								span.booking-number Booking number:
+									span 215423541 B
+
+							.booking-middle
+								p.booking-author You are talking to:
+									span Anthony N
+								include ../includes/rating-stars
+
+								.booking-times
+									.start-date
+										span Start Date:
+										| 12/05/2015
+
+									.end-date
+										span End Date:
+										| 12/05/2015
+
+									.duration
+										span Duration of the reservation:
+										| 5
+
+							.booking-footer
+								p
+									span Anthoni N. dit:
+									| ed tempus ante non metus ultricies vestibulum. Vestibulum eget ultrices nunc, nee feugiat purus.
+									a(href="#") [Read More]
+
+						.booking-card-right
+							.price 800,00 €
+
+							.status.refused Status: Refused
+
+							.expire-time Expires in 02:25 hours
+
+							a(href="#")
+								span Open
+
+
+					.booking-card
+						.booking-preview-img
+							a(href="#")
+								+renderimg('preview-default.png')
+
+						.booking-content
+							.content-header
+								h5.booking-title
+									a(href="#") Listing Six
+								span.booking-number Booking number:
+									span 215423541 B
+
+							.booking-middle
+								p.booking-author You are talking to:
+									span Anthony N
+								include ../includes/rating-stars
+
+								.booking-times
+									.start-date
+										span Start Date:
+										| 12/05/2015
+
+									.end-date
+										span End Date:
+										| 12/05/2015
+
+									.duration
+										span Duration of the reservation:
+										| 3
+
+							.booking-footer
+								p
+									span Anthoni N. dit:
+									| ed tempus ante non metus ultricies vestibulum. Vestibulum eget ultrices nunc, nee feugiat purus.
+									a(href="#") [Read More]
+
+						.booking-card-right
+							.price 390,00 €
+
+							.status.made Status: Made
+
+							.expire-time Expires in 01:15 hours
+
+							a(href="#")
+								span Open
+
+					.booking-card
+						.booking-preview-img
+							a(href="#")
+								+renderimg('preview-default.png')
+
+						.booking-content
+							.content-header
+								h5.booking-title
+									a(href="#") Listing Seven
+								span.booking-number Booking number:
+									span 215423541 B
+
+							.booking-middle
+								p.booking-author You are talking to:
+									span Anthony N
+								include ../includes/rating-stars
+
+								.booking-times
+									.start-date
+										span Start Date:
+										| 12/05/2015
+
+									.end-date
+										span End Date:
+										| 12/05/2015
+
+									.duration
+										span Duration of the reservation:
+										| 2
+
+							.booking-footer
+								p
+									span Anthoni N. dit:
+									| ed tempus ante non metus ultricies vestibulum. Vestibulum eget ultrices nunc, nee feugiat purus.
+									a(href="#") [Read More]
+
+						.booking-card-right
+							.price 0,05 €
+
+							.status.error Status: Error
+
+							.expire-time Expires in 00:01 hours
+
+							a(href="#")
+								span Open
+
+					include ../includes/pagination
