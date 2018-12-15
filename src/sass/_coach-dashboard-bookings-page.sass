@@ -6,8 +6,29 @@
   display: flex
   transition: all .3s ease
 
+  &:first-of-type
+    background-color: #e1efbb
+    border: 1px solid #8ec16f
+    margin-bottom: 40px
+
   &:hover
     box-shadow: 0 3px 10px 0 rgba($grey, 0.05)
+
+  .check-icon
+    float: left
+    @extend %force-centered
+
+    svg
+      font-weight: 700
+      font-size: 30px
+      background-color: #fff
+      height: 50px
+      width: 50px
+      padding: 5px
+      border-radius: 100%
+      color: #8ec16f
+      margin-right: 20px
+
 
   .booking-preview-img
     a
