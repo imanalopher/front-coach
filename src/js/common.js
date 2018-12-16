@@ -38,6 +38,8 @@ $(() => {
 
   headerFix();
   $(window).scroll(headerFix);
+
+  $("#nav-bar-tgl").click(e => $(e.currentTarget).find('.tgl-icon').toggleClass("on"));
   // ----------------------------------------
 
 });

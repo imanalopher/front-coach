@@ -10,11 +10,11 @@ header
   &.fixed
     background-color: rgba($blue, .95)
     padding: 10px 0
-    box-shadow: 0px 3px 15px 0px rgba(#000, 0.25)
+    box-shadow: 0px 3px 15px 0px rgba($black, 0.25)
 
     #logo
       svg
-        max-width: 220px
+        max-width: 200px
 
         *
           fill: #fff
@@ -22,7 +22,6 @@ header
     .nav-link
       &:before
         background-color: #fff
-
 
   #logo
     text-align: center
@@ -33,6 +32,9 @@ header
       width: 100%
       height: auto
       transition: all .5s ease
+
+      *
+        transition: all .5s ease
 
   nav
     display: flex
@@ -58,13 +60,27 @@ header
     justify-content: flex-end
 
     .header-right-item
-      border-right: 1px solid rgba(#fff, .35)
-      padding: 0 15px
+      padding-left: 15px
+      margin-left: 15px
       line-height: 1.25
+      position: relative
 
-      &:last-child
-        border: none
-        padding-right: 0
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 1px
+        height: 15px
+        background-color: rgba(#fff, .35)
+
+      &:first-child
+        padding-left: 0
+        margin-left: 0
+
+        &:before
+          display: none
 
     .language-tgl
       .toggle-link
@@ -84,26 +100,73 @@ header
         img
           margin-right: 5px
 
-    .social-links
-      display: flex
+    #nav-bar-tgl
+      display: none
 
-    .social-link
-      display: flex
-      align-items: center
+      .tgl-icon
+        width: 32px
+        height: 25px
+        position: relative
+        transform: rotate(0deg)
+        transition: .5s ease-in-out
+        cursor: pointer
+
+        span
+          display: block
+          position: absolute
+          height: 3px
+          width: 100%
+          background: #fff
+          opacity: 1
+          left: 0
+          transform: rotate(0deg)
+          transition: .25s ease-in-out
+          border-radius: 5px
+
+          &:nth-child(1)
+            top: 0px
+          &:nth-child(2)
+            top: 11px
+          &:nth-child(3)
+            top: 22px
+
+        &.on
+          span
+            &:nth-child(1)
+              top: 11px
+              transform: rotate(135deg)
+            &:nth-child(2)
+              opacity: 0
+              left: 200px
+            &:nth-child(3)
+              top: 11px
+              transform: rotate(-135deg)
+
+// Large devices (desktops, 991px and up)
+@media screen and (max-width: 991px)
+  header
+    #logo
+      justify-content: flex-start
+
+    #header-right
+      #nav-bar-tgl
+        display: block
+
+// Small devices (landscape phones, 500px and up)
+@media screen and (max-width: 500px)
+  header
+    #logo
+      margin-bottom: 10px
       justify-content: center
-      height: 24px
-      width: 24px
-      border-radius: 100%
-      background-color: #fff
-      color: $blue
-      margin-left: 10px
-      font-size: .75rem
-      transition: all .3s ease
-      @extend %hover-effect
 
-      &:first-child
+    #header-right
+      justify-content: space-between
+      border-top: 1px solid rgba(#fff, .35)
+      padding-top: 10px
+
+      .header-right-item
+        padding-left: 0
         margin-left: 0
 
-      &:hover
-        background-color: $blue
-        color: #fff
+        &:before
+          display: none
