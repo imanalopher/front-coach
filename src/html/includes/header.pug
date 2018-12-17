@@ -3,8 +3,8 @@ include ../includes/mixins
 header
 	.container-fluid
 		.row.align-items-center
-			.col-lg-4.d-none.d-lg-block
-				nav
+			.col-lg-4
+				nav.main-nav
 					ul.nav
 						each url, val in {'Login': 'auth.html', 'Register': 'auth.html', 'Learn': '#', 'Help': '#'}
 							li.nav-item

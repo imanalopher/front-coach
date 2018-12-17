@@ -36,6 +36,7 @@
 
   .advantage
     text-align: center
+    margin: 15px 0
 
     .icon-img
       width: 120px
@@ -146,6 +147,7 @@
     overflow: hidden
     text-align: center
     position: relative
+    margin: 0 5px
 
     &:before, &:after
       content: ''
@@ -229,23 +231,24 @@
     top: 50%
     z-index: 1
     border: none
-    transform: translateY(-50)
     @extend %force-centered
+    width: 0
+    height: 0
 
     &:before
-      color: #fff
+      color: $blue
       font-size: 1.5rem
       opacity: 1
       text-shadow: 3px 3px 9px rgba($grey, .75)
 
     &.slick-prev
-      left: -40px
+      left: 10px
 
       &:before
         content: '\2329'
 
     &.slick-next
-      right: -40px
+      right: 10px
 
       &:before
         content: '\232A'
@@ -438,3 +441,19 @@
         content: '\2192'
         font-weight: 700
         margin-left: 5px
+
+@media screen and (min-width: 1200px)
+  #banner-form
+    width: 90%
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px)
+  #banner-form
+    #banner-title
+      font-size: 2.5rem
+
+// Small devices (landscape phones, 500px and up)
+@media screen and (min-width: 500px)
+  #banner-form
+    #banner-title
+      font-size: 2.0rem

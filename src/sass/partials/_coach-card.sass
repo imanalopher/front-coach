@@ -1,5 +1,6 @@
 .coach-card
-  width: 100%
+  //width: 100%
+  max-width: 300px
   border-radius: 15px
   overflow: hidden
   position: relative
@@ -84,17 +85,18 @@
         color: #fff
         width: 100px
         line-height: 1.2
+        font-size: .875rem
 
         .txt-label
           text-transform: uppercase
-          font-size: .875rem
+          font-size: .75rem
 
         .price
           font-weight: 900
 
       .coach-avatar
-        width: 96px
-        height: 96px
+        width: 90px
+        height: 90px
         border-radius: 100%
         overflow: hidden
         @extend %bg-cover
@@ -108,9 +110,10 @@
 
       .coach-full-name
         text-align: center
-        font-weight: 900
         color: $blue
+        font-weight: 900
         margin-bottom: 0
+        font-size: 1.125rem
 
       .location
         text-align: center

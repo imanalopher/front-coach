@@ -7,7 +7,41 @@ $(() => {
     autoplay: false,
     slidesToShow: 4,
     slidesToScroll: 4,
-    centerMode: true
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 1550,
+        settings: {
+          slidesToScroll: 4,
+          slidesToShow: 4,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 1230,
+        settings: {
+          slidesToScroll: 3,
+          slidesToShow: 3,
+          variableWidth: true
+        }
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToScroll: 2,
+          slidesToShow: 2,
+          variableWidth: true
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          variableWidth: true
+        }
+      }
+    ]
   });
 
   // --- Coach Type Slick Slider End ---
@@ -18,7 +52,26 @@ $(() => {
     autoplay: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: true
+    infinite: true,
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToScroll: 2,
+          slidesToShow: 2,
+
+        }
+      },
+      {
+        breakpoint: 762,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          variableWidth: true,
+        }
+      }
+    ]
   });
   // --- Featured Coaches Slick Slider End ---
 
