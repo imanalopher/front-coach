@@ -40,11 +40,11 @@ block wrapper
 					.tabs-sidebar
 						ul
 							li
-								a(href="#").active About Me
-
-							each val in ['Payment Information', 'Contact Information']
-								li
-									a(href="#")= val
+								a(href="coach-dashboard-aboutme.html") About Me
+							li
+								a(href="coach-dashboard-paymentinformation.html").active Payment Information
+							li
+								a(href="coach-dashboard-contact.html") Contact Information
 
 					.tab-content
 						.container-fluid
@@ -70,11 +70,11 @@ block wrapper
 												.col-md-4
 													.select-wrap
 														select(
-														multiple
-														placeholder="day"
-														data-jcf={
-                              multipleCompactStyle: true
-                            }
+															multiple
+															placeholder="day"
+															data-jcf={
+																multipleCompactStyle: true
+															}
 														).jcf-hidden
 															each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
 																option(val= index)= val
@@ -82,11 +82,11 @@ block wrapper
 												.col-md-4
 													.select-wrap
 														select(
-														multiple
-														placeholder="month"
-														data-jcf={
-                              multipleCompactStyle: true
-                            }
+															multiple
+															placeholder="month"
+															data-jcf={
+																multipleCompactStyle: true
+															}
 														).jcf-hidden
 															each val, index in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 																option(val= index)= val
@@ -94,11 +94,11 @@ block wrapper
 												.col-md-4
 													.select-wrap
 														select(
-														multiple
-														placeholder="year"
-														data-jcf={
-                              multipleCompactStyle: true
-                            }
+															multiple
+															placeholder="year"
+															data-jcf={
+																multipleCompactStyle: true
+															}
 														).jcf-hidden
 															each val, index in [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
 																option(val= index)= val
@@ -107,11 +107,11 @@ block wrapper
 											p.element-label Nationality
 											.select-wrap
 												select(
-												multiple
-												placeholder="Nationality"
-												data-jcf={
-                          multipleCompactStyle: true
-                        }
+													multiple
+													placeholder="Nationality"
+													data-jcf={
+														multipleCompactStyle: true
+													}
 												).jcf-hidden
 													each val, index in ['Chinese', 'English', 'Deutch', 'Greek']
 														option(val= index)= val
@@ -120,11 +120,11 @@ block wrapper
 											p.element-label Country of Residence
 											.select-wrap
 												select(
-												multiple
-												placeholder="Country of Residence"
-												data-jcf={
-                          multipleCompactStyle: true
-                        }
+													multiple
+													placeholder="Country of Residence"
+													data-jcf={
+														multipleCompactStyle: true
+													}
 												).jcf-hidden
 													each val, index in ['Chinese', 'English', 'Deutch', 'Greek']
 														option(val= index)= val
