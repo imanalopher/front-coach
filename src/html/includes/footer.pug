@@ -1,56 +1,56 @@
 footer
-	.container
-		.row
-			.col-lg-6.col-md-6
-				a(href="#")#footer-logo
-					+renderimg("logo.png").img-fluid
-				p
-					a(href="#").contact-link
-						span
-							i.fas.fa-envelope
-						| test@test.com
+  .container
+    .row
+      .col-lg-6.col-md-6
+        a(href="#")#footer-logo
+          +renderimg("logo.png").img-fluid
 
-				p
-					a(href="#").contact-link
-						span
-							i.fas.fa-phone
-						| (303) 630-9454
+        p
+          a(href="mailto:sample@mail.com").contact-link
+            span
+              i.fas.fa-envelope
+            |sondercentersfranchise@info.com
+        p
+          a(href="tel:000000000").contact-link
+            span
+              i.fas.fa-phone
+            |(303) 630-9454
 
-				p
-					a(href="#")#contact_us_btn.btn-link
-						span Contact Us
+        p
+          a(href="#")#contact_us-btn.btn-link
+            span Contact Us
 
-			.col-lg-3.col-6
-				#footer-nav
-					p.footer-section-title Quick Links
+      .col-md-3.col-6
+        #footer-nav
+          p.footer-section-title Quick Links
 
-					ul
-						each val in ['About', 'FAQ', 'Who we are?', 'Contact']
-							li
-								a(href="#")= val
+          ul
+            each val in ['Why', 'Opportunities', 'Numbers', 'Training And Support', 'Process', 'Apply Now']
+              li
+                a(href="#")= val
 
-			.col-lg-3.col-6
-				#footer-address
-					p.footer-section-title Our location
-					p.footer-address 12344, Wkkk, St. Unit ll11 Denver, CO 808080
+      .col-md-3.col-6
+        #footer-address
+          p.footer-section-title Our Location
+          p.footer-address 1738, Wyncoop St, Unit LL 1, Denver, CO 80202
 
-					p.footer-section-title Social
+          p.footer-section-title Social
 
-					.social-links
-						a(href="#").social-link
-							span
-								i.fab.fa-facebook-f
-						a(href="#").social-link
-							span
-								i.fab.fa-twitter
-						a(href="#").social-link
-							span
-								i.fab.fa-instagram
+          .social-links
+            a(href="#").social-link
+              span
+                i.fab.fa-facebook-f
+            a(href="#").social-link
+              span
+                i.fab.fa-twitter
+            a(href="#").social-link
+              span
+                i.fab.fa-instagram
 
-		#footer-bottom
-			span.rights @ 2018 SonderCenters. All Rights Reversed.
+    #footer-bottom
+      span.rights ©2018 SonderCenters. All Rights Reserved.
 
-			ul
-				each val in ['Terms And Conditions', 'Privacy Policy', 'FAQ']
-					li
-						a(href="#")= val
+      ul
+        each val in ['Terms And Conditions', 'Privacy Policy', 'FAQ']
+          li
+            a(href="#")= val

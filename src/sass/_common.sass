@@ -1,11 +1,17 @@
 @import "partials/coach-card"
 @import "partials/booking-form"
 @import "partials/breadcrumb"
-@import "partials/pagination"
 @import "partials/filter"
+@import "partials/pagination"
+@import "partials/rating-stars"
 
-// --- Extendable Styles ---
-
+// --- Extentable Styles ---
+%title
+  font-size: 2rem
+  font-weight: 900
+  text-transform: uppercase
+  text-align: center
+  
 %section-distance
   padding: 80px 0
 
@@ -95,20 +101,16 @@
   &:hover
     &:before
       width: calc(100% + 10px)
-// --- Extendable Styles End ---
+// --- Extentable Styles End ---
 
-// --- Form Controls ---
+.form-control, .custom-file-control, .is-focused .form-control, .is-focused .custom-file-control
+  background-image: linear-gradient(to top, $blue 2px, rgba(0, 150, 136, 0) 2px), linear-gradient(to top, rgba(0, 0, 0, 0.26) 1px, rgba(0, 0, 0, 0) 1px)
 
 .checkbox label .checkbox-decorator .check, label.checkbox-inline .checkbox-decorator .check
   border-color: $blue
 
-.checkbox label input[type=checkbox]:checked + .checkbox-decorator .check:before, label.checkbox-inline input[type=checkbox]:checked + .checkbox-decorator .check:before
+.checkbox label input[type=checkbox]:checked + .checkbox-decorator .check::before, label.checkbox-inline input[type=checkbox]:checked + .checkbox-decorator .check::before
   color: $blue
-
-.form-control, .custom-file-control, .is-focused .form-control, .is-focused .custom-file-control
-  background-image: linear-gradient(to top, $blue 2px, rgba(0,150,136,0) 2px),linear-gradient(to top, rgba(0,0,0,0.26) 1px, rgba(0,0,0,0) 1px)
-
-// --- Form Controls End ---
 
 button.btn.btn-raised
   background-color: $blue !important
@@ -208,7 +210,7 @@ button.btn.btn-raised
   margin-top: 0 !important
   z-index: 9 !important
 
-  &.jcf-compact-multiple
+  &.jcf-compact-multiple 
     .jcf-option
       display: flex
       align-items: center
@@ -236,7 +238,7 @@ button.btn.btn-raised
       line-height: 1.2
 // --- JCF Plugin Syle End ---
 
-// --- Dropzone Plugin Style ---
+// --- Dropzone Plugin Style
 .dropzone
   border: 2px dashed $blue
   border-radius: 15px
@@ -246,16 +248,12 @@ button.btn.btn-raised
   background-color: $light-grey
 
   .dz-preview
-    padding: 5px
+    margin: 5px
     z-index: 0
-    border-radius: 15px
 
     .dz-image
       border-radius: 15px
-
-// --- JCF Plugin Style End ---
-
-// --- Dropzone Plugin Style End ---
+// --- Dropzone Plugin Style End
 
 .c-button
   border-radius: 30px
@@ -263,6 +261,7 @@ button.btn.btn-raised
   @extend %hover-effect
   cursor: pointer
   padding: 5px 15px
+  text-transform: uppercase
   text-decoration: none
   @extend %force-centered
 
@@ -274,14 +273,12 @@ button.btn.btn-raised
     border: 1px solid $blue
     background-color: $blue
     color: #fff
-
+  
   &.red-btn
     border: 1px solid $red
     background-color: $red
     color: #fff
 
-
-// --- Dropzone Plugin Style End ---
 .social-links
   display: flex
 
@@ -301,6 +298,7 @@ button.btn.btn-raised
       margin-left: 0
 
     &:hover
+      background-color: $blue
       color: #fff
 
     span
@@ -313,7 +311,7 @@ button.btn.btn-raised
   div
     font-size: 1.75rem
     overflow: hidden
-
+    
     &.filled
       width: 0
       height: 0
@@ -337,9 +335,9 @@ button.btn.btn-raised
     display: inline-block
     border: 1px solid $light-grey
     border-radius: 30px
-    padding: 5px 15px
+    padding: 5px 10px
     margin: 5px
-    font-size: .875rem
+    font-size: .75rem
 
     &.hidden-num
       font-weight: 900
@@ -350,33 +348,22 @@ button.btn.btn-raised
 .card-element
   margin-bottom: 20px
 
-  input
-    &::placeholder
-      font-size: 1rem
-      color: rgba(0, 0, 0, 0.26)
-
   .element-label
     font-size: .875rem
     margin-bottom: 10px
     color: $blue
-
+    
 .input-wrap
-  input, textarea
+  input
     width: 100%
     border-radius: 30px
+    height: 40px
     border: 1px solid $light-grey
+    padding: 0 15px
     font-size: .875rem
     color: $black
-
-  input
-    height: 40px
-    padding: 0 15px
     outline: none
-
-  textarea
-    height: auto
-    padding: 5px 15px
-
+      
 body
   font-family: Lato, Arial, Helvetica, sans-serif
   color: $black
@@ -395,7 +382,7 @@ main
   font-weight: 900
   text-transform: uppercase
   text-align: center
-
+  
 .resp-img
   max-width: 100%
   max-height: 100%
@@ -409,7 +396,7 @@ main
   .content
     margin: 15px
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
   .c-title
     font-size: 1.5rem
 

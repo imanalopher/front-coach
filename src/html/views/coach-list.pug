@@ -2,333 +2,253 @@ extends ../includes/layout
 include ../includes/mixins
 
 block page-scripts
-	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnzRjwYxJCaaQ_JzmJp0aIlpWFG_nYw4&callback=init" async defer)
-	script(src="js/coach-list.js")
-	script.
-			InfoBubble.prototype.setBubbleOffset = function (xOffset, yOffset) {
-				this.bubbleOffsetX = parseInt(xOffset);
-				this.bubbleOffsetY = parseInt(yOffset);
-			};
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnzRjwYxJCaaQ_JzmJp0aIlpWFG_nYw4&callback=init" async defer)
+  script(src="js/coach-list.js")
+  script.
+      let dataList = [
+          {
+              id: 1,
+              type: "1",
+              plantedDate: "30.01.2018",
+              plantedBy: "Alexander Lantsov",
+              plantInfo: "Береза, 3 года",
+              nameplate: "Отсутствует",
+              shared: 123,
+              liked: 500,
+              lt: 51.160534,
+              ln: 71.470356
+          },
+          {
+              id: 2,
+              type: "2",
+              plantedDate: "16.05.2018",
+              plantedBy: "Vladimir Prohorov",
+              plantInfo: "Ель, 2 года",
+              nameplate: "Отсутствует",
+              shared: 123,
+              liked: 500,
+              lt: 51.161423,
+              ln: 71.443256
+          },
+          {
+              id: 3,
+              type: "0",
+              plantedDate: "05.09.2018",
+              plantedBy: "Stanislav Glushakov",
+              plantInfo: "Яблоко, 5 года",
+              nameplate: "Отсутствует",
+              shared: 123,
+              liked: 500,
+              lt: 51.14871,
+              ln: 71.460127
+          }
+      ];
 
-			InfoBubble.prototype.getBubbleOffset = function () {
-				return {
-					x: this.bubbleOffsetX || 0,
-					y: this.bubbleOffsetY || 0
-				}
-			};
+      let mapObj = [];
 
-			InfoBubble.prototype.draw = function () {
-				var projection = this.getProjection();
+      function init() {
+          let map = new google.maps.Map(document.getElementById("coach-list-map"), {
+              zoom: 13,
+              center: new google.maps.LatLng(51.157845, 71.454424),
+              styles: [{
+                  "featureType": "administrative",
+                  "elementType": "labels.text.fill",
+                  "stylers": [{"color": "#6195a0"}]
+              }, {
+                  "featureType": "administrative.province",
+                  "elementType": "geometry.stroke",
+                  "stylers": [{"visibility": "off"}]
+              }, {
+                  "featureType": "landscape",
+                  "elementType": "geometry",
+                  "stylers": [{"lightness": "0"}, {"saturation": "0"}, {"color": "#f5f5f2"}, {"gamma": "1"}]
+              }, {
+                  "featureType": "landscape.man_made",
+                  "elementType": "all",
+                  "stylers": [{"lightness": "-3"}, {"gamma": "1.00"}]
+              }, {
+                  "featureType": "landscape.natural.terrain",
+                  "elementType": "all",
+                  "stylers": [{"visibility": "off"}]
+              }, {
+                  "featureType": "poi",
+                  "elementType": "all",
+                  "stylers": [{"visibility": "off"}]
+              }, {
+                  "featureType": "poi.park",
+                  "elementType": "geometry.fill",
+                  "stylers": [{"color": "#bae5ce"}, {"visibility": "on"}]
+              }, {
+                  "featureType": "road",
+                  "elementType": "all",
+                  "stylers": [{"saturation": -100}, {"lightness": 45}, {"visibility": "simplified"}]
+              }, {
+                  "featureType": "road.highway",
+                  "elementType": "all",
+                  "stylers": [{"visibility": "simplified"}]
+              }, {
+                  "featureType": "road.highway",
+                  "elementType": "geometry.fill",
+                  "stylers": [{"color": "#fac9a9"}, {"visibility": "simplified"}]
+              }, {
+                  "featureType": "road.highway",
+                  "elementType": "labels.text",
+                  "stylers": [{"color": "#4e4e4e"}]
+              }, {
+                  "featureType": "road.arterial",
+                  "elementType": "labels.text.fill",
+                  "stylers": [{"color": "#787878"}]
+              }, {
+                  "featureType": "road.arterial",
+                  "elementType": "labels.icon",
+                  "stylers": [{"visibility": "off"}]
+              }, {
+                  "featureType": "transit",
+                  "elementType": "all",
+                  "stylers": [{"visibility": "simplified"}]
+              }, {
+                  "featureType": "transit.station.airport",
+                  "elementType": "labels.icon",
+                  "stylers": [{"hue": "#0a00ff"}, {"saturation": "-77"}, {"gamma": "0.57"}, {"lightness": "0"}]
+              }, {
+                  "featureType": "transit.station.rail",
+                  "elementType": "labels.text.fill",
+                  "stylers": [{"color": "#43321e"}]
+              }, {
+                  "featureType": "transit.station.rail",
+                  "elementType": "labels.icon",
+                  "stylers": [{"hue": "#ff6c00"}, {"lightness": "4"}, {"gamma": "0.75"}, {"saturation": "-68"}]
+              }, {
+                  "featureType": "water",
+                  "elementType": "all",
+                  "stylers": [{"color": "#eaf6f8"}, {"visibility": "on"}]
+              }, {
+                  "featureType": "water",
+                  "elementType": "geometry.fill",
+                  "stylers": [{"color": "#c7eced"}]
+              }, {
+                  "featureType": "water",
+                  "elementType": "labels.text.fill",
+                  "stylers": [{"lightness": "-49"}, {"saturation": "-53"}, {"gamma": "0.79"}]
+              }],
+              mapTypeControl: false,
+              streetViewControl: false
+          });
 
-				if (!projection) {
-					return;
-				}
+          dataList.forEach((e, i) => {
+              mapObj.push({
+                  marker: new google.maps.Marker({
+                      map: map,
+                      position: new google.maps.LatLng(e.lt, e.ln)
+                  }),
+                  infoBubble: new InfoBubble({
+                      content: createBubbleInfo(e),
+                      minWidth: 300,
+                      maxWidth: 300,
+                      maxHeight: 297,
+                      padding: 0,
+                      backgroundClassName: "map-coach-card",
+                      backgroundColor: "#fff",
+                      shadowStyle: 0,
+                      arrowStyle: 2,
+                      closeSrc: "../../img/mapCarClose.png",
+                      borderRadius: 15
+                  })
+              });
 
-				var latLng = (this.get('position'));
+              google.maps.event.addListener(mapObj[i].marker, "click", () => {
+                  closeMaps(mapObj[i].infoBubble);
+                  if (!mapObj[i].infoBubble.isOpen()) {
+                      mapObj[i].infoBubble.open(map, mapObj[i].marker);
+                      $(".map-coach-card")
+                          .parent()
+                          .css("border-radius", "15px");
+                  } else {
+                      mapObj[i].infoBubble.close();
+                  }
+              });
+          });
+      }
 
-				if (!latLng) {
-					this.close();
-					return;
-				}
+      function createBubbleInfo(e) {
+          return `
+          <div class="coach-card">
+            <div class="card-top-info">
+              <div class="add-to-wishlist"></div>
+              <div class="top-right-side">
+                <div class="rating">
+                  <div class="rating-star">
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="rating-star">
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="rating-star">
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="rating-star">
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="rating-star">
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div >
+            <a class="link-body" href="#">
+              <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
+                <div class="info-belt">
+                  <div class="in-call txt-item">
+                    <span class="txt-label">In-Call</span>
+                    <span class="price">Unavailable</span>
+                  </div>
+                  <div class="coach-avatar" style="background-image:url('./img/life-coaching.jpg');"></div>
+                  <div class="in-call txt-item">
+                    <span class="txt-label">House-Call</span>
+                    <span class="price">€39</span>
+                  </div>
+                </div>
+              </div>
+              <div class="link-footer">
+                <h5 class="coach-full-name">Cristina Nunez Pabon</h5>
+                <p class="location">Madrid, Spain</p>
+              </div>
+            </a>
+          </div>
+        `;
+      }
 
-				var tabHeight = 0;
-
-				if (this.activeTab_) {
-					tabHeight = this.activeTab_.offsetHeight;
-				}
-
-				var anchorHeight = this.getAnchorHeight_();
-				var arrowSize = this.getArrowSize_();
-				var arrowPosition = this.getArrowPosition_();
-
-				arrowPosition = arrowPosition / 100;
-
-				var pos = projection.fromLatLngToDivPixel(latLng);
-				var width = this.contentContainer_.offsetWidth;
-				var height = this.bubble_.offsetHeight;
-
-				if (!width) {
-					return;
-				}
-
-				var top = pos.y - (height + arrowSize) + this.getBubbleOffset().y;
-
-				if (anchorHeight) {
-					top -= anchorHeight;
-				}
-
-				var left = pos.x - (width * arrowPosition) + this.getBubbleOffset().x;
-
-				this.bubble_.style['top'] = this.px(top);
-				this.bubble_.style['left'] = this.px(left);
-
-				var shadowStyle = parseInt(this.get('shadowStyle'), 10);
-
-				switch (shadowStyle) {
-					case 1:
-						// Shadow is behind
-						this.bubbleShadow_.style['top'] = this.px(top + tabHeight - 1);
-						this.bubbleShadow_.style['left'] = this.px(left);
-						this.bubbleShadow_.style['width'] = this.px(width);
-						this.bubbleShadow_.style['height'] =
-							this.px(this.contentContainer_.offsetHeight - arrowSize);
-						break;
-					case 2:
-						// Shadow is below
-						width = width * 0.8;
-						if (anchorHeight) {
-							this.bubbleShadow_.style['top'] = this.px(pos.y);
-						} else {
-							this.bubbleShadow_.style['top'] = this.px(pos.y + arrowSize);
-						}
-						this.bubbleShadow_.style['left'] = this.px(pos.x - width * arrowPosition);
-
-						this.bubbleShadow_.style['width'] = this.px(width);
-						this.bubbleShadow_.style['height'] = this.px(2);
-						break;
-				}
-			};
-			var dataList = [
-				{
-					id: 1,
-					type: "1",
-					plantedDate: "30.01.2018",
-					plantedBy: "Alexander Lantsov",
-					plantInfo: "Береза, 3 года",
-					nameplate: "Отсутствует",
-					shared: 123,
-					liked: 500,
-					lt: 51.160534,
-					ln: 71.470356
-				},
-				{
-					id: 2,
-					type: "2",
-					plantedDate: "16.05.2018",
-					plantedBy: "Vladimir Prohorov",
-					plantInfo: "Ель, 2 года",
-					nameplate: "Отсутствует",
-					shared: 123,
-					liked: 500,
-					lt: 51.161423,
-					ln: 71.443256
-				},
-				{
-					id: 3,
-					type: "0",
-					plantedDate: "05.09.2018",
-					plantedBy: "Stanislav Glushakov",
-					plantInfo: "Яблоко, 5 года",
-					nameplate: "Отсутствует",
-					shared: 123,
-					liked: 500,
-					lt: 51.14871,
-					ln: 71.460127
-				}
-			];
-
-			let mapObj = [];
-
-			function init() {
-				let map = new google.maps.Map(document.getElementById("coach-list-map"), {
-					zoom: 13,
-					center: new google.maps.LatLng(51.157845, 71.454424),
-					styles: [{
-						"featureType": "administrative",
-						"elementType": "labels.text.fill",
-						"stylers": [{"color": "#6195a0"}]
-					}, {
-						"featureType": "administrative.province",
-						"elementType": "geometry.stroke",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "landscape",
-						"elementType": "geometry",
-						"stylers": [{"lightness": "0"}, {"saturation": "0"}, {"color": "#f5f5f2"}, {"gamma": "1"}]
-					}, {
-						"featureType": "landscape.man_made",
-						"elementType": "all",
-						"stylers": [{"lightness": "-3"}, {"gamma": "1.00"}]
-					}, {
-						"featureType": "landscape.natural.terrain",
-						"elementType": "all",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "poi",
-						"elementType": "all",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "poi.park",
-						"elementType": "geometry.fill",
-						"stylers": [{"color": "#bae5ce"}, {"visibility": "on"}]
-					}, {
-						"featureType": "road",
-						"elementType": "all",
-						"stylers": [{"saturation": -100}, {"lightness": 45}, {"visibility": "simplified"}]
-					}, {
-						"featureType": "road.highway",
-						"elementType": "all",
-						"stylers": [{"visibility": "simplified"}]
-					}, {
-						"featureType": "road.highway",
-						"elementType": "geometry.fill",
-						"stylers": [{"color": "#fac9a9"}, {"visibility": "simplified"}]
-					}, {
-						"featureType": "road.highway",
-						"elementType": "labels.text",
-						"stylers": [{"color": "#4e4e4e"}]
-					}, {
-						"featureType": "road.arterial",
-						"elementType": "labels.text.fill",
-						"stylers": [{"color": "#787878"}]
-					}, {
-						"featureType": "road.arterial",
-						"elementType": "labels.icon",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "transit",
-						"elementType": "all",
-						"stylers": [{"visibility": "simplified"}]
-					}, {
-						"featureType": "transit.station.airport",
-						"elementType": "labels.icon",
-						"stylers": [{"hue": "#0a00ff"}, {"saturation": "-77"}, {"gamma": "0.57"}, {"lightness": "0"}]
-					}, {
-						"featureType": "transit.station.rail",
-						"elementType": "labels.text.fill",
-						"stylers": [{"color": "#43321e"}]
-					}, {
-						"featureType": "transit.station.rail",
-						"elementType": "labels.icon",
-						"stylers": [{"hue": "#ff6c00"}, {"lightness": "4"}, {"gamma": "0.75"}, {"saturation": "-68"}]
-					}, {
-						"featureType": "water",
-						"elementType": "all",
-						"stylers": [{"color": "#eaf6f8"}, {"visibility": "on"}]
-					}, {
-						"featureType": "water",
-						"elementType": "geometry.fill",
-						"stylers": [{"color": "#c7eced"}]
-					}, {
-						"featureType": "water",
-						"elementType": "labels.text.fill",
-						"stylers": [{"lightness": "-49"}, {"saturation": "-53"}, {"gamma": "0.79"}]
-					}],
-					mapTypeControl: false,
-					streetViewControl: false
-				});
-
-				dataList.forEach((e, i) => {
-					mapObj.push({
-						marker: new google.maps.Marker({
-							map: map,
-							position: new google.maps.LatLng(e.lt, e.ln)
-						}),
-						infoBubble: new InfoBubble({
-							content: createBubbleInfo(e),
-							minWidth: 300,
-							maxWidth: 300,
-							maxHeight: 297,
-							padding: 0,
-							backgroundClassName: "map-coach-card",
-							backgroundColor: "#fff",
-							shadowStyle: 0,
-							arrowStyle: 2,
-							closeSrc: "../../img/mapCarClose.png",
-							borderRadius: 15
-						})
-					});
-
-					google.maps.event.addListener(mapObj[i].marker, "click", () => {
-						closeMaps(mapObj[i].infoBubble);
-
-						if (!mapObj[i].infoBubble.isOpen()) {
-							mapObj[i].infoBubble.open(map, mapObj[i].marker);
-							$(".map-coach-card").parent().css("border-radius", "15px");
-						} else {
-							mapObj[i].infoBubble.close();
-						}
-					});
-				});
-			}
-
-			function createBubbleInfo(e) {
-				return `
-					<div class="coach-card">
-						<div class="card-top-info">
-							<div class="add-to-wishlist"></div>
-							<div class="top-right-side">
-								<div class="rating">
-									<div class="rating-star">
-										<i class="far fa-star"></i>
-									</div>
-									<div class="rating-star">
-										<i class="far fa-star"></i>
-									</div>
-									<div class="rating-star">
-										<i class="far fa-star"></i>
-									</div>
-									<div class="rating-star">
-										<i class="far fa-star"></i>
-									</div>
-									<div class="rating-star">
-										<i class="far fa-star"></i>
-									</div>
-								</div>
-							</div>
-						</div >
-						<a class="link-body" href="#">
-							<div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
-								<div class="info-belt">
-									<div class="in-call txt-item">
-										<span class="txt-label">In-Call</span>
-										<span class="price">Unavailable</span>
-									</div>
-									<div class="coach-avatar" style="background-image:url('./img/life-coaching.jpg');"></div>
-									<div class="in-call txt-item">
-										<span class="txt-label">House-Call</span>
-										<span class="price">€39</span>
-									</div>
-								</div>
-							</div>
-							<div class="link-footer">
-								<h5 class="coach-full-name">Cristina Nunez Pabon</h5>
-								<p class="location">Madrid, Spain</p>
-							</div>
-						</a>
-					</div>
-				`;
-			}
-
-			function closeMaps(objInfoBubble) {
-				mapObj.forEach(e => {
-					if(objInfoBubble !== e.infoBubble) {
-						if (e.infoBubble.isOpen()) {
-							e.infoBubble.close();
-						}
-					}
-				});
-			}
-
+      function closeMaps(obj) {
+          mapObj.forEach((e) => {
+              if(obj != e.infoBubble)
+                  {
+                      if (e.infoBubble.isOpen()) {
+                          e.infoBubble.close();
+                      }
+                  }
+          });
+      }
+  
 
 block wrapper
-	main#coach-list
-		.container
-			include ../includes/booking-form
-			h1.c-title Select a coach & book your FREE SESSION directly from the coach profile
+  main#coach-list
+    .container
+      include ../includes/booking-form
+      h1.c-title Select a coach & book your FREE SESSION directly from the coach profile
 
-			include ../includes/breadcrumb
+      include ../includes/breadcrumb
 
-		.container-fluid
-			.row
-				.col-lg-4
-					#coach-list-map-wrap
-						#coach-list-map
+    .container-fluid
+      .row
+        .col-lg-4
+          #coach-list-map-wrap
+            #coach-list-map
 
-				.col-lg-8
-					#coach-list-catalog
-						.row
-							- for (var x = 0; x <= 5; x++)
-								.col-lg-4
-									include ../includes/coach-card
-						include ../includes/pagination
+        .col-lg-8
+          #coach-list-catalog
+            .row
+              - for (var x = 0; x < 6; x++)
+                .col-lg-4
+                  include ../includes/coach-card
+                  
+            include ../includes/pagination

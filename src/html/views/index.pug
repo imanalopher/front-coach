@@ -2,268 +2,158 @@ extends ../includes/layout
 include ../includes/mixins
 
 block page-scripts
-	script(src="js/index.js")
+  script(src="js/index.js")
 
 block wrapper
-	#banner-row
-		#banner-form
-			h2#banner-title Book a free session with a coach of your choice
+  #banner-row
+    #banner-form
+      h2#banner-title Book a free session with a coach of your choice
 
-			include ../includes/booking-form
+      include ../includes/booking-form
 
-	#advantages
-		.container
-			.row
-				.col-lg-3.col-sm-6
-					.advantage
-						.icon-img
-							+renderimg("ico-certificate.png")
-						h5.title Certified, verified & reviewed
-						p.txt.
-							All coaches are certified and verified according to high standards. Reviews of previous clients are displayed transparently
-				.col-lg-3.col-sm-6
-					.advantage
-						.icon-img
-							+renderimg("ico-figures.png")
-						h5.title Free intake
-						p.txt.
-							Meet a potential coach with no obligation. Then decide if you wish to continue with the coach, or not
-				.col-lg-3.col-sm-6
-					.advantage
-						.icon-img
-							+renderimg("ico-video-conversation.png")
-						h5.title Anytime anywhere
-						p.txt.
-							Get face-to-face or virtual coaching using common tools such as Skype or FaceTime at time and place that work for you
-				.col-lg-3.col-sm-6
-					.advantage
-						.icon-img
-							+renderimg("ico-hand.png")
-						h5.title Easy-to-use
-						p.txt.
-							Clear information to help you find the perfect coach as well as seamless booking and secure payment process
+  #advantages
+    .container
+      .row
+        .col-lg-3.col-sm-6
+          .advantage
+            .icon-img
+              +renderimg("ico-certificate.png")
+            h5.title Certified, verified & reviewed
+            p.txt.
+              All coaches are certified and verified according to high standards. Reviews of previous clients are displayed transparently
+        .col-lg-3.col-sm-6
+          .advantage
+            .icon-img
+              +renderimg("ico-figures.png")
+            h5.title Free intake
+            p.txt.
+              Meet a potential coach with no obligation. Then decide if you wish to continue with the coach, or not
+        .col-lg-3.col-sm-6
+          .advantage
+            .icon-img
+              +renderimg("ico-video-conversation.png")
+            h5.title Anytime anywhere
+            p.txt.
+              Get face-to-face or virtual coaching using common tools such as Skype or FaceTime at time and place that work for you
+        .col-lg-3.col-sm-6
+          .advantage
+            .icon-img
+              +renderimg("ico-hand.png")
+            h5.title Easy-to-use
+            p.txt.
+              Clear information to help you find the perfect coach as well as seamless booking and secure payment process
 
-	#coach-types
-		h5.c-title What type of coaching are you looking for?
+  #coach-types
+    h5.c-title What type of coaching are you looking for?
 
-		.slick-coach-types
-			.item
-				.type-item(style={"background-image": "url('./img/life-coaching.jpg')"})
-					h5.title Life Coaching
-					p.description.
-						Life coaching value lies in connecting the different aspects of your life in a single powerful strategy and action plan. The right life coach will help you reach the clarity.
-					a(href="/coach-list.html").link.light
-						span Search Now
-			.item
-				.type-item(style={"background-image": "url('./img/leadership-coaching.jpg')"})
-					h5.title Leadership Coaching
-					p.description.
-						Leaders need to constantly develop if they are to maintain a positive and lasting impact on their teams and organizations. An experienced leadership coach is your ally in your pursuit of excellence.
-					a(href="/coach-list.html").link.light
-						span Search Now
-			.item
-				.type-item(style={"background-image": "url('./img/career-coaching.jpg')"})
-					h5.title Career Coaching
-					p.description.
-						A gratifying and meaningful career is critical to leading a fulfilling life. Whether you are searching for the right career, or find yourself at a crossroads wondering which route to take.
-					a(href="/coach-list.html").link.light
-						span Search Now
-			.item
-				.type-item(style={"background-image": "url('./img/mentoring.jpg')"})
-					h5.title Mentoring
-					p.description.
-						A mentor is a guide – someone who had walked the path that you wish to follow and faced the challenges you are encountering. Mentors are seasoned experts with a wealth of experience to share in a specific proficiency.
-					a(href="/coach-list.html").link.light
-						span Search Now
-			.item
-				.type-item(style={"background-image": "url('./img/health-coaching.jpg')"})
-					h5.title Health Coaching
-					p.description.
-						The pressures of a modern lifestyle and escalating work demands make it difficult to maintain optimal health, but when your health has slipped too far it is often necessary to acquire the assistance of a professional coach.
-					a(href="/coach-list.html").link.light
-						span Search Now
+    .slick-coach-types
+      .item
+        .type-item(style={"background-image": "url('./img/life-coaching.jpg')"})
+          h5.title Life Coaching
+          p.description.
+            Life coaching value lies in connecting the different aspects of your life in a single powerful strategy and action plan. The right life coach will help you reach the clarity.
+          a(href="#").link.light
+            span Search Now
+      .item
+        .type-item(style={"background-image": "url('./img/leadership-coaching.jpg')"})
+          h5.title Leadership Coaching
+          p.description.
+            Leaders need to constantly develop if they are to maintain a positive and lasting impact on their teams and organizations. An experienced leadership coach is your ally in your pursuit of excellence.
+          a(href="#").link.light
+            span Search Now
+      .item
+        .type-item(style={"background-image": "url('./img/career-coaching.jpg')"})
+          h5.title Career Coaching
+          p.description.
+            A gratifying and meaningful career is critical to leading a fulfilling life. Whether you are searching for the right career, or find yourself at a crossroads wondering which route to take.
+          a(href="#").link.light
+            span Search Now
+      .item
+        .type-item(style={"background-image": "url('./img/mentoring.jpg')"})
+          h5.title Mentoring
+          p.description.
+            A mentor is a guide – someone who had walked the path that you wish to follow and faced the challenges you are encountering. Mentors are seasoned experts with a wealth of experience to share in a specific proficiency.
+          a(href="#").link.light
+            span Search Now
+      .item
+        .type-item(style={"background-image": "url('./img/health-coaching.jpg')"})
+          h5.title Health Coaching
+          p.description.
+            The pressures of a modern lifestyle and escalating work demands make it difficult to maintain optimal health, but when your health has slipped too far it is often necessary to acquire the assistance of a professional coach.
+          a(href="#").link.light
+            span Search Now
 
-	#featured-coaches
-		.container
-			h5.c-title The Best Rated Coaches
+  #featured-coaches
+    .container
+      h5.c-title The Best Rated Coaches
 
-			.slick-featured-coaches
-				- for (var i = 0; i < 5; i++)
-					.item
-						include ../includes/coach-card
+      .slick-featured-coaches
+        - for (var x = 0; x < 5; x++)
+          .item
+            include ../includes/coach-card                
 
-	#partners-list
-		.container
-			.row
-				.col-xl-4
-					.partners-title Our Trustfully Partners
-				.col-xl-8
-					.partners-logo
-						each val in ['demochimp', 'merchant', 'innovaccer', 'tartu_science']
-							a(href="#" target="_blank")
-								+renderimg(val+"-logo.png")
+  #contact-us-section
+    .container
+      h5.c-title Contact us to start your journey
+      p.title-description Use the form below to contact us regarding your interest becoming a SonderMind Franchisee
 
-	#our-story
-		.container
-			.row
-				.col-lg-12
-					.shortinfo-title Our Story
-					p.
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+      form
+        .row
+          .col-lg-6
+            .form-group
+              label(for="contact-first-name").bmd-label-floating First Name
+              input(type="text" name="firstName")#contact-first-name.form-control
 
-					a(href="#").btn-link.float-right
-						span Read More
+          .col-lg-6
+            .form-group
+              label(for="contact-last-name").bmd-label-floating Last Name
+              input(type="text" name="lasttName")#contact-last-name.form-control
 
-	#testimonials
-		.row.no-gutters.align-items-center
-			.col-lg-6
-				+renderimg("people.png").img-fluid
+          .col-lg-6
+            .form-group
+              label(for="contact-phone").bmd-label-floating Phone
+              input(type="text" name="phone")#contact-phone.form-control
 
-			.col-lg-6
-				.testimonials-txt
-					p.title-txt Testimonials
-					p.description-txt Check what's our clients say about us!
+          .col-lg-6
+            .form-group
+              label(for="contact-email").bmd-label-floating Email
+              input(type="text" name="email")#contact-email.form-control
 
-					.testimonials-slider
-						.comment
-							p.
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        .row
+          .col-12.text-center
+            p.region-txt Region You're Interested In:
 
-							.author
-								.author-avatar
-									+renderimg("profile.png").img-fluid
+          .col-md-6.text-center
+            .checkbox
+              label
+                  input(type="checkbox" name="acceptTerms")
+                  |Northeast (ME, NH, VT, NY, MA, CT)
 
-								.author-info
-									p Daniel Smith
-									span Field Manager
+            .checkbox
+              label
+                  input(type="checkbox" name="acceptTerms")
+                  |Northeast (ME, NH, VT, NY, MA, CT)
 
-						.comment
-							p.
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            .checkbox
+              label
+                  input(type="checkbox" name="acceptTerms")
+                  |Northeast (ME, NH, VT, NY, MA, CT)
+          
+          .col-md-6.text-center
+            .checkbox
+              label
+                  input(type="checkbox" name="acceptTerms")
+                  |Northeast (ME, NH, VT, NY, MA, CT)
 
-							.author
-								.author-avatar
-									+renderimg("profile.png").img-fluid
+            .checkbox
+              label
+                  input(type="checkbox" name="acceptTerms")
+                  |Northeast (ME, NH, VT, NY, MA, CT)
 
-								.author-info
-									p Daniel Smith
-									span Field Manager
+            .checkbox
+              label
+                  input(type="checkbox" name="acceptTerms")
+                  |Northeast (ME, NH, VT, NY, MA, CT)
 
-						.comment
-							p.
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-							.author
-								.author-avatar
-									+renderimg("profile.png").img-fluid
-
-								.author-info
-									p Daniel Smith
-									span Field Manager
-
-					.slider-controls
-						.slider-btn.to-left
-							i.fas.fa-arrow-left
-						.slider-btn.to-right
-							i.fas.fa-arrow-right
-
-
-	#contact-us-section
-		.container
-			h5.c-title Contact us to start your journey
-			p.title-description Use the form below to contact us regarding your interest in becoming a SonderMind Franchesee.
-
-			form
-				.row
-					.col-lg-6
-						.form-group
-							label(for="contact-first-name").bmd-label-floating First Name
-							input(type="text" name="firstName")#contact-first-name.form-control
-
-					.col-lg-6
-						.form-group
-							label(for="contact-last-name").bmd-label-floating Last Name
-							input(type="text" name="lastName")#contact-last-name.form-control
-
-					.col-lg-6
-						.form-group
-							label(for="contact-phone").bmd-label-floating Phone
-							input(type="text" name="phone")#contact-phone.form-control
-
-					.col-lg-6
-						.form-group
-							label(for="contact-email").bmd-label-floating Email
-							input(type="text" name="email")#contact-email.form-control
-
-				.row
-					.col-12.text-center
-						p.region-txt Region You're Interested In:
-
-					.col-md-6
-						.checkbox
-							label
-								input(type="checkbox").form-check-input
-								| Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-
-						.checkbox
-							label
-								input(type="checkbox").form-check-input
-								| Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-
-						.checkbox
-							label
-								input(type="checkbox").form-check-input
-								| Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-
-					.col-md-6
-						.checkbox
-							label
-								input(type="checkbox").form-check-input
-								| Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-
-						.checkbox
-							label
-								input(type="checkbox").form-check-input
-								| Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-
-						.checkbox
-							label
-								input(type="checkbox").form-check-input
-								| Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-
-					.col-md-12.text-center
-						button(type="submit").btn.btn-primary.btn-raised Submit
-
-	#blog-section
-		.container
-			p.title-txt Our Blog
-			p.description-txt Latest News
-
-			.row
-				.col-lg-4
-					.news-preview
-						span.publish-date Oct 24 2018
-						h5.news-title Simply dummy lorem ipsum
-						p.content.
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
-
-						a(href="#").news-link Read More
-
-				.col-lg-4
-					.news-preview
-						span.publish-date Oct 24 2018
-						h5.news-title Simply dummy lorem ipsum
-						p.content.
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
-
-						a(href="#").news-link Read More
-
-				.col-lg-4
-					.news-preview
-						span.publish-date Oct 24 2018
-						h5.news-title Simply dummy lorem ipsum
-						p.content.
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
-
-						a(href="#").news-link Read More
-
+          .col-12.text-center
+            button(type="submit").btn.btn-primary.btn-raised Submit

@@ -12,7 +12,7 @@ header
     padding: 10px 0
     box-shadow: 0px 3px 15px 0px rgba($black, 0.25)
 
-    #logo
+    #logo 
       svg
         max-width: 200px
 
@@ -45,7 +45,7 @@ header
 
     &:first-child
       margin-left: 0
-
+  
   .nav-link
     display: block
     color: #fff
@@ -137,12 +137,11 @@ header
               transform: rotate(135deg)
             &:nth-child(2)
               opacity: 0
-              left: 200px
+              left: 60px
             &:nth-child(3)
               top: 11px
               transform: rotate(-135deg)
 
-// Large devices (desktops, 991px and up)
 @media screen and (max-width: 991px)
   header
     .main-nav
@@ -166,12 +165,11 @@ header
       ul
         flex-direction: column
 
-        li
+        li 
           margin: 5px 0
 
           a
             color: $blue
-
 
     #logo
       justify-content: flex-start

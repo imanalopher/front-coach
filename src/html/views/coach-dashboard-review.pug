@@ -1,4 +1,5 @@
 extends ../includes/layout
+include ../includes/mixins
 
 block page-scripts
 	script(src="js/coach-dashboard-review.js")
@@ -8,15 +9,15 @@ block wrapper
 		.container
 			include ../includes/breadcrumb
 
-		#dashboard-content.content
+		#dashboar-content.content
 			nav#dash-board-nav
 				ul
 					li
-						a(href="#").active Mi Message
+						a(href="/coach-dashboard-mimessages.html").active Mi Message
 					li
-						a(href="#") Mi Bookings
+						a(href="/coach-dashboard-bookings.html") Mi Bookings
 					li
-						a(href="/coach-dashboard-payments.html") My Payments
+						a(href="/coach-dashboard-mypayments.html") My Payments
 					li
 						a(href="#") My Comments
 					li
@@ -42,8 +43,8 @@ block wrapper
 										.date-handler
 											p Start Date:
 												span 12/05/2015
-											p Start End:
-												span 12/06/2015
+											p End Date:
+												span 20/05/2015
 
 										.average-grade
 											p Average grade:
@@ -66,10 +67,12 @@ block wrapper
 
 									.review-txt-area
 										p Your comment:
-										textarea(placeholder="Be polite, think about how your opinion can help others to form an opinion.")
+
+										textarea(name="review-comment" placeholder="Be polite, think about how your opinion can help others to form an opinion.")
 
 									.review-btns
 										button(type="reset").c-button.white-btn
 											span Cancel
+
 										button(type="submit").c-button.colored-btn
 											span Publish The Commentary

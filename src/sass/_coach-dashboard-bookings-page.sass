@@ -1,8 +1,3 @@
-.booking-notification
-  background-color: #e1efbb
-  border: 1px solid #8ec16f
-  margin-bottom: 40px
-
 .booking-card
   border: 1px solid $light-grey
   border-radius: 15px
@@ -12,23 +7,7 @@
   transition: all .3s ease
 
   &:hover
-    box-shadow: 0 3px 10px 0 rgba($grey, 0.05)
-
-  .check-icon
-    float: left
-    @extend %force-centered
-
-    svg
-      font-weight: 700
-      font-size: 30px
-      background-color: #fff
-      height: 50px
-      width: 50px
-      padding: 5px
-      border-radius: 100%
-      color: #8ec16f
-      margin-right: 20px
-
+    box-shadow: 0px 3px 10px 0px rgba($grey, 0.05)
 
   .booking-preview-img
     a
@@ -38,7 +17,7 @@
 
       img
         max-width: 100%
-        min-height: 100%
+        max-height: 100%
         width: auto
         height: auto
 
@@ -53,23 +32,23 @@
       justify-content: space-between
       align-items: center
 
-      .booking-title
+    .booking-title
+      font-weight: 700
+      flex: 1
+      width: 100%
+      margin: 0
+
+      a
+        text-decoration: none
+        color: $black
+
+    span.booking-number
+      color: $grey
+      font-size: .875rem
+
+      span
         font-weight: 700
-        flex: 1
-        width: 100%
-        margin: 0
-
-        a
-          text-decoration: none
-          color: $black
-
-      span.booking-number
-        color: $grey
-        font-size: .875rem
-
-        span
-          font-weight: 700
-          padding-left: 5px
+        margin-left: 5px
 
     .booking-middle
       display: flex
@@ -90,12 +69,13 @@
         display: block
         width: 1px
         height: 70%
-        background-color: #eaeaea
+        background-color: $light-grey
         position: absolute
         right: -1px
 
       span
         font-weight: 700
+        margin-left: 5px
 
     .rating
       margin-bottom: 0
@@ -117,7 +97,6 @@
 
       span
         font-weight: 700
-        margin-right: 5px
 
   .booking-footer
     p
@@ -151,22 +130,22 @@
 
       &.waiting
         background-color: #f9e08e
-
+      
       &.expire
         background-color: #b7b09d
-
+      
       &.accepted
         background-color: #8be1b1
-
+      
       &.canceled
         background-color: #ff8e6c
-
+      
       &.refused
         background-color: #f13f4a
-
+      
       &.made
         background-color: #83a9d0
-
+      
       &.error
         background-color: #ca4951
 
@@ -267,4 +246,3 @@
 
       a
         margin-top: 10px
-

@@ -1,37 +1,35 @@
 .booking-form
-	form
-		.form-elements
-			.select-items
-				.select-wrap
-					select(
-						multiple
-						placeholder="Coaching type..."
-						data-jcf={
-							multipleCompactStyle: true
-						}
-					).jcf-hidden
-						optgroup(label="Category 1")
-							option(val="v1.1") Option 1
-							option(val="v1.2") Option 2
-							option(val="v1.3") Option 3
-						optgroup(label="Category 1")
-							option(val="v2.1") Option 1
-							option(val="v3.2") Option 2
-							option(val="v4.3") Option 3
-						optgroup(label="Category 1")
-							option(val="v3.1") Option 1
-							option(val="v3.2") Option 2
-							option(val="v3.3") Option 3
+  form
+    .form-elements
+      .select-items
+        .select-wrap
+          select(
+            multiple 
+            placeholder="Coaching type..." 
+            data-jcf={
+              multipleCompactStyle: true
+            }
+          ).jcf-hidden
+            optgroup(label="Category 1")
+              option(val="v1.1") Option 1
+              option(val="v1.2") Option 2
+              option(val="v1.3") Option 3
+            optgroup(label="Category 1")
+              option(val="v2.1") Option 1
+              option(val="v3.2") Option 2
+              option(val="v4.3") Option 3
+            optgroup(label="Category 1")
+              option(val="v3.1") Option 1
+              option(val="v3.2") Option 2
+              option(val="v3.3") Option 3
+            
+        .select-wrap
+          select.jcf-hidden
+            option(val="v2") Option 0
+            option(val="v8") Option 8
+            option(val="v9") Option 9
+            option(val="v10") Option 10
+            option(val="v11") Option 11
 
-				.select-wrap
-					select(
-						placeholder="Meeting type..."
-					).jcf-hidden
-						option(val="v2") Option 0
-						option(val="v8") Option 8
-						option(val="v9") Option 9
-						option(val="v10") Option 10
-						option(val="v11") Option 11
-
-			button(type='submit')
-				span Book my free session
+      button(type='submit')
+        span Book my free session

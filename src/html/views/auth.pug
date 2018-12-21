@@ -1,75 +1,74 @@
 extends ../includes/layout
 
 block wrapper
-	main#auth-page.page-content
-		.container
-			.row
-				.col-md-6
-					.card.form-card
-						.card-header Register New Account (free)
-						.card-body
-							form
-								.row
-									.col-md-6
-										.card-element
-											p.element-label First Name
-											.input-wrap
-												input(type="text" placeholder="Enter Your First Name")
+    main#auth-page.page-content
+        .container
+            .row
+                .col-md-6
+                    .card.form-card
+                        .card-header Register New Account (free)
+                        .card-body
+                            form
+                                .row
+                                    .col-md-6
+                                        .card-element
+                                            p.element-label First Name
+                                            .input-wrap
+                                                input(type="text" placeholder="Enter Your First Name")
 
-									.col-md-6
-										.card-element
-											p.element-label Last Name
-											.input-wrap
-												input(type="text" placeholder="Enter Your Last Name")
+                                    .col-md-6
+                                        .card-element
+                                            p.element-label Last Name
+                                            .input-wrap
+                                                input(type="text" placeholder="Enter Your Last Name")
 
-									.col-md-12
-										.card-element
-											p.element-label Email
-											.input-wrap
-												input(type="email" placeholder="Enter Your Email")
+                                    .col-md-12
+                                        .card-element
+                                            p.element-label Email
+                                            .input-wrap
+                                                input(type="text" placeholder="Enter Your Email")
 
-									.col-md-6
-										.card-element
-											p.element-label Password
-											.input-wrap
-												input(type="password" placeholder="Enter Password")
+                                    .col-md-6
+                                        .card-element
+                                            p.element-label Password
+                                            .input-wrap
+                                                input(type="password" placeholder="Enter Password")
+                                    
+                                    .col-md-6
+                                        .card-element
+                                            p.element-label Confirm Password
+                                            .input-wrap
+                                                input(type="password" placeholder="Confirm Password")
 
-									.col-md-6
-										.card-element
-											p.element-label Confirm Password
-											.input-wrap
-												input(type="password" placeholder="Confirm Password")
+                                .form-bottom.text-center
+                                    .checkbox
+                                        label
+                                            input(type="checkbox" name="acceptTerms")
+                                            a(href="terms").form-check-label Accept Terms
 
-								.form-bottom.text-center
-									.checkbox
-										label
-											input(type="checkbox" name="acceptTerms")
-											a(href="terms").form-check-label Accept Terms
+                                    button(type="submit").c-button.colored-btn
+                                        span Register
 
-									button(type="submit").c-button.colored-btn
-										span Register
+                .col-md-6
+                    .card.form-card
+                        .card-header Login to an Existing Account
+                        .card-body
+                            form
+                                .row
+                                    .col-md-12
+                                        .card-element
+                                            p.element-label Email
+                                            .input-wrap
+                                                input(type="text" placeholder="Enter Your Email")
 
-				.col-md-6
-					.card.form-card
-						.card-header Login to an Existing Account
-						.card-body
-							form
-								.row
+                                    .col-md-12
+                                        .card-element
+                                            p.element-label Password
+                                            .input-wrap
+                                                input(type="password" placeholder="Enter Password")
 
-									.col-md-12
-										.card-element
-											p.element-label Email
-											.input-wrap
-												input(type="email" placeholder="Enter Your Email")
+                                .form-bottom
+                                    a(href="terms") Forgot Password
 
-									.col-md-12
-										.card-element
-											p.element-label Password
-											.input-wrap
-												input(type="password" placeholder="Password")
-
-								.form-bottom
-									a(href="terms") Forgot Password
-
-									button(type="submit").c-button.colored-btn
-										span Log In
+                                    button(type="submit").c-button.colored-btn
+                                        span Log In

@@ -44,7 +44,7 @@
       margin: auto
       border-radius: 100%
       @extend %force-centered
-      background: linear-gradient(25deg, $dark-blue, $dark-blue, $blue)
+      background: linear-gradient(25deg, $dark-blue - #222, $blue)
       position: relative
 
       &:after
@@ -142,8 +142,8 @@
     flex-direction: column
     width: 280px
     height: 400px
-    padding: 10px
-    border-radius: 15px
+    padding: 15px
+    border-radius: 10px
     overflow: hidden
     text-align: center
     position: relative
@@ -182,14 +182,14 @@
 
     .link
       position: absolute
-      bottom: 2px
+      bottom: 20px
       z-index: 1
       border: 2px solid #fff
       border-radius: 30px
       padding: 3px 30px 5px
       text-decoration: none
       opacity: 0
-      //visibility: hidden
+      visibility: hidden
       transition: all .3s ease
       color: #fff
       @extend %hover-effect
@@ -198,14 +198,14 @@
       &:after
         opacity: .5
         visibility: visible
-
+        
       .link
         bottom: 40px
         opacity: 1
         visibility: visible
 // --- Coach Type Row End ---
 
-// -- Featured Coaches Row ---
+// --- Featured Coaches Row ---
 #featured-coaches
   @extend %sections
   background-color: rgba($blue, .5)
@@ -237,7 +237,7 @@
 
     &:before
       color: $blue
-      font-size: 1.5rem
+      font-size: 3rem
       opacity: 1
       text-shadow: 3px 3px 9px rgba($grey, .75)
 
@@ -281,105 +281,10 @@
     .item
       width: calc(100% / 3 - 30px)
       padding: 0 10px
-
-// -- Featured Coaches Row End ---
-
-#our-story
-  padding-top: 50px
-  padding-bottom: 50px
-
-#partners-list
-  padding: 30px 0
-  box-shadow: 0px 2px 15px 0px rgba(#888, 0.25)
-  display: none
-
-  .partners-title
-    text-transform: uppercase
-    font-size: 1.25rem
-    font-weight: 900
-
-.partners-logo
-  display: flex
-  align-items: center
-  justify-content: space-between
-
-  a
-    img
-      max-height: 26px
-      width: auto
-
-.shortinfo
-  margin: auto
-  width: 80%
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: flex-start
-  height: 100%
-
-#testimonials
-  .testimonials-txt
-    width: 80%
-    margin: 0 auto
-
-    .title-txt
-      text-transform: uppercase
-      font-weight: 700
-      font-size: .875rem
-
-    .description-txt
-      font-size: 2.5rem
-      font-weight: 900
-
-  .testimonials-slider
-    .comment
-      p
-        color: #555
-
-      .author
-        display: flex
-        align-items: center
-
-      .author-avatar
-        width: 50px
-        height: 50px
-        border-radius: 100%
-        overflow: hidden
-        margin-right: 10px
-
-      .author-info
-        p
-          margin-bottom: 0
-          font-weight: 700
-          color: #000
-          line-height: 1
-
-        span
-          font-size: .875rem
-          line-height: 0
-
-  .slider-controls
-    display: flex
-    margin-top: 1.5rem
-
-    .slider-btn
-      background-color: $blue
-      height: 20px
-      width: 20px
-      border-radius: 100%
-      display: flex
-      align-items: center
-      justify-content: center
-      color: #fff
-      font-size: .75rem
-      cursor: pointer
-
-      &:first-child
-        margin-right: 5px
+// --- Featured Coaches Row End ---
 
 #contact-us-section
   padding: 5rem 0
-  margin: 5rem 0
   background-color: #f5f5f5
 
   .title-description
@@ -393,27 +298,26 @@
     margin-top: 2rem
 
   button.btn.btn-raised
-    margin-top: 5rem
-    padding: 10px 55px
-    font-weight: 700
+    margin-top: 2rem
 
 #blog-section
   margin-bottom: 5rem
 
   .title-txt
     text-transform: uppercase
-    font-weight: 700
+    font-weight: 900
     font-size: .875rem
     text-align: center
 
   .description-txt
-    font-size: 1.75rem
+    font-size: 1.5rem
     font-weight: 900
     text-align: center
+    margin-bottom: 3rem
 
   .news-preview
     border: 1px solid #ccc
-    padding: 25px 25px
+    padding: 25px 20px
     transition: all .3s ease
 
     &:hover
@@ -425,21 +329,21 @@
 
     .publish-date
       font-size: .75rem
-      font-weight: 700
+      font-weight: 900
       text-transform: uppercase
 
     .news-title
       margin-top: 1rem
       margin-bottom: 1rem
-      font-weight: 700
+      font-weight: 900
 
     .news-link
       text-decoration: none
-      color: $blue
+      color: $black
 
       &:after
         content: '\2192'
-        font-weight: 700
+        font-weight: 900
         margin-left: 5px
 
 @media screen and (max-width: 1200px)
@@ -454,4 +358,4 @@
 @media screen and (max-width: 500px)
   #banner-form
     #banner-title
-      font-size: 2.0rem
+      font-size: 2rem

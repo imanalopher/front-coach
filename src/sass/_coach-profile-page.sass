@@ -33,7 +33,7 @@
 
     .rating
       font-size: 1.25rem
-
+    
     .comment-count
       border-left: 1px solid rgba(#fff, .5)
       margin-left: 15px
@@ -142,7 +142,7 @@
     cursor: pointer
     @extend %hover-effect
     margin-top: 15px
-
+    
 .coach-info-item
   background-color: #fff
   padding: 30px
@@ -155,7 +155,7 @@
     font-weight: 700
     font-size: 1.75rem
     border-bottom: 1px solid $light-grey
-    padding-bottom: 10px
+    padding-bottom: 10px 
     margin-bottom: 1rem
 
   p
@@ -190,6 +190,7 @@
     background-color: $blue
     color: #fff
     text-align: center
+    padding: 5px
     padding: 5px 15px 10px
 
     .service-price
@@ -198,55 +199,39 @@
       font-size: 1.5rem
       line-height: 1
 
-#lasts-comments
+.comments-to-coach
+  .comment-wrap
+    display: flex
+    margin-top: 15px
+    padding-bottom: 15px
+    border-bottom: 1px solid $light-grey
 
-  #pagination
-    margin-bottom: -10px !important
+    .comment-avatar
+      width: 80px
 
-  .comments-to-coach
-    .comment-wrap
-      display: flex
-      margin-top: 15px
-      padding-bottom: 15px
-      border-bottom: 1px solid $light-grey
+      .avatar-wrap
+        border-radius: 100%
+        width: 60px
+        height: 60px
+        overflow: hidden
 
-      .comment-avatar
-        width: 80px
+    .comment-content
+      flex: 1
+      width: 100%
 
-        .avatar-wrap
-          border-radius: 100%
-          width: 60px
-          height: 60px
-          overflow: hidden
+      .comment-header
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
 
-      .comment-content
-        flex: 1
-        width: 100%
+      h5.comment-author-name
+        font-size: 1rem
+        font-weight: 700
+        margin-bottom: 5px
 
-        .comment-header
-          display: flex
-          justify-content: space-between
-          margin-bottom: 10px
-
-        h5.comment-author-name
-          font-size: 1rem
-          font-weight: 700
-          margin-bottom: 5px
-
-        .comment-date
-          color: $light-grey - #222
-          font-size: .875rem
+      .comment-date
+        color: $light-grey - #222
+        font-size: .875rem
 
 #coach-profile-map
-  height: 400px
-
-#coach-photos-section
-
-  .coach-photos-slide
-    margin-bottom: 30px
-
-  .coach-photos-nav
-    padding: 0 30px
-
-    .item
-      padding: 0 5px
+  height: 300px

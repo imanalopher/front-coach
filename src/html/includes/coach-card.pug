@@ -1,44 +1,35 @@
 .coach-card
-	.card-top-info
-		.add-to-wishlist
-			.filled
-				i.fas.fa-heart
-			.stroke
-				i.far.fa-heart
+  .card-top-info
+    .add-to-wishlist
+      .filled
+        <i class="fas fa-heart"></i>
+      .stroke
+        <i class="far fa-heart"></i>
+      
+    .top-right-side
+      include rating-stars
+      
 
-		.top-right-side
-			.rating
-				.rating-star
-					i.far.fa-star
-				.rating-star
-					i.far.fa-star
-				.rating-star
-					i.far.fa-star
-				.rating-star
-					i.far.fa-star
-				.rating-star
-					i.far.fa-star
+      a(href="#").comment-link 1 Comment
 
-			a(href="#").comment-link 1 Comment
+  a(href="#").link-body
+    .link-header(style={"background-image": "url('./img/health-coaching.jpg')"})
+      .info-belt
+        .in-call.txt-item
+          span.txt-label In-Call
+          span.price Unavailable
 
-	a(href="/coach-profile.html").link-body
-		.link-header(style={"background-image": "url('./img/health-coaching.jpg')"})
-			.info-belt
-				.in-call.txt-item
-					span.txt-label In-Call
-					span.price Unavailable
+        .coach-avatar(style={"background-image": "url('./img/life-coaching.jpg')"})
 
-				.coach-avatar(style={"background-image": "url('./img/life-coaching.jpg')"})
+        .in-call.txt-item
+          span.txt-label House-Call
+          span.price €39
 
-				.in-call.txt-item
-					span.txt-label House-Call
-					span.price €39
+    .link-footer
+      h5.coach-full-name Cristina Nunez Pabon
+      p.location Madrid, Spain
 
-		.link-footer
-			h5.coach-full-name Cristina Nunez Pabon
-			p.location Madrid, Spain
-
-			.proff-list
-				span General physiotherapy
-				span Physiotherapy of the pelvic floor
-				span.hidden-num +2
+      .proff-list
+        span General physiotherapy
+        span Physiotherapy of the pelvic floor
+        span.hidden-num +2

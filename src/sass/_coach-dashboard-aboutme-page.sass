@@ -2,10 +2,10 @@
   .c-title
     margin: 10px 0
 
-  #dashboard-content
+  #dashboar-content
     background-color: #fff
     border-radius: 15px
-    box-shadow: 0 3px 10px 0 rgba($gray, 0.05)
+    box-shadow: 0px 3px 10px 0px rgba($grey, 0.05)
     overflow: hidden
     min-height: 50vh
 
@@ -26,7 +26,7 @@
             display: block
             position: absolute
             top: 35%
-            right: 0
+            right: 0px
             height: 30%
             width: 1px
             background-color: $blue
@@ -44,11 +44,6 @@
 
             &.active
               border-color: $blue
-
-
-            &:hover
-              color: $blue
-
 
     #dashboard-profile
       #coach-fullname
@@ -109,18 +104,18 @@
 
           .tab-title
             font-weight: 700
-            margin: 15px 0 15px 0
+            margin-bottom: 15px
+
+          form
+            margin: 0
 
           .profile-card-item
             border: 1px solid $light-grey
             border-radius: 15px
             padding: 15px
             height: 100%
-            margin: 0
 
             #profile-avatar-loader
-              margin-bottom: 30px
-
               #dashboard-profile-image
                 border-radius: 15px
                 overflow: hidden
@@ -143,10 +138,10 @@
               color: $blue
 
             .select-wrap
-              border: 1px solid #eaeaea
+              border: 1px solid $light-grey
               border-radius: 30px
 
-              .jfc-select
+              .jcf-select
                 height: 40px
 
             .text-handler
@@ -172,3 +167,4 @@
             @extend %hover-effect
             padding: 0 30px
             margin: 0 auto
+                    

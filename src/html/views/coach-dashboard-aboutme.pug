@@ -1,4 +1,5 @@
 extends ../includes/layout
+include ../includes/mixins
 
 block page-scripts
 	script(src="js/coach-dashboard-aboutme.js")
@@ -8,19 +9,19 @@ block wrapper
 		.container
 			include ../includes/breadcrumb
 
-		#dashboard-content.content
+		#dashboar-content.content
 			nav#dash-board-nav
 				ul
 					li
-						a(href="/coach-dashboard-messages.html") Mi Message
+						a(href="/coach-dashboard-mimessages.html") Mi Message
 					li
 						a(href="/coach-dashboard-bookings.html") Mi Bookings
 					li
-						a(href="/coach-dashboard-payments.html") My Payments
+						a(href="/coach-dashboard-mypayments.html") My Payments
 					li
 						a(href="#") My Comments
 					li
-						a(href="#").active My Profile
+						a(href="/coach-dashboard-aboutme.html").active My Profile
 
 			#dashboard-profile.dashboard-section
 				#coach-fullname
@@ -34,43 +35,42 @@ block wrapper
 					.tabs-sidebar
 						ul
 							li
-								a(href="coach-dashboard-aboutme.html").active About Me
-							li
-								a(href="coach-dashboard-paymentinformation.html") Payment Information
-							li
-								a(href="coach-dashboard-contact.html") Contact Information
+								a(href="#").active About Me
+
+							each val in ['Payment Information', 'Contact Information']
+								li
+									a(href="#")= val
 
 					.tab-content
-
 						.container-fluid
 							h5.tab-title About
+
 							.row
 								.col-lg-6
-									.card.profile-card-item
-										.card-body
-											#profile-avatar-loader
-												#dashboard-profile-image
-													+renderimg('default-user.png')
-												#avatar-load-zone
-													form(action="#" method="post" enctype="multipart/form-data").dropzone
-														input(type="file" name="file" hidden)
+									.profile-card-item
+										#profile-avatar-loader
+											#dashboard-profile-image
+												+renderimg('default-user.png')
+											#avatar-load-zone
+												form(action="/file-upload"  method="post" enctype="multipart/form-data")#my-awesome-dropzone.dropzone
+													input(type="file" name="file" hidden)
 
 								.col-lg-6
-									.card.profile-card-item
-										.card-body
-											p.card-title My Language
+									.profile-card-item
+										form(action="#")
+											p.card-title My Languages
 
 											.card-element
-												p.element-label Language spoken (at least 1 required):
+												p.element-label Languages spoken (at least 1 required) :
 												.select-wrap
 													select(
 														multiple
-														placeholder="Coaching type..."
+														placeholder="Choose Language..."
 														data-jcf={
 															multipleCompactStyle: true
 														}
 													).jcf-hidden
-														each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+														each val, index in ['Chinese', 'English', 'Deutch', 'Greek']
 															option(val= index)= val
 
 											.card-element
@@ -88,20 +88,18 @@ block wrapper
 																select(
 																	placeholder="Choose Language..."
 																).jcf-hidden
-																	each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+																	each val, index in ['Chinese', 'English', 'Deutch', 'Greek']
 																		option(val= index)= val
+
 													.col-lg-6
 														.card-element
 															p.element-label Translate To:
 															.select-wrap
 																select(
-																	placeholder="Choose Language..."
+																placeholder="Choose Language..."
 																).jcf-hidden
-																	each val, index in ['Chinese', 'English', 'Dutch', 'Greek']
+																	each val, index in ['Chinese', 'English', 'Deutch', 'Greek']
 																		option(val= index)= val
 
-													button(type="submit")#dashboard-update.btn-raised
+													button(type="submit")#dashboard-update
 														span Update
-
-								.col-lg-12.text-center
-									button(type="submit").btn.btn-primary.btn-raised Update

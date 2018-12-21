@@ -1,59 +1,55 @@
 extends ../includes/layout
+include ../includes/mixins
 
 block page-scripts
-	script(src="js/coach-dashboard-messages.js")
+	script(src="js/coach-dashboard-mimessages.js")
 
 block wrapper
 	main#coach-dashboard
 		.container
 			include ../includes/breadcrumb
 
-		#dashboard-content.content
+		#dashboar-content.content
 			nav#dash-board-nav
 				#dashboard-nav-tgl
 					span.active-tab-name Mi Messages
 					span.tab-tgl-icon
 						i.fas.fa-chevron-down
+
 				ul
 					li
-						a(href="/coach-dashboard-messages.html").active Mi Message
+						a(href="/coach-dashboard-mimessages.html").active Mi Message
 					li
 						a(href="/coach-dashboard-bookings.html") Mi Bookings
 					li
-						a(href="/coach-dashboard-payments.html") My Payments
+						a(href="/coach-dashboard-mypayments.html") My Payments
 					li
 						a(href="#") My Comments
 					li
 						a(href="/coach-dashboard-aboutme.html") My Profile
 
-			#dashboard-messages.dashboard-section
+			#dashboard-mimessages.dashboard-section
 				.container-fluid
 					.row
-
-						.col-lg-12.text-center
-							span.result-counter 3 Results
-
 						.col-lg-12.col-sm-6
 							.message-card
 								.message-preview-img
 									a(href="#")
-										+renderimg('default-user.png')
+										+renderimg('preview-default.png')
 
 								.message-content
 									.content-header
 										h5.message-title
 											a(href="#") Titre du message
-										span.message-date Date: 25/02/2018
+										span.message-date Date: 25/02/2014
 
 									.message-middle
-										p.message-author You are tanking to:
-											span Antony N
+										p.message-author You are talking to:
+											span Anthony N
 										include ../includes/rating-stars
 
 									.message-footer
-										p
-											b Antony N.
-											| dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..
+										p Anthoni N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus...
 
 								.message-btns
 									a(href="#")
@@ -69,23 +65,21 @@ block wrapper
 							.message-card
 								.message-preview-img
 									a(href="#")
-										+renderimg('default-user.png')
+										+renderimg('preview-default.png')
 
 								.message-content
 									.content-header
 										h5.message-title
 											a(href="#") Titre du message
-										span.message-date Date: 25/02/2018
+										span.message-date Date: 25/02/2014
 
 									.message-middle
-										p.message-author You are tanking to:
-											span Antony N
+										p.message-author You are talking to:
+											span Anthony N
 										include ../includes/rating-stars
 
 									.message-footer
-										p
-											b Antony N.
-											| dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..
+										p Anthoni N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus...
 
 								.message-btns
 									a(href="#")
@@ -101,23 +95,21 @@ block wrapper
 							.message-card
 								.message-preview-img
 									a(href="#")
-										+renderimg('default-user.png')
+										+renderimg('preview-default.png')
 
 								.message-content
 									.content-header
 										h5.message-title
 											a(href="#") Titre du message
-										span.message-date Date: 25/02/2018
+										span.message-date Date: 25/02/2014
 
 									.message-middle
-										p.message-author You are tanking to:
-											span Antony N
+										p.message-author You are talking to:
+											span Anthony N
 										include ../includes/rating-stars
 
 									.message-footer
-										p
-											b Antony N.
-											| dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus..
+										p Anthoni N. dit: ed tempus ante поп metus ultricies vestibulum. Vestibulum eget ulti ices nunc, пес feugiat purus. Quisque non urna et lectus tempor aliquam. Maecenas vitae lacus posuere, egestas est sed, fringilla lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus...
 
 								.message-btns
 									a(href="#")

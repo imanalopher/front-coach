@@ -1,6 +1,28 @@
-import slick from 'slick-carousel/slick/slick'
+import slick from "slick-carousel/slick/slick";
+// require("/js/common.js");
+// function coachListMap() {
+//   let windowScroll = $(window).scrollTop() + $("header.fixed").outerHeight();
+//   let mapScroll = $("#coach-list-map-wrap").offset().top;
+//   console.log(windowScroll, mapScroll);
+//   if (windowScroll >= mapScroll) {
+//     $("#coach-list-map-wrap").addClass("fixed");
+//     $("#coach-list-map-wrap").css("top", $("header.fixed").outerHeight());
+//     console.log("true");
+//   } else {
+//     $("#coach-list-map-wrap").css("top", "auto");
+//     $("#coach-list-map-wrap").removeClass("fixed");
+//     console.log("false");
+//   }
+// }
 
 $(() => {
+  // coachListMap();
+
+  // $(window).scroll(() => {
+  //   // coachListMap();
+  // });
+  // ----------------------------------------
+
   // --- Coach Type Slick Slider ---
   $(".slick-coach-types").slick({
     dots: true,
@@ -12,39 +34,35 @@ $(() => {
       {
         breakpoint: 1550,
         settings: {
-          slidesToScroll: 4,
           slidesToShow: 4,
-          variableWidth: true,
+          slidesToScroll: 4
         }
       },
       {
         breakpoint: 1230,
         settings: {
-          slidesToScroll: 3,
           slidesToShow: 3,
-          variableWidth: true
+          slidesToScroll: 3
         }
       },
       {
         breakpoint: 960,
         settings: {
-          slidesToScroll: 2,
           slidesToShow: 2,
-          variableWidth: true
+          slidesToScroll: 2
         }
       },
       {
         breakpoint: 700,
         settings: {
-          slidesToScroll: 1,
           slidesToShow: 1,
+          slidesToScroll: 1,
           variableWidth: true
         }
       }
     ]
   });
-
-  // --- Coach Type Slick Slider End ---
+  // ----------------------------------------
 
   // --- Featured Coaches Slick Slider ---
   $(".slick-featured-coaches").slick({
@@ -54,35 +72,21 @@ $(() => {
     slidesToScroll: 1,
     infinite: true,
     centerMode: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 992,
         settings: {
-          slidesToScroll: 2,
           slidesToShow: 2,
-
         }
       },
       {
         breakpoint: 762,
         settings: {
-          slidesToScroll: 1,
-          slidesToShow: 1,
-          variableWidth: true,
+          slidesToShow: 1
         }
       }
     ]
   });
-  // --- Featured Coaches Slick Slider End ---
-
-  // --- Testimonials Sliders ---
-  $(".testimonials-slider").slick({
-    arrows: false,
-    autoplay: true,
-  });
-
-  $(".slider-btn.to-right").click(() => $(".testimonials-slider").slick('slickNext'));
-  $(".slider-btn.to-left").click(() => $(".testimonials-slider").slick('slickPrev'));
-  // --- Testimonials Sliders End ---
-
+  // ----------------------------------------
 });

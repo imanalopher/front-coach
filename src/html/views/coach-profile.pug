@@ -2,300 +2,281 @@ extends ../includes/layout
 include ../includes/mixins
 
 block page-scripts
-	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnzRjwYxJCaaQ_JzmJp0aIlpWFG_nYw4&callback=init" async defer)
-	script(src="js/coach-profile.js")
-	script.
-			function init() {
-				let map = new google.maps.Map(document.getElementById("coach-profile-map"), {
-					zoom: 13,
-					center: new google.maps.LatLng(42.872029, 74.611335),
-					styles: [{
-						"featureType": "administrative",
-						"elementType": "labels.text.fill",
-						"stylers": [{"color": "#6195a0"}]
-					}, {
-						"featureType": "administrative.province",
-						"elementType": "geometry.stroke",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "landscape",
-						"elementType": "geometry",
-						"stylers": [{"lightness": "0"}, {"saturation": "0"}, {"color": "#f5f5f2"}, {"gamma": "1"}]
-					}, {
-						"featureType": "landscape.man_made",
-						"elementType": "all",
-						"stylers": [{"lightness": "-3"}, {"gamma": "1.00"}]
-					}, {
-						"featureType": "landscape.natural.terrain",
-						"elementType": "all",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "poi",
-						"elementType": "all",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "poi.park",
-						"elementType": "geometry.fill",
-						"stylers": [{"color": "#bae5ce"}, {"visibility": "on"}]
-					}, {
-						"featureType": "road",
-						"elementType": "all",
-						"stylers": [{"saturation": -100}, {"lightness": 45}, {"visibility": "simplified"}]
-					}, {
-						"featureType": "road.highway",
-						"elementType": "all",
-						"stylers": [{"visibility": "simplified"}]
-					}, {
-						"featureType": "road.highway",
-						"elementType": "geometry.fill",
-						"stylers": [{"color": "#fac9a9"}, {"visibility": "simplified"}]
-					}, {
-						"featureType": "road.highway",
-						"elementType": "labels.text",
-						"stylers": [{"color": "#4e4e4e"}]
-					}, {
-						"featureType": "road.arterial",
-						"elementType": "labels.text.fill",
-						"stylers": [{"color": "#787878"}]
-					}, {
-						"featureType": "road.arterial",
-						"elementType": "labels.icon",
-						"stylers": [{"visibility": "off"}]
-					}, {
-						"featureType": "transit",
-						"elementType": "all",
-						"stylers": [{"visibility": "simplified"}]
-					}, {
-						"featureType": "transit.station.airport",
-						"elementType": "labels.icon",
-						"stylers": [{"hue": "#0a00ff"}, {"saturation": "-77"}, {"gamma": "0.57"}, {"lightness": "0"}]
-					}, {
-						"featureType": "transit.station.rail",
-						"elementType": "labels.text.fill",
-						"stylers": [{"color": "#43321e"}]
-					}, {
-						"featureType": "transit.station.rail",
-						"elementType": "labels.icon",
-						"stylers": [{"hue": "#ff6c00"}, {"lightness": "4"}, {"gamma": "0.75"}, {"saturation": "-68"}]
-					}, {
-						"featureType": "water",
-						"elementType": "all",
-						"stylers": [{"color": "#eaf6f8"}, {"visibility": "on"}]
-					}, {
-						"featureType": "water",
-						"elementType": "geometry.fill",
-						"stylers": [{"color": "#c7eced"}]
-					}, {
-						"featureType": "water",
-						"elementType": "labels.text.fill",
-						"stylers": [{"lightness": "-49"}, {"saturation": "-53"}, {"gamma": "0.79"}]
-					}],
-					mapTypeControl: false,
-					streetViewControl: false
-				});
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnzRjwYxJCaaQ_JzmJp0aIlpWFG_nYw4&callback=init" async defer)
+  script(src="js/coach-profile.js")
 
-				let coachBookFormCircle = new google.maps.Circle({
-					strokeColor: "#00d2d4f2",
-					strokeOpacity: 0.8,
-					strokeWeight: 2,
-					fillColor: "#00d2d4f2",
-					fillOpacity: 0.35,
-					map: map,
-					center: {lat: 42.872029, lng: 74.611335},
-					radius: 1000
-				});
-			}
+  script.
+    function init() {
+      let map = new google.maps.Map(document.getElementById("coach-profile-map"), {
+          zoom: 13,
+          center: new google.maps.LatLng(51.157845, 71.454424),
+          styles: [{
+              "featureType": "administrative",
+              "elementType": "labels.text.fill",
+              "stylers": [{"color": "#6195a0"}]
+          }, {
+              "featureType": "administrative.province",
+              "elementType": "geometry.stroke",
+              "stylers": [{"visibility": "off"}]
+          }, {
+              "featureType": "landscape",
+              "elementType": "geometry",
+              "stylers": [{"lightness": "0"}, {"saturation": "0"}, {"color": "#f5f5f2"}, {"gamma": "1"}]
+          }, {
+              "featureType": "landscape.man_made",
+              "elementType": "all",
+              "stylers": [{"lightness": "-3"}, {"gamma": "1.00"}]
+          }, {
+              "featureType": "landscape.natural.terrain",
+              "elementType": "all",
+              "stylers": [{"visibility": "off"}]
+          }, {
+              "featureType": "poi",
+              "elementType": "all",
+              "stylers": [{"visibility": "off"}]
+          }, {
+              "featureType": "poi.park",
+              "elementType": "geometry.fill",
+              "stylers": [{"color": "#bae5ce"}, {"visibility": "on"}]
+          }, {
+              "featureType": "road",
+              "elementType": "all",
+              "stylers": [{"saturation": -100}, {"lightness": 45}, {"visibility": "simplified"}]
+          }, {
+              "featureType": "road.highway",
+              "elementType": "all",
+              "stylers": [{"visibility": "simplified"}]
+          }, {
+              "featureType": "road.highway",
+              "elementType": "geometry.fill",
+              "stylers": [{"color": "#fac9a9"}, {"visibility": "simplified"}]
+          }, {
+              "featureType": "road.highway",
+              "elementType": "labels.text",
+              "stylers": [{"color": "#4e4e4e"}]
+          }, {
+              "featureType": "road.arterial",
+              "elementType": "labels.text.fill",
+              "stylers": [{"color": "#787878"}]
+          }, {
+              "featureType": "road.arterial",
+              "elementType": "labels.icon",
+              "stylers": [{"visibility": "off"}]
+          }, {
+              "featureType": "transit",
+              "elementType": "all",
+              "stylers": [{"visibility": "simplified"}]
+          }, {
+              "featureType": "transit.station.airport",
+              "elementType": "labels.icon",
+              "stylers": [{"hue": "#0a00ff"}, {"saturation": "-77"}, {"gamma": "0.57"}, {"lightness": "0"}]
+          }, {
+              "featureType": "transit.station.rail",
+              "elementType": "labels.text.fill",
+              "stylers": [{"color": "#43321e"}]
+          }, {
+              "featureType": "transit.station.rail",
+              "elementType": "labels.icon",
+              "stylers": [{"hue": "#ff6c00"}, {"lightness": "4"}, {"gamma": "0.75"}, {"saturation": "-68"}]
+          }, {
+              "featureType": "water",
+              "elementType": "all",
+              "stylers": [{"color": "#eaf6f8"}, {"visibility": "on"}]
+          }, {
+              "featureType": "water",
+              "elementType": "geometry.fill",
+              "stylers": [{"color": "#c7eced"}]
+          }, {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [{"lightness": "-49"}, {"saturation": "-53"}, {"gamma": "0.79"}]
+          }],
+          mapTypeControl: false,
+          streetViewControl: false
+      });
+
+      let coachBookFormCircle = new google.maps.Circle({
+        strokeColor: "#00d2d4f2",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#00d2d4f2",
+        fillOpacity: 0.35,
+        map: map,
+        center: {lat: 51.157845, lng: 71.454424},
+        radius: 1000
+      });
+    }
 
 block wrapper
-	main#coach-profile
-		.container
-			include ../includes/booking-form
-			h1.c-title Silvia Di Bonaventura
+  main#coach-profile
+    .container
+      include ../includes/booking-form
+      h1.c-title Silvia Di Bonaventura
 
-			include ../includes/breadcrumb
+      include ../includes/breadcrumb
 
-		#coach-info.content
-			#coach-info-header
-				.container-fluid
-					.row.align-items-center
-						.col-lg-3
-							#profile-avatar
-								+renderimg('profile-avatar.jpg').img-fluid
+    #coach-info.content
+      #coach-info-header
+        .container-fluid
+          .row.align-items-center
+            .col-lg-3
+              #profile-avatar
+                +renderimg('profile-avatar.jpg').img-fluid
 
-						.col-lg-9
-							.row
-								.col-lg-8
-									.rating-row
-										include ../includes/rating-stars
+            .col-lg-9
+              .row
+                .col-lg-8
+                  .rating-row
+                    include ../includes/rating-stars
 
-										.comment-count
-											a(href="#") 1 Comments
+                    .comment-count
+                      a(href="#") 1 Comments
 
-									.proff-list
-										span General physiotherapy
-										span Ambassador
-										span Physiotherapy of the pelvic floor
+                  .proff-list
+                    span General physiotherapy
+                    span Ambassador
+                    span Physiotherapy of the pelvic floor
 
-									.social-icons-row
-										.add-to-wishlist
-											.filled
-												<i class="fas fa-heart"></i>
-											.stroke
-												<i class="far fa-heart"></i>
-											span Add To Favorites
+                  .social-icons-row
+                    .add-to-wishlist
+                      .filled
+                        <i class="fas fa-heart"></i>
+                      .stroke
+                        <i class="far fa-heart"></i>
+                      span Add To Favorites
 
-										.social-links
-											a(href="#").social-link
-												span
-													i.fab.fa-facebook-f
-											a(href="#").social-link
-												span
-													i.fab.fa-twitter
-											a(href="#").social-link
-												span
-													i.fab.fa-instagram
+                    .social-links
+                      a(href="#").social-link
+                        span
+                          i.fab.fa-facebook-f
+                      a(href="#").social-link
+                        span
+                          i.fab.fa-twitter
+                      a(href="#").social-link
+                        span
+                          i.fab.fa-instagram
 
-								.col-lg-4
-									#book-form-handler
-										#coach-book-form
-											h5.booking-form-header Book your visit
+                .col-lg-4
+                  #book-form-handler
+                    #coach-book-form
+                      h5.booking-form-header Book your visit
 
-											.booking-form-body
-												.booking-element
-													.calendar-toggle-icon
-														i.far.fa-calendar-alt
-													input(id="booking-date" placeholder="Choose Date And Time")
+                      .booking-form-body
+                        .booking-element
+                          .calendar-toggle-icon
+                            i.far.fa-calendar-alt
+                          input(id="booking-date" placeholder="Choose Date And Time")
 
-												.booking-element
-													select.jcf-hidden
-														option(val="0") Select Service...
-														option(val="v2") Option 0
-														option(val="v8") Option 8
-														option(val="v9") Option 9
-														option(val="v10") Option 10
-														option(val="v11") Option 11
+                        .booking-element
+                          select.jcf-hidden
+                            option(val="0") Select Service...
+                            option(val="v2") Option 0
+                            option(val="v8") Option 8
+                            option(val="v9") Option 9
+                            option(val="v10") Option 10
+                            option(val="v11") Option 11
+                        
+                        .booking-element
+                          select.jcf-hidden
+                            option(val="0") Select Price Type...
+                            option(val="v2") Option 0
+                            option(val="v8") Option 8
 
-												.booking-element
-													select.jcf-hidden
-														option(val="0") Select Price Type...
-														option(val="v2") Option 0
-														option(val="v8") Option 8
+                        button(type="submit")#book-btn
+                          span Book Now!
+                          
+      .row
+        .col-lg-9
+          #coach-description.coach-info-item
+            h5.info-item-title Description
+            p.
+              Physical therapist with extensive experience in the field of rehabilitation. I have worked in several hospitals in Madrid. I am currently specializing in neurology, to get to work in the field of Neurorehabilitation, my passion. Physical therapist with extensive experience in the field of rehabilitation. I have worked in several hospitals in Madrid. I am currently specializing in neurology, to get to work in the field of Neurorehabilitation, my passion.
 
-												button(type="submit")#book-btn
-													span Book Now!
+          #coach-services.coach-info-item
+            h5.info-item-title Services
 
-			.row
-				.col-lg-9
-					#coach-description.coach-info-item
-						h5.info-item-title Description
-						p.
-							Physical therapist with extensive experience in the field of rehabilitation. I have worked in several hospitals in Madrid. I am currently specializing in neurology, to get to work in the field of Neurorehabilitation, my passion. Physical therapist with extensive experience in the field of rehabilitation. I have worked in several hospitals in Madrid. I am currently specializing in neurology, to get to work in the field of Neurorehabilitation, my passion.
+            .row
+              .col-lg-6
+                .coach-service-card
+                  .service-card-body 
+                    h5.service-title Dry needling - 1h
+                    span.procedure-type General physiotherapy
+                    p.service-description.
+                      Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
+                  .service-bottom
+                    span.service-type House-Call
+                    span.service-price €40
 
-					#coach-services.coach-info-item
-						h5.info-item-title Services
+              .col-lg-6
+                .coach-service-card
+                  .service-card-body 
+                    h5.service-title Dry needling - 1h
+                    span.procedure-type General physiotherapy
+                    p.service-description.
+                      Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
+                  .service-bottom
+                    span.service-type House-Call
+                    span.service-price €40
 
-						.row
-							.col-lg-6
-								.coach-service-card
-									.service-card-body
-										h5.service-title Dry needling - 1h
-										span.procedure-type General physiotherapy
-										p.service-description.
-											Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
-									.service-bottom
-										span.service-type House-Call
-										span.service-price €40
+              .col-lg-6
+                .coach-service-card
+                  .service-card-body 
+                    h5.service-title Dry needling - 1h
+                    span.procedure-type General physiotherapy
+                    p.service-description.
+                      Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
+                  .service-bottom
+                    span.service-type House-Call
+                    span.service-price €40
 
-							.col-lg-6
-								.coach-service-card
-									.service-card-body
-										h5.service-title Dry needling - 1h
-										span.procedure-type General physiotherapy
-										p.service-description.
-											Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
-									.service-bottom
-										span.service-type House-Call
-										span.service-price €40
+              .col-lg-6
+                .coach-service-card
+                  .service-card-body 
+                    h5.service-title Dry needling - 1h
+                    span.procedure-type General physiotherapy
+                    p.service-description.
+                      Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
+                  .service-bottom
+                    span.service-type House-Call
+                    span.service-price €40
 
-							.col-lg-6
-								.coach-service-card
-									.service-card-body
-										h5.service-title Dry needling - 1h
-										span.procedure-type General physiotherapy
-										p.service-description.
-											Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
-									.service-bottom
-										span.service-type House-Call
-										span.service-price €40
+          #lasts-comments.coach-info-item
+            h5.info-item-title Lasts Comments
 
-							.col-lg-6
-								.coach-service-card
-									.service-card-body
-										h5.service-title Dry needling - 1h
-										span.procedure-type General physiotherapy
-										p.service-description.
-											Dry needling is a technique of physical therapy that involves the use of a needle on the points trigger or muscular nodules (muscular contraction knots), with the aim of treating pain and contractures.
-									.service-bottom
-										span.service-type House-Call
-										span.service-price €40
+            .comments-to-coach
+              .comment-wrap
+                .comment-avatar
+                  .avatar-wrap
+                    +renderimg('default-user.png').resp-img
 
-					#lasts-comments.coach-info-item
-						h5.info-item-title Lasts Comments
+                .comment-content
+                  .comment-header
+                    .comment-title
+                      h5.comment-author-name Niels V.
+                      include ../includes/rating-stars
 
-						.comments-to-coach
-							.comment-wrap
-								.comment-avatar
-									.avatar-wrap
-										+renderimg('default-user.png').resp-img
+                    span.comment-date 13/11/2018
 
-								.comment-content
-									.comment-header
-										.comment-title
-											h5.comment-author-name Niels V.
-											include ../includes/rating-stars
+                  .comment-body
+                    p Cristina es una fisioterapeuta muy profesional. El tratamiento fue exactamente lo que necesitaba para liberar tensión en el hombro.
+              
+              .comment-wrap
+                .comment-avatar
+                  .avatar-wrap
+                    +renderimg('default-user.png').resp-img
 
-										span.comment-date 13/11/2018
+                .comment-content
+                  .comment-header
+                    .comment-title
+                      h5.comment-author-name Niels V.
+                      include ../includes/rating-stars
 
-									.comment-body
-										p Cristina es una fisioterapeuta muy profesional. El tratamiento fue exactamente lo que necesitaba para liberar tensión en el hombro.
+                    span.comment-date 13/11/2018
 
-							.comment-wrap
-								.comment-avatar
-									.avatar-wrap
-										+renderimg('default-user.png').resp-img
+                  .comment-body
+                    p Cristina es una fisioterapeuta muy profesional. El tratamiento fue exactamente lo que necesitaba para liberar tensión en el hombro.
 
-								.comment-content
-									.comment-header
-										.comment-title
-											h5.comment-author-name Niels V.
-											include ../includes/rating-stars
+          #coach-map.coach-info-item
+            h5.info-item-title Map
 
-										span.comment-date 13/11/2018
-
-									.comment-body
-										p Cristina es una fisioterapeuta muy profesional. El tratamiento fue exactamente lo que necesitaba para liberar tensión en el hombro.
-
-						include ../includes/pagination
-
-					#coach-full-calendar.coach-info-item
-						h5.info-item-title Calendar
-
-						#coach-profile-full-calendar
-
-					#coach-map.coach-info-item
-						h5.info-item-title Map
-
-						#coach-profile-map
-
-					#coach-photos-section.coach-info-item
-						h5.info-item-title Photos
-
-						.coach-photos-slide
-							each val in [1,2,3,4]
-								.item
-									+renderimg("medi" + val + ".jpg").img-fluid
-
-						.coach-photos-nav
-							each val in [1,2,3,4]
-								.item
-									+renderimg("medi" + val + ".jpg").img-fluid
+            #coach-profile-map

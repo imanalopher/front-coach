@@ -1,0 +1,55 @@
+extends ../includes/layout
+include ../includes/mixins
+
+block page-scripts
+	script(src="js/coach-dashboard-mimessages.js")
+
+block wrapper
+	main#coach-dashboard
+		.container
+			include ../includes/breadcrumb
+
+		#dashboar-content.content
+			nav#dash-board-nav
+				ul
+					li
+						a(href="/coach-dashboard-mimessages.html") Mi Message
+					li
+						a(href="/coach-dashboard-bookings.html") Mi Bookings
+					li
+						a(href="/coach-dashboard-mypayments.html").active My Payments
+					li
+						a(href="#") My Comments
+					li
+						a(href="/coach-dashboard-aboutme.html") My Profile
+
+			#dashboard-mypayments.dashboard-section
+				.container-fluid
+					table.table.table-striped
+						thead
+							tr
+								th(scope="col") # Reservation number
+								th(scope="col") Payment date in your favor
+								th(scope="col") Amount
+								th(scope="col") Status
+								th(scope="col") Bill
+
+						tbody
+							tr
+								td(scope="row") NJOQ88J
+								td -
+								td 52.06€
+								td En attente
+								td -
+							tr
+								td(scope="row") NJOQ88J
+								td 20/02/2016
+								td 52.06€
+								td En attente
+								td -
+							tr
+								td(scope="row") NJOQ88J
+								td -
+								td 52.06€
+								td En attente
+								td -
