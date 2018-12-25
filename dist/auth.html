@@ -17,17 +17,17 @@
     <header>
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-xl-4">
-            <nav>
+          <div class="col-lg-4">
+            <nav class="main-nav">
               <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="auth.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="auth.html">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
               </ul>
             </nav>
           </div>
-          <div class="col-xl-4">
+          <div class="col-lg-4 col-sm-4">
             <div id="logo"><a href="/"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1685.67 262.79">
                   <defs>
                     <style>.cls-1{fill:#00d1d2;}.cls-2{fill:#01cdc8;}.cls-3{fill:#01cdc9;}.cls-4{fill:#00cdc8;}.cls-5{fill:#02cec9;}</style>
@@ -69,13 +69,16 @@
                   <path class="cls-5" d="M55.19,249.85a9.37,9.37,0,0,1-9-8.89,9.06,9.06,0,0,1,9.12-9h.15a8.8,8.8,0,0,1,8.66,8.94V241A9,9,0,0,1,55.19,249.85Z" transform="translate(0)" />
                 </svg></a></div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-lg-4 col-sm-8">
             <div id="header-right">
               <div class="header-right-item" id="favorite-link"><a class="nav-link" href="#">My Favorites</a></div>
               <div class="dropdown language-tgl header-right-item"><a class="toggle-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background-image:url('../../img/en.png');"></a>
-                <div class="dropdown-menu"><a class="dropdown-item" href="#"><img src="../img/en.png" alt="en.png"><span>En</span></a><a class="dropdown-item" href="#"><img src="../img/es.png" alt="es.png"><span>Es</span></a></div>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#"><img src="../img/en.png" alt="en.png"><span>English</span></a><a class="dropdown-item" href="#"><img src="../img/es.png" alt="es.png"><span>Espanol</span></a></div>
               </div>
               <div class="social-links header-right-item"><a class="social-link" href="#"><span><i class="fab fa-facebook-f"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-twitter"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-instagram"></i></span></a></div>
+              <div class="header-right-item" id="nav-bar-tgl">
+                <div class="tgl-icon"><span></span><span></span><span></span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +113,7 @@
                       <div class="card-element">
                         <p class="element-label">Email</p>
                         <div class="input-wrap">
-                          <input type="email" placeholder="Enter Your Email">
+                          <input type="text" placeholder="Enter Your Email">
                         </div>
                       </div>
                     </div>
@@ -153,7 +156,7 @@
                       <div class="card-element">
                         <p class="element-label">Email</p>
                         <div class="input-wrap">
-                          <input type="email" placeholder="Enter Your Email">
+                          <input type="text" placeholder="Enter Your Email">
                         </div>
                       </div>
                     </div>
@@ -161,7 +164,7 @@
                       <div class="card-element">
                         <p class="element-label">Password</p>
                         <div class="input-wrap">
-                          <input type="password" placeholder="Password">
+                          <input type="password" placeholder="Enter Password">
                         </div>
                       </div>
                     </div>
@@ -179,32 +182,34 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6"><a href="#" id="footer-logo"><img class="img-fluid" src="../img/logo.png" alt="logo.png"></a>
-            <p><a class="contact-link" href="#"><span><i class="fas fa-envelope"></i></span>test@test.com</a></p>
-            <p><a class="contact-link" href="#"><span><i class="fas fa-phone"></i></span>(303) 630-9454</a></p>
-            <p><a class="btn-link" href="#" id="contact_us_btn"><span>Contact Us</span></a></p>
+          <div class="col-lg-6 col-md-6"><a href="#" id="footer-logo"><img class="img-fluid" src="../img/logo.png" alt="logo.png"></a>
+            <p><a class="contact-link" href="mailto:sample@mail.com"><span><i class="fas fa-envelope"></i></span>sondercentersfranchise@info.com</a></p>
+            <p><a class="contact-link" href="tel:000000000"><span><i class="fas fa-phone"></i></span>(303) 630-9454</a></p>
+            <p><a class="btn-link" href="#" id="contact_us-btn"><span>Contact Us</span></a></p>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-3 col-6">
             <div id="footer-nav">
               <p class="footer-section-title">Quick Links</p>
               <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Who we are?</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Why</a></li>
+                <li><a href="#">Opportunities</a></li>
+                <li><a href="#">Numbers</a></li>
+                <li><a href="#">Training And Support</a></li>
+                <li><a href="#">Process</a></li>
+                <li><a href="#">Apply Now</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-3 col-6">
             <div id="footer-address">
-              <p class="footer-section-title">Our location</p>
-              <p class="footer-address">12344, Wkkk, St. Unit ll11 Denver, CO 808080</p>
+              <p class="footer-section-title">Our Location</p>
+              <p class="footer-address">1738, Wyncoop St, Unit LL 1, Denver, CO 80202</p>
               <p class="footer-section-title">Social</p>
               <div class="social-links"><a class="social-link" href="#"><span><i class="fab fa-facebook-f"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-twitter"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-instagram"></i></span></a></div>
             </div>
           </div>
         </div>
-        <div id="footer-bottom"><span class="rights">@ 2018 SonderCenters. All Rights Reversed.</span>
+        <div id="footer-bottom"><span class="rights">©2018 SonderCenters. All Rights Reserved.</span>
           <ul>
             <li><a href="#">Terms And Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>

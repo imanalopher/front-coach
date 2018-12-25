@@ -17,17 +17,17 @@
     <header>
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-xl-4">
-            <nav>
+          <div class="col-lg-4">
+            <nav class="main-nav">
               <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="auth.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="auth.html">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
               </ul>
             </nav>
           </div>
-          <div class="col-xl-4">
+          <div class="col-lg-4 col-sm-4">
             <div id="logo"><a href="/"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1685.67 262.79">
                   <defs>
                     <style>.cls-1{fill:#00d1d2;}.cls-2{fill:#01cdc8;}.cls-3{fill:#01cdc9;}.cls-4{fill:#00cdc8;}.cls-5{fill:#02cec9;}</style>
@@ -69,13 +69,16 @@
                   <path class="cls-5" d="M55.19,249.85a9.37,9.37,0,0,1-9-8.89,9.06,9.06,0,0,1,9.12-9h.15a8.8,8.8,0,0,1,8.66,8.94V241A9,9,0,0,1,55.19,249.85Z" transform="translate(0)" />
                 </svg></a></div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-lg-4 col-sm-8">
             <div id="header-right">
               <div class="header-right-item" id="favorite-link"><a class="nav-link" href="#">My Favorites</a></div>
               <div class="dropdown language-tgl header-right-item"><a class="toggle-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background-image:url('../../img/en.png');"></a>
-                <div class="dropdown-menu"><a class="dropdown-item" href="#"><img src="../img/en.png" alt="en.png"><span>En</span></a><a class="dropdown-item" href="#"><img src="../img/es.png" alt="es.png"><span>Es</span></a></div>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#"><img src="../img/en.png" alt="en.png"><span>English</span></a><a class="dropdown-item" href="#"><img src="../img/es.png" alt="es.png"><span>Espanol</span></a></div>
               </div>
               <div class="social-links header-right-item"><a class="social-link" href="#"><span><i class="fab fa-facebook-f"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-twitter"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-instagram"></i></span></a></div>
+              <div class="header-right-item" id="nav-bar-tgl">
+                <div class="tgl-icon"><span></span><span></span><span></span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -107,7 +110,7 @@
                   </select>
                 </div>
                 <div class="select-wrap">
-                  <select class="jcf-hidden" placeholder="Meeting type...">
+                  <select class="jcf-hidden">
                     <option val="v2">Option 0</option>
                     <option val="v8">Option 8</option>
                     <option val="v9">Option 9</option>
@@ -125,7 +128,7 @@
           <ul>
             <li><a href="#">Home</a>
             </li>
-            <li><a href="#">Coach list</a>
+            <li><a href="#">Coach List</a>
             </li>
             <li><span>Silvia Di Bonaventura</span>
             </li>
@@ -142,7 +145,7 @@
           <div class="col-lg-8">
             <div id="coach-list-catalog">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="coach-card">
                     <div class="card-top-info">
                       <div class="add-to-wishlist">
@@ -153,12 +156,12 @@
                         <div class="rating">
                           <div class="rating-star"><i class="far fa-star"></i></div>
                           <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
                         </div><a class="comment-link" href="#">1 Comment</a>
                       </div>
-                    </div><a class="link-body" href="/coach-profile.html">
+                    </div><a class="link-body" href="#">
                       <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                         <div class="info-belt">
                           <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -174,7 +177,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="coach-card">
                     <div class="card-top-info">
                       <div class="add-to-wishlist">
@@ -185,12 +188,12 @@
                         <div class="rating">
                           <div class="rating-star"><i class="far fa-star"></i></div>
                           <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
                         </div><a class="comment-link" href="#">1 Comment</a>
                       </div>
-                    </div><a class="link-body" href="/coach-profile.html">
+                    </div><a class="link-body" href="#">
                       <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                         <div class="info-belt">
                           <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -206,7 +209,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="coach-card">
                     <div class="card-top-info">
                       <div class="add-to-wishlist">
@@ -217,12 +220,12 @@
                         <div class="rating">
                           <div class="rating-star"><i class="far fa-star"></i></div>
                           <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
                         </div><a class="comment-link" href="#">1 Comment</a>
                       </div>
-                    </div><a class="link-body" href="/coach-profile.html">
+                    </div><a class="link-body" href="#">
                       <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                         <div class="info-belt">
                           <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -238,7 +241,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="coach-card">
                     <div class="card-top-info">
                       <div class="add-to-wishlist">
@@ -249,12 +252,12 @@
                         <div class="rating">
                           <div class="rating-star"><i class="far fa-star"></i></div>
                           <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
                         </div><a class="comment-link" href="#">1 Comment</a>
                       </div>
-                    </div><a class="link-body" href="/coach-profile.html">
+                    </div><a class="link-body" href="#">
                       <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                         <div class="info-belt">
                           <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -270,7 +273,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="coach-card">
                     <div class="card-top-info">
                       <div class="add-to-wishlist">
@@ -281,12 +284,12 @@
                         <div class="rating">
                           <div class="rating-star"><i class="far fa-star"></i></div>
                           <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
                         </div><a class="comment-link" href="#">1 Comment</a>
                       </div>
-                    </div><a class="link-body" href="/coach-profile.html">
+                    </div><a class="link-body" href="#">
                       <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                         <div class="info-belt">
                           <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -302,7 +305,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="coach-card">
                     <div class="card-top-info">
                       <div class="add-to-wishlist">
@@ -313,12 +316,12 @@
                         <div class="rating">
                           <div class="rating-star"><i class="far fa-star"></i></div>
                           <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
-                          <div class="rating-star"><i class="far fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
+                          <div class="rating-star"><i class="fas fa-star"></i></div>
                         </div><a class="comment-link" href="#">1 Comment</a>
                       </div>
-                    </div><a class="link-body" href="/coach-profile.html">
+                    </div><a class="link-body" href="#">
                       <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                         <div class="info-belt">
                           <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -339,9 +342,9 @@
                 <ul>
                   <li><a href="#"><span><i class="fas fa-angle-left"></i></span></a></li>
                   <li class="active"><span>1</span></li>
-                  <li><a href="#"><span>2</span></a></li>
-                  <li><a href="#"><span>3</span></a></li>
-                  <li><a href="#"><span><i class="fas fa-angle-right"></i></span></a></li>
+                  <li><a href="#"> <span>2</span></a></li>
+                  <li><a href="#"> <span>3</span></a></li>
+                  <li><a href="#"><span> <i class="fas fa-angle-right"></i></span></a></li>
                 </ul>
               </div>
             </div>
@@ -352,32 +355,34 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6"><a href="#" id="footer-logo"><img class="img-fluid" src="../img/logo.png" alt="logo.png"></a>
-            <p><a class="contact-link" href="#"><span><i class="fas fa-envelope"></i></span>test@test.com</a></p>
-            <p><a class="contact-link" href="#"><span><i class="fas fa-phone"></i></span>(303) 630-9454</a></p>
-            <p><a class="btn-link" href="#" id="contact_us_btn"><span>Contact Us</span></a></p>
+          <div class="col-lg-6 col-md-6"><a href="#" id="footer-logo"><img class="img-fluid" src="../img/logo.png" alt="logo.png"></a>
+            <p><a class="contact-link" href="mailto:sample@mail.com"><span><i class="fas fa-envelope"></i></span>sondercentersfranchise@info.com</a></p>
+            <p><a class="contact-link" href="tel:000000000"><span><i class="fas fa-phone"></i></span>(303) 630-9454</a></p>
+            <p><a class="btn-link" href="#" id="contact_us-btn"><span>Contact Us</span></a></p>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-3 col-6">
             <div id="footer-nav">
               <p class="footer-section-title">Quick Links</p>
               <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Who we are?</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Why</a></li>
+                <li><a href="#">Opportunities</a></li>
+                <li><a href="#">Numbers</a></li>
+                <li><a href="#">Training And Support</a></li>
+                <li><a href="#">Process</a></li>
+                <li><a href="#">Apply Now</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-3 col-6">
             <div id="footer-address">
-              <p class="footer-section-title">Our location</p>
-              <p class="footer-address">12344, Wkkk, St. Unit ll11 Denver, CO 808080</p>
+              <p class="footer-section-title">Our Location</p>
+              <p class="footer-address">1738, Wyncoop St, Unit LL 1, Denver, CO 80202</p>
               <p class="footer-section-title">Social</p>
               <div class="social-links"><a class="social-link" href="#"><span><i class="fab fa-facebook-f"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-twitter"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-instagram"></i></span></a></div>
             </div>
           </div>
         </div>
-        <div id="footer-bottom"><span class="rights">@ 2018 SonderCenters. All Rights Reversed.</span>
+        <div id="footer-bottom"><span class="rights">©2018 SonderCenters. All Rights Reserved.</span>
           <ul>
             <li><a href="#">Terms And Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -390,90 +395,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnzRjwYxJCaaQ_JzmJp0aIlpWFG_nYw4&amp;callback=init" async defer></script>
     <script src="js/coach-list.js"></script>
     <script>
-      InfoBubble.prototype.setBubbleOffset = function(xOffset, yOffset) {
-        this.bubbleOffsetX = parseInt(xOffset);
-        this.bubbleOffsetY = parseInt(yOffset);
-      };
-
-      InfoBubble.prototype.getBubbleOffset = function() {
-        return {
-          x: this.bubbleOffsetX || 0,
-          y: this.bubbleOffsetY || 0
-        }
-      };
-
-      InfoBubble.prototype.draw = function() {
-        var projection = this.getProjection();
-
-        if (!projection) {
-          return;
-        }
-
-        var latLng = (this.get('position'));
-
-        if (!latLng) {
-          this.close();
-          return;
-        }
-
-        var tabHeight = 0;
-
-        if (this.activeTab_) {
-          tabHeight = this.activeTab_.offsetHeight;
-        }
-
-        var anchorHeight = this.getAnchorHeight_();
-        var arrowSize = this.getArrowSize_();
-        var arrowPosition = this.getArrowPosition_();
-
-        arrowPosition = arrowPosition / 100;
-
-        var pos = projection.fromLatLngToDivPixel(latLng);
-        var width = this.contentContainer_.offsetWidth;
-        var height = this.bubble_.offsetHeight;
-
-        if (!width) {
-          return;
-        }
-
-        var top = pos.y - (height + arrowSize) + this.getBubbleOffset().y;
-
-        if (anchorHeight) {
-          top -= anchorHeight;
-        }
-
-        var left = pos.x - (width * arrowPosition) + this.getBubbleOffset().x;
-
-        this.bubble_.style['top'] = this.px(top);
-        this.bubble_.style['left'] = this.px(left);
-
-        var shadowStyle = parseInt(this.get('shadowStyle'), 10);
-
-        switch (shadowStyle) {
-          case 1:
-            // Shadow is behind
-            this.bubbleShadow_.style['top'] = this.px(top + tabHeight - 1);
-            this.bubbleShadow_.style['left'] = this.px(left);
-            this.bubbleShadow_.style['width'] = this.px(width);
-            this.bubbleShadow_.style['height'] =
-              this.px(this.contentContainer_.offsetHeight - arrowSize);
-            break;
-          case 2:
-            // Shadow is below
-            width = width * 0.8;
-            if (anchorHeight) {
-              this.bubbleShadow_.style['top'] = this.px(pos.y);
-            } else {
-              this.bubbleShadow_.style['top'] = this.px(pos.y + arrowSize);
-            }
-            this.bubbleShadow_.style['left'] = this.px(pos.x - width * arrowPosition);
-
-            this.bubbleShadow_.style['width'] = this.px(width);
-            this.bubbleShadow_.style['height'] = this.px(2);
-            break;
-        }
-      };
-      var dataList = [{
+      let dataList = [{
           id: 1,
           type: "1",
           plantedDate: "30.01.2018",
@@ -699,10 +621,11 @@
 
           google.maps.event.addListener(mapObj[i].marker, "click", () => {
             closeMaps(mapObj[i].infoBubble);
-
             if (!mapObj[i].infoBubble.isOpen()) {
               mapObj[i].infoBubble.open(map, mapObj[i].marker);
-              $(".map-coach-card").parent().css("border-radius", "15px");
+              $(".map-coach-card")
+                .parent()
+                .css("border-radius", "15px");
             } else {
               mapObj[i].infoBubble.close();
             }
@@ -712,55 +635,55 @@
 
       function createBubbleInfo(e) {
         return `
-        		<div class="coach-card">
-        			<div class="card-top-info">
-        				<div class="add-to-wishlist"></div>
-        				<div class="top-right-side">
-        					<div class="rating">
-        						<div class="rating-star">
-        							<i class="far fa-star"></i>
-        						</div>
-        						<div class="rating-star">
-        							<i class="far fa-star"></i>
-        						</div>
-        						<div class="rating-star">
-        							<i class="far fa-star"></i>
-        						</div>
-        						<div class="rating-star">
-        							<i class="far fa-star"></i>
-        						</div>
-        						<div class="rating-star">
-        							<i class="far fa-star"></i>
-        						</div>
-        					</div>
-        				</div>
-        			</div >
-        			<a class="link-body" href="#">
-        				<div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
-        					<div class="info-belt">
-        						<div class="in-call txt-item">
-        							<span class="txt-label">In-Call</span>
-        							<span class="price">Unavailable</span>
-        						</div>
-        						<div class="coach-avatar" style="background-image:url('./img/life-coaching.jpg');"></div>
-        						<div class="in-call txt-item">
-        							<span class="txt-label">House-Call</span>
-        							<span class="price">€39</span>
-        						</div>
-        					</div>
-        				</div>
-        				<div class="link-footer">
-        					<h5 class="coach-full-name">Cristina Nunez Pabon</h5>
-        					<p class="location">Madrid, Spain</p>
-        				</div>
-        			</a>
-        		</div>
-        	`;
+            <div class="coach-card">
+              <div class="card-top-info">
+                <div class="add-to-wishlist"></div>
+                <div class="top-right-side">
+                  <div class="rating">
+                    <div class="rating-star">
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="rating-star">
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="rating-star">
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="rating-star">
+                      <i class="far fa-star"></i>
+                    </div>
+                    <div class="rating-star">
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div >
+              <a class="link-body" href="#">
+                <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
+                  <div class="info-belt">
+                    <div class="in-call txt-item">
+                      <span class="txt-label">In-Call</span>
+                      <span class="price">Unavailable</span>
+                    </div>
+                    <div class="coach-avatar" style="background-image:url('./img/life-coaching.jpg');"></div>
+                    <div class="in-call txt-item">
+                      <span class="txt-label">House-Call</span>
+                      <span class="price">€39</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="link-footer">
+                  <h5 class="coach-full-name">Cristina Nunez Pabon</h5>
+                  <p class="location">Madrid, Spain</p>
+                </div>
+              </a>
+            </div>
+          `;
       }
 
-      function closeMaps(objInfoBubble) {
-        mapObj.forEach(e => {
-          if (objInfoBubble !== e.infoBubble) {
+      function closeMaps(obj) {
+        mapObj.forEach((e) => {
+          if (obj != e.infoBubble) {
             if (e.infoBubble.isOpen()) {
               e.infoBubble.close();
             }

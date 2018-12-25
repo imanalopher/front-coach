@@ -17,17 +17,17 @@
     <header>
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-xl-4">
-            <nav>
+          <div class="col-lg-4">
+            <nav class="main-nav">
               <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="auth.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="auth.html">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
               </ul>
             </nav>
           </div>
-          <div class="col-xl-4">
+          <div class="col-lg-4 col-sm-4">
             <div id="logo"><a href="/"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1685.67 262.79">
                   <defs>
                     <style>.cls-1{fill:#00d1d2;}.cls-2{fill:#01cdc8;}.cls-3{fill:#01cdc9;}.cls-4{fill:#00cdc8;}.cls-5{fill:#02cec9;}</style>
@@ -69,13 +69,16 @@
                   <path class="cls-5" d="M55.19,249.85a9.37,9.37,0,0,1-9-8.89,9.06,9.06,0,0,1,9.12-9h.15a8.8,8.8,0,0,1,8.66,8.94V241A9,9,0,0,1,55.19,249.85Z" transform="translate(0)" />
                 </svg></a></div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-lg-4 col-sm-8">
             <div id="header-right">
               <div class="header-right-item" id="favorite-link"><a class="nav-link" href="#">My Favorites</a></div>
               <div class="dropdown language-tgl header-right-item"><a class="toggle-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background-image:url('../../img/en.png');"></a>
-                <div class="dropdown-menu"><a class="dropdown-item" href="#"><img src="../img/en.png" alt="en.png"><span>En</span></a><a class="dropdown-item" href="#"><img src="../img/es.png" alt="es.png"><span>Es</span></a></div>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#"><img src="../img/en.png" alt="en.png"><span>English</span></a><a class="dropdown-item" href="#"><img src="../img/es.png" alt="es.png"><span>Espanol</span></a></div>
               </div>
               <div class="social-links header-right-item"><a class="social-link" href="#"><span><i class="fab fa-facebook-f"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-twitter"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-instagram"></i></span></a></div>
+              <div class="header-right-item" id="nav-bar-tgl">
+                <div class="tgl-icon"><span></span><span></span><span></span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -108,7 +111,7 @@
                   </select>
                 </div>
                 <div class="select-wrap">
-                  <select class="jcf-hidden" placeholder="Meeting type...">
+                  <select class="jcf-hidden">
                     <option val="v2">Option 0</option>
                     <option val="v8">Option 8</option>
                     <option val="v9">Option 9</option>
@@ -126,7 +129,7 @@
     <div id="advantages">
       <div class="container">
         <div class="row">
-          <div class="col-xl-3">
+          <div class="col-lg-3 col-sm-6">
             <div class="advantage">
               <div class="icon-img"><img src="../img/ico-certificate.png" alt="ico-certificate.png">
               </div>
@@ -134,7 +137,7 @@
               <p class="txt">All coaches are certified and verified according to high standards. Reviews of previous clients are displayed transparently</p>
             </div>
           </div>
-          <div class="col-xl-3">
+          <div class="col-lg-3 col-sm-6">
             <div class="advantage">
               <div class="icon-img"><img src="../img/ico-figures.png" alt="ico-figures.png">
               </div>
@@ -142,7 +145,7 @@
               <p class="txt">Meet a potential coach with no obligation. Then decide if you wish to continue with the coach, or not</p>
             </div>
           </div>
-          <div class="col-xl-3">
+          <div class="col-lg-3 col-sm-6">
             <div class="advantage">
               <div class="icon-img"><img src="../img/ico-video-conversation.png" alt="ico-video-conversation.png">
               </div>
@@ -150,7 +153,7 @@
               <p class="txt">Get face-to-face or virtual coaching using common tools such as Skype or FaceTime at time and place that work for you</p>
             </div>
           </div>
-          <div class="col-xl-3">
+          <div class="col-lg-3 col-sm-6">
             <div class="advantage">
               <div class="icon-img"><img src="../img/ico-hand.png" alt="ico-hand.png">
               </div>
@@ -170,31 +173,31 @@
         <div class="item">
           <div class="type-item" style="background-image:url('./img/life-coaching.jpg');">
             <h5 class="title">Life Coaching</h5>
-            <p class="description">Life coaching value lies in connecting the different aspects of your life in a single powerful strategy and action plan. The right life coach will help you reach the clarity.</p><a class="link light" href="/coach-list.html"><span>Search Now</span></a>
+            <p class="description">Life coaching value lies in connecting the different aspects of your life in a single powerful strategy and action plan. The right life coach will help you reach the clarity.</p><a class="link light" href="#"><span>Search Now</span></a>
           </div>
         </div>
         <div class="item">
           <div class="type-item" style="background-image:url('./img/leadership-coaching.jpg');">
             <h5 class="title">Leadership Coaching</h5>
-            <p class="description">Leaders need to constantly develop if they are to maintain a positive and lasting impact on their teams and organizations. An experienced leadership coach is your ally in your pursuit of excellence.</p><a class="link light" href="/coach-list.html"><span>Search Now</span></a>
+            <p class="description">Leaders need to constantly develop if they are to maintain a positive and lasting impact on their teams and organizations. An experienced leadership coach is your ally in your pursuit of excellence.</p><a class="link light" href="#"><span>Search Now</span></a>
           </div>
         </div>
         <div class="item">
           <div class="type-item" style="background-image:url('./img/career-coaching.jpg');">
             <h5 class="title">Career Coaching</h5>
-            <p class="description">A gratifying and meaningful career is critical to leading a fulfilling life. Whether you are searching for the right career, or find yourself at a crossroads wondering which route to take.</p><a class="link light" href="/coach-list.html"><span>Search Now</span></a>
+            <p class="description">A gratifying and meaningful career is critical to leading a fulfilling life. Whether you are searching for the right career, or find yourself at a crossroads wondering which route to take.</p><a class="link light" href="#"><span>Search Now</span></a>
           </div>
         </div>
         <div class="item">
           <div class="type-item" style="background-image:url('./img/mentoring.jpg');">
             <h5 class="title">Mentoring</h5>
-            <p class="description">A mentor is a guide – someone who had walked the path that you wish to follow and faced the challenges you are encountering. Mentors are seasoned experts with a wealth of experience to share in a specific proficiency.</p><a class="link light" href="/coach-list.html"><span>Search Now</span></a>
+            <p class="description">A mentor is a guide – someone who had walked the path that you wish to follow and faced the challenges you are encountering. Mentors are seasoned experts with a wealth of experience to share in a specific proficiency.</p><a class="link light" href="#"><span>Search Now</span></a>
           </div>
         </div>
         <div class="item">
           <div class="type-item" style="background-image:url('./img/health-coaching.jpg');">
             <h5 class="title">Health Coaching</h5>
-            <p class="description">The pressures of a modern lifestyle and escalating work demands make it difficult to maintain optimal health, but when your health has slipped too far it is often necessary to acquire the assistance of a professional coach.</p><a class="link light" href="/coach-list.html"><span>Search Now</span></a>
+            <p class="description">The pressures of a modern lifestyle and escalating work demands make it difficult to maintain optimal health, but when your health has slipped too far it is often necessary to acquire the assistance of a professional coach.</p><a class="link light" href="#"><span>Search Now</span></a>
           </div>
         </div>
       </div>
@@ -214,12 +217,12 @@
                   <div class="rating">
                     <div class="rating-star"><i class="far fa-star"></i></div>
                     <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
                   </div><a class="comment-link" href="#">1 Comment</a>
                 </div>
-              </div><a class="link-body" href="/coach-profile.html">
+              </div><a class="link-body" href="#">
                 <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                   <div class="info-belt">
                     <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -246,12 +249,12 @@
                   <div class="rating">
                     <div class="rating-star"><i class="far fa-star"></i></div>
                     <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
                   </div><a class="comment-link" href="#">1 Comment</a>
                 </div>
-              </div><a class="link-body" href="/coach-profile.html">
+              </div><a class="link-body" href="#">
                 <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                   <div class="info-belt">
                     <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -278,12 +281,12 @@
                   <div class="rating">
                     <div class="rating-star"><i class="far fa-star"></i></div>
                     <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
                   </div><a class="comment-link" href="#">1 Comment</a>
                 </div>
-              </div><a class="link-body" href="/coach-profile.html">
+              </div><a class="link-body" href="#">
                 <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                   <div class="info-belt">
                     <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -310,12 +313,12 @@
                   <div class="rating">
                     <div class="rating-star"><i class="far fa-star"></i></div>
                     <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
                   </div><a class="comment-link" href="#">1 Comment</a>
                 </div>
-              </div><a class="link-body" href="/coach-profile.html">
+              </div><a class="link-body" href="#">
                 <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                   <div class="info-belt">
                     <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -342,12 +345,12 @@
                   <div class="rating">
                     <div class="rating-star"><i class="far fa-star"></i></div>
                     <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
-                    <div class="rating-star"><i class="far fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
+                    <div class="rating-star"><i class="fas fa-star"></i></div>
                   </div><a class="comment-link" href="#">1 Comment</a>
                 </div>
-              </div><a class="link-body" href="/coach-profile.html">
+              </div><a class="link-body" href="#">
                 <div class="link-header" style="background-image:url('./img/health-coaching.jpg');">
                   <div class="info-belt">
                     <div class="in-call txt-item"><span class="txt-label">In-Call</span><span class="price">Unavailable</span></div>
@@ -361,89 +364,6 @@
                   <div class="proff-list"><span>General physiotherapy</span><span>Physiotherapy of the pelvic floor</span><span class="hidden-num">+2</span></div>
                 </div>
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="partners-list">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-4">
-            <div class="partners-title">Our Trustfully Partners</div>
-          </div>
-          <div class="col-xl-8">
-            <div class="partners-logo"><a href="#" target="_blank"><img src="../img/demochimp-logo.png" alt="demochimp-logo.png"></a><a href="#" target="_blank"><img src="../img/merchant-logo.png" alt="merchant-logo.png"></a><a href="#" target="_blank"><img src="../img/innovaccer-logo.png" alt="innovaccer-logo.png"></a><a href="#" target="_blank"><img src="../img/tartu_science-logo.png" alt="tartu_science-logo.png"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="our-story">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="shortinfo-title">Our Story</div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-
-            </p><a class="btn-link float-right" href="#"><span>Read More</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="testimonials">
-      <div class="row no-gutters align-items-center">
-        <div class="col-lg-6"><img class="img-fluid" src="../img/people.png" alt="people.png">
-        </div>
-        <div class="col-lg-6">
-          <div class="testimonials-txt">
-            <p class="title-txt">Testimonials</p>
-            <p class="description-txt">Check what's our clients say about us!</p>
-            <div class="testimonials-slider">
-              <div class="comment">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-                </p>
-                <div class="author">
-                  <div class="author-avatar"><img class="img-fluid" src="../img/profile.png" alt="profile.png">
-                  </div>
-                  <div class="author-info">
-                    <p>Daniel Smith</p><span>Field Manager</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-                </p>
-                <div class="author">
-                  <div class="author-avatar"><img class="img-fluid" src="../img/profile.png" alt="profile.png">
-                  </div>
-                  <div class="author-info">
-                    <p>Daniel Smith</p><span>Field Manager</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-                </p>
-                <div class="author">
-                  <div class="author-avatar"><img class="img-fluid" src="../img/profile.png" alt="profile.png">
-                  </div>
-                  <div class="author-info">
-                    <p>Daniel Smith</p><span>Field Manager</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slider-controls">
-              <div class="slider-btn to-left"><i class="fas fa-arrow-left"></i></div>
-              <div class="slider-btn to-right"><i class="fas fa-arrow-right"></i></div>
             </div>
           </div>
         </div>
@@ -452,7 +372,7 @@
     <div id="contact-us-section">
       <div class="container">
         <h5 class="c-title">Contact us to start your journey</h5>
-        <p class="title-description">Use the form below to contact us regarding your interest in becoming a SonderMind Franchesee.</p>
+        <p class="title-description">Use the form below to contact us regarding your interest becoming a SonderMind Franchisee</p>
         <form>
           <div class="row">
             <div class="col-lg-6">
@@ -464,7 +384,7 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label class="bmd-label-floating" for="contact-last-name">Last Name</label>
-                <input class="form-control" type="text" name="lastName" id="contact-last-name">
+                <input class="form-control" type="text" name="lasttName" id="contact-last-name">
               </div>
             </div>
             <div class="col-lg-6">
@@ -484,111 +404,78 @@
             <div class="col-12 text-center">
               <p class="region-txt">Region You're Interested In:</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
               <div class="checkbox">
                 <label>
-                  <input class="form-check-input" type="checkbox">Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
+                  <input type="checkbox" name="acceptTerms">Northeast (ME, NH, VT, NY, MA, CT)
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input class="form-check-input" type="checkbox">Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
+                  <input type="checkbox" name="acceptTerms">Northeast (ME, NH, VT, NY, MA, CT)
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input class="form-check-input" type="checkbox">Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="checkbox">
-                <label>
-                  <input class="form-check-input" type="checkbox">Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input class="form-check-input" type="checkbox">Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input class="form-check-input" type="checkbox">Northeast (ME, NH, VT, NY, MA, CT, RI, PA, NJ)
+                  <input type="checkbox" name="acceptTerms">Northeast (ME, NH, VT, NY, MA, CT)
                 </label>
               </div>
             </div>
-            <div class="col-md-12 text-center">
+            <div class="col-md-6 text-center">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="acceptTerms">Northeast (ME, NH, VT, NY, MA, CT)
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="acceptTerms">Northeast (ME, NH, VT, NY, MA, CT)
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="acceptTerms">Northeast (ME, NH, VT, NY, MA, CT)
+                </label>
+              </div>
+            </div>
+            <div class="col-12 text-center">
               <button class="btn btn-primary btn-raised" type="submit">Submit</button>
             </div>
           </div>
         </form>
       </div>
     </div>
-    <div id="blog-section">
-      <div class="container">
-        <p class="title-txt">Our Blog</p>
-        <p class="description-txt">Latest News</p>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="news-preview"><span class="publish-date">Oct 24 2018</span>
-              <h5 class="news-title">Simply dummy lorem ipsum</h5>
-              <p class="content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
-
-              </p><a class="news-link" href="#">Read More</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="news-preview"><span class="publish-date">Oct 24 2018</span>
-              <h5 class="news-title">Simply dummy lorem ipsum</h5>
-              <p class="content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
-
-              </p><a class="news-link" href="#">Read More</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="news-preview"><span class="publish-date">Oct 24 2018</span>
-              <h5 class="news-title">Simply dummy lorem ipsum</h5>
-              <p class="content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
-
-              </p><a class="news-link" href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6"><a href="#" id="footer-logo"><img class="img-fluid" src="../img/logo.png" alt="logo.png"></a>
-            <p><a class="contact-link" href="#"><span><i class="fas fa-envelope"></i></span>test@test.com</a></p>
-            <p><a class="contact-link" href="#"><span><i class="fas fa-phone"></i></span>(303) 630-9454</a></p>
-            <p><a class="btn-link" href="#" id="contact_us_btn"><span>Contact Us</span></a></p>
+          <div class="col-lg-6 col-md-6"><a href="#" id="footer-logo"><img class="img-fluid" src="../img/logo.png" alt="logo.png"></a>
+            <p><a class="contact-link" href="mailto:sample@mail.com"><span><i class="fas fa-envelope"></i></span>sondercentersfranchise@info.com</a></p>
+            <p><a class="contact-link" href="tel:000000000"><span><i class="fas fa-phone"></i></span>(303) 630-9454</a></p>
+            <p><a class="btn-link" href="#" id="contact_us-btn"><span>Contact Us</span></a></p>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-3 col-6">
             <div id="footer-nav">
               <p class="footer-section-title">Quick Links</p>
               <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Who we are?</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Why</a></li>
+                <li><a href="#">Opportunities</a></li>
+                <li><a href="#">Numbers</a></li>
+                <li><a href="#">Training And Support</a></li>
+                <li><a href="#">Process</a></li>
+                <li><a href="#">Apply Now</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-3 col-6">
             <div id="footer-address">
-              <p class="footer-section-title">Our location</p>
-              <p class="footer-address">12344, Wkkk, St. Unit ll11 Denver, CO 808080</p>
+              <p class="footer-section-title">Our Location</p>
+              <p class="footer-address">1738, Wyncoop St, Unit LL 1, Denver, CO 80202</p>
               <p class="footer-section-title">Social</p>
               <div class="social-links"><a class="social-link" href="#"><span><i class="fab fa-facebook-f"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-twitter"></i></span></a><a class="social-link" href="#"><span><i class="fab fa-instagram"></i></span></a></div>
             </div>
           </div>
         </div>
-        <div id="footer-bottom"><span class="rights">@ 2018 SonderCenters. All Rights Reversed.</span>
+        <div id="footer-bottom"><span class="rights">©2018 SonderCenters. All Rights Reserved.</span>
           <ul>
             <li><a href="#">Terms And Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
