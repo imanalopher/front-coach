@@ -8,20 +8,20 @@
   position: relative
   //display: none
 
-  .bg-pattern-img
-    img
-      position: absolute
-      top: 0
-      left: 0
-      height: 100%
-      width: auto
+.bg-pattern-img
+  img
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: auto
 
-      &:nth-child(1)
-        z-index: 3
-      &:nth-child(2)
-        z-index: 2
-      &:nth-child(3)
-        z-index: 1
+    &:nth-child(1)
+      z-index: 3
+    &:nth-child(2)
+      z-index: 2
+    &:nth-child(3)
+      z-index: 1
 
   &:before
     content: ''
@@ -374,6 +374,16 @@
       font-size: 2.5rem
 
 @media screen and (max-width: 500px)
+  .bg-pattern-img
+    svg, img
+      left: 50%
+      transform: translateX(-50%)
   #banner-form
     #banner-title
       font-size: 2rem
+
+@media screen and (orientation: portrait)
+  .bg-pattern-img
+    svg, img
+      left: 50%
+      transform: translateX(-50%)
