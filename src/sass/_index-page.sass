@@ -6,7 +6,18 @@
   height: 100vh
   overflow: hidden
   position: relative
-  //display: none
+
+  &:before
+    content: ''
+    position: absolute
+    top: -50%
+    left: 0
+    z-index: 0
+    width: 50%
+    height: 200%
+    background: linear-gradient(to left, rgba(#fff, .25), transparent, transparent)
+    transform: rotate(25deg)
+    display: none
 
 .bg-pattern-img
   img
@@ -22,17 +33,6 @@
       z-index: 2
     &:nth-child(3)
       z-index: 1
-
-  &:before
-    content: ''
-    position: absolute
-    top: -50%
-    left: 0
-    z-index: 0
-    width: 50%
-    height: 200%
-    background: linear-gradient(to left, rgba(#fff, .25), transparent, transparent)
-    transform: rotate(25deg)
 
 #banner-form
   width: 70%
