@@ -1,11 +1,27 @@
 // --- Banner Row ---
 #banner-row
-  background-image: url(../img/banner-row.jpg)
+  background-image: url(../img/3082.jpg)
   @extend %bg-cover
   @extend %force-centered
   height: 100vh
   overflow: hidden
   position: relative
+  //display: none
+
+  .bg-pattern-img
+    img
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: auto
+
+      &:nth-child(1)
+        z-index: 3
+      &:nth-child(2)
+        z-index: 2
+      &:nth-child(3)
+        z-index: 1
 
   &:before
     content: ''
@@ -20,6 +36,8 @@
 
 #banner-form
   width: 70%
+  position: relative
+  z-index: 4
 
   #banner-title
     color: #fff
@@ -198,7 +216,7 @@
       &:after
         opacity: .5
         visibility: visible
-        
+
       .link
         bottom: 40px
         opacity: 1
