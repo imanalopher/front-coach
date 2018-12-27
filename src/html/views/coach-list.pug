@@ -228,7 +228,7 @@ block page-scripts
                   }
           });
       }
-  
+
 
 block wrapper
   main#coach-list
@@ -240,15 +240,15 @@ block wrapper
 
     .container-fluid
       .row
-        .col-lg-4
+        .col-xl-5.col-lg-4
           #coach-list-map-wrap
             #coach-list-map
 
-        .col-lg-8
+        .col-xl-7.col-lg-8
           #coach-list-catalog
             .row
               - for (var x = 0; x < 6; x++)
-                .col-lg-4
+                .col-xl-6.col-lg-6.col-md-6
                   include ../includes/coach-card
-                  
+
             include ../includes/pagination

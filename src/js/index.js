@@ -30,6 +30,7 @@ $(() => {
     slidesToShow: 4,
     slidesToScroll: 4,
     centerMode: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1550,
@@ -72,18 +73,18 @@ $(() => {
     slidesToScroll: 1,
     infinite: true,
     centerMode: true,
-    variableWidth: true,
     responsive: [
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2
         }
       },
       {
         breakpoint: 762,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          centerMode: false
         }
       }
     ]
