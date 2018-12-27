@@ -35,7 +35,7 @@
       &:last-child
         &:after
           display: none
-          
+
   button
     width: 220px
     background-color: $blue
@@ -46,3 +46,22 @@
     text-transform: uppercase
     @extend %hover-effect
     @extend %force-centered
+
+@media screen and (max-width: 500px)
+  .booking-form
+    .form-elements
+      flex-direction: column
+      border-radius: 25px
+
+    .select-items
+      flex-direction: column
+      width: 100%
+
+      .select-wrap
+        width: 100%
+
+        &:after
+          display: none
+
+    button
+      width: 100%
