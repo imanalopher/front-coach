@@ -162,8 +162,17 @@
                         <div class="card-element">
                           <p class="element-label">Tell Us About Yourself</p>
                           <div class="text-handler">
-                            <textarea placeholder="Introduction" data-lang="en"></textarea>
-                            <textarea placeholder="Introduction" data-lang="gr" hidden></textarea>
+                            <ul class="nav nav-tabs" role="tablist" id="aboutuser-tab">
+                              <li><a class="active" href="#en-description-tab" data-toggle="tab" role="tab" aria-controls="en-description-tab" aria-selected="true" id="en-description-tgl">English</a><a href="#es-description-tab" data-toggle="tab" role="tab" aria-controls="es-description-tab" aria-selected="false" id="es-description-tgl">Espanol</a></li>
+                            </ul>
+                            <div class="tab-content" id="aboutuser-tab-content">
+                              <div class="tab-pane fade show active" id="en-description-tab" role="tabpanel" aria-labelledby="#en-description-tgl">
+                                <textarea placeholder="IntroductionEnglish" data-lang="en"></textarea>
+                              </div>
+                              <div class="tab-pane fade" id="es-description-tab" role="tabpanel" aria-labelledby="#es-description-tgl">
+                                <textarea placeholder="IntroductionEspanol" data-lang="es"></textarea>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div class="container-fluid">
