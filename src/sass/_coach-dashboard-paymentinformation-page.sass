@@ -11,6 +11,9 @@
 
     nav#dash-board-nav
       border-bottom: 1px solid $light-grey
+      display: flex
+      align-items: center
+      justify-content: space-between
 
       #dashboard-nav-tgl
         align-items: center
@@ -18,6 +21,7 @@
         padding: 15px
         color: $blue
         display: none
+        flex: 1
 
         .active-tab-name
 
@@ -40,6 +44,7 @@
         list-style: none
         margin: 0
         padding: 0
+        flex: 1
 
         li
           position: relative
@@ -67,6 +72,48 @@
 
             &.active
               border-color: $blue
+
+      .type-switch
+        padding: 15px
+
+        input:checked + label
+          span
+            color: $black
+
+            &:last-child
+              color: $blue
+
+          .switcher-tgl
+            justify-content: flex-end
+
+        label
+          margin: 0
+          @extend %force-centered
+          cursor: pointer
+
+          span
+            color: $black
+
+            &:first-child
+              color: $blue
+
+          .switcher-tgl
+            position: relative
+            height: 30px
+            width: 45px
+            border: 1px solid $light-grey
+            border-radius: 30px
+            margin: 0 10px
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            padding: 3px
+
+            .switcher-tgl-dot
+              height: 24px
+              width: 24px
+              border-radius: 30px
+              background-color: $blue
 
     #dashboard-profile
       #coach-fullname
@@ -193,12 +240,16 @@
             cursor: pointer
             @extend %hover-effect
             padding: 0 30px
-                    
-@media screen and (max-width: 767px)
+
+@media screen and (max-width: 991px)
   #coach-dashboard
     #dashboar-content
       nav#dash-board-nav
         position: relative
+        display: block
+
+        .type-switch
+          border-bottom: 1px solid $light-grey
 
         #dashboard-nav-tgl
           display: flex

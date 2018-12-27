@@ -43,6 +43,6 @@ $(() => {
 
   $("#dashboard-nav-tgl").click((e) => {
     $(e.currentTarget).find(".tab-tgl-icon").toggleClass('on');
-    $(e.currentTarget).next("ul").slideToggle();
+    $(e.currentTarget).parent().find("ul").slideToggle();
   });
 });

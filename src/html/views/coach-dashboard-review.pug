@@ -23,6 +23,14 @@ block wrapper
 					li
 						a(href="/coach-dashboard-aboutme.html") My Profile
 
+				.type-switch
+					input(type="checkbox" hidden)#type-switcher-checkbox
+					label(for="type-switcher-checkbox")
+						span Patient
+						.switcher-tgl
+							.switcher-tgl-dot
+						span Doctor
+
 			#dashboard-review.dashboard-section
 				.container
 					.row.justify-content-center
