@@ -20,8 +20,8 @@
           <div class="col-lg-4">
             <nav class="main-nav">
               <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="auth.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="auth.html">Register</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
               </ul>
@@ -100,12 +100,20 @@
       <div class="content" id="dashboar-content">
         <nav id="dash-board-nav">
           <ul>
-            <li><a class="active" href="#">Mi Messages</a></li>
-            <li><a href="#">Mi Bookings</a></li>
-            <li><a href="#">My Payments</a></li>
+            <li><a class="active" href="/coach-dashboard-mimessages.html">Mi Message</a></li>
+            <li><a href="/coach-dashboard-bookings.html">Mi Bookings</a></li>
+            <li><a href="/coach-dashboard-mypayments.html">My Payments</a></li>
             <li><a href="#">My Comments</a></li>
-            <li><a href="#">My Profile</a></li>
+            <li><a href="/coach-dashboard-aboutme.html">My Profile</a></li>
           </ul>
+          <div class="type-switch">
+            <input type="checkbox" hidden id="type-switcher-checkbox">
+            <label for="type-switcher-checkbox"><span>Patient</span>
+              <div class="switcher-tgl">
+                <div class="switcher-tgl-dot"></div>
+              </div><span>Doctor</span>
+            </label>
+          </div>
         </nav>
         <div class="dashboard-section" id="dashboard-review">
           <div class="container">
@@ -116,13 +124,13 @@
                     <div class="avatar-wrap"><a href="#"><img src="../img/default-user.png" alt="default-user.png"></a></div>
                     <div class="review-content">
                       <h5 class="review-title"><a href="#">Title Of Review</a></h5>
-                      <p class="tagged">The person you notice: <a href="#">Anthoni N</a></p>
+                      <p class="tagged">The person you notice:<a href="#">Anthoni N</a></p>
                       <div class="date-handler">
-                        <p>Start Date: <span>12/05/2015 </span></p>
-                        <p>End Date: <span>20/05/2015 </span></p>
+                        <p>Start Date:<span>12/05/2015</span></p>
+                        <p>End Date:<span>20/05/2015</span></p>
                       </div>
                       <div class="average-grade">
-                        <p>Average grade: </p>
+                        <p>Average grade:</p>
                         <div class="rating">
                           <div class="rating-star"><i class="far fa-star"></i></div>
                           <div class="rating-star"><i class="far fa-star"></i></div>
