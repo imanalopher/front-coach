@@ -84,8 +84,26 @@ block wrapper
 											.card-element
 												p.element-label Tell Us About Yourself
 												.text-handler
-													textarea(placeholder="Introduction" data-lang="en")
-													textarea(placeholder="Introduction" data-lang="gr" hidden)
+													ul(role="tablist")#aboutuser-tab.nav.nav-tabs
+														li
+															a(
+																href="#en-description-tab"
+																data-toggle="tab"
+																role="tab"
+																aria-controls="en-description-tab"
+																aria-selected="true")#en-description-tgl.active English
+															a(
+																href="#es-description-tab"
+																data-toggle="tab"
+																role="tab"
+																aria-controls="es-description-tab"
+																aria-selected="false")#es-description-tgl Espanol
+
+													#aboutuser-tab-content.tab-content
+														#en-description-tab.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="#en-description-tgl")
+															textarea(placeholder="IntroductionEnglish" data-lang="en")
+														#es-description-tab.tab-pane.fade(role="tabpanel" aria-labelledby="#es-description-tgl")
+															textarea(placeholder="IntroductionEspanol" data-lang="es")
 
 											.container-fluid
 												.row
