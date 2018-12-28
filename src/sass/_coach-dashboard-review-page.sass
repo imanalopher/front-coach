@@ -8,14 +8,14 @@
       .rate-level-label
         .filled-star
           display: block
-        
+
         .stroke-star
           display: none
 
     input:checked + label
       .filled-star
         display: block
-      
+
       .stroke-star
         display: none
 
@@ -50,7 +50,7 @@
 
     .review-title
       font-weight: 700
-      
+
       a
         text-decoration: none
         color: $black
@@ -114,7 +114,47 @@
 
   .review-btns
     margin-top: 15px
-    text-align: center
+    @extend %force-centered
 
     button
       margin: 0 5px
+      padding: 10px 30px
+
+@media screen and (max-width: 500px)
+  #review-form
+    .review-form-header
+      flex-direction: column
+
+    .avatar-wrap
+      align-items: center
+      margin: 0 auto 10px
+
+    .review-content
+      text-align: center
+
+      .tagged
+        margin: 20px 0
+
+        a
+          display: block
+
+    .rate-user
+      padding: 15px
+      flex-direction: column
+      margin-bottom: 20px
+
+      .rate-form
+        margin: 10px 0 0
+
+    .review-txt-area
+      p
+        text-align: center
+
+    .review-btns
+      flex-direction: column-reverse
+
+      button
+        padding: 10px 10px
+        width: 100%
+        margin: 5px 0
+        font-size: .875rem
