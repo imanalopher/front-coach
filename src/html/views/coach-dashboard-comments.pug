@@ -71,3 +71,40 @@ block wrapper
 												p
 													span Comment:
 													|&nbsp;Lorem ipsum is simply dummy text of the printing and typesetting industry
+
+						.col-lg-12.col-sm-6
+							.booking-card
+								.booking-preview-img
+									a(href="#")
+										+renderimg('preview-default.png')
+
+								.booking-content
+									.content-header
+										h5 Reservation:&nbsp;
+											a(href="#") 9506388
+											|&nbsp;for listing
+											a(href="#")
+												|&nbsp;Dr Martine Durand
+
+									.booking-middle
+										p.booking-author Reviewer:
+											span Anthony N
+										include ../includes/rating-stars
+
+										.booking-times
+											.start-date
+												span Date:
+												| 12/05/2015
+
+									.booking-footer
+										.booking-card
+											.booking-preview-offer-img
+												a(href="#")
+													+renderimg('preview-default.png')
+
+											.booking-content
+												p
+													span Comment:
+													|&nbsp;Lorem ipsum is simply dummy text of the printing and typesetting industry
+
+					include ../includes/pagination
