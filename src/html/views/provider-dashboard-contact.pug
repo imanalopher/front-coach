@@ -8,16 +8,14 @@ block wrapper
 
 		#dashboard-content.content
 			nav#dash-board-nav
-				#dashboard-nav-tgl
-					span.active-tab-name Mi Messages
-					span.tab-tgl-icon
-						i.fas.fa-chevron-down
 
 				ul
 					li
-						a(href="/provider-dashboard-messages.html") Mi Message
+						a(href="/provider-dashboard-mimessages.html") Mi Message
 					li
 						a(href="/provider-dashboard-bookings.html") Mi Bookings
+					li
+						a(href="/provider-dashboard-listings.html") Mi Listings
 					li
 						a(href="/provider-dashboard-payments.html") My Payments
 					li
@@ -32,6 +30,11 @@ block wrapper
 						.switcher-tgl
 							.switcher-tgl-dot
 						span Doctor
+
+				#dashboard-nav-tgl
+					span.active-tab-name Mi Review
+					span.tab-tgl-icon
+						i.fas.fa-chevron-down
 
 			#dashboard-profile.dashboard-section
 				#coach-fullname
