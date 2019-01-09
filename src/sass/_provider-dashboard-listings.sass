@@ -18,11 +18,13 @@
   .box-holder
     position: absolute
     bottom: 10px
-    left: 15px
-    width: calc(100% - 30px)
+    left: 10px
+    width: calc(100% - 20px)
 
     .btn-list
       display: flex
+      justify-content: space-between
+      flex-wrap: wrap
       padding: 0 15px
 
       a
@@ -31,27 +33,24 @@
         background-color: $blue
         @extend %hover-effect
         color: #fff
-        margin-bottom: 10px
+        margin: 0 5px 10px
         text-transform: uppercase
         padding: 10px 30px
         font-size: .875rem
-        margin-right: 10px
+        width: 90px
+        flex: 1
+        min-width: 90px
 
       .select-wrap
-        flex: 1
         background-color: #fff
         border-radius: 30px
         overflow: hidden
         height: 34px
+        width: 100%
+        margin: 0 5px 10px
 
         .jfc-select
           height: 34px
-
-        .jcf-select-text
-          padding-bottom: 15px
-
-        .jcf-select-opener
-          padding-bottom: 15px
 
     .foot
       background-color: rgba(#fff, .7)
@@ -62,20 +61,20 @@
       justify-content: space-between
 
       h2
-        font-size: 1.5rem
+        font-size: 1.25rem
 
       .time-price
         strong
-          font-size: 2.5rem
+          font-size: 2rem
           line-height: 1
           display: flex
           align-items: center
 
           sup
             margin-left: 5px
-            font-size: 1.125rem
+            font-size: 1rem
             line-height: 1
 
         p
-          font-size: .875rem
+          font-size: .75rem
           margin-bottom: 0
